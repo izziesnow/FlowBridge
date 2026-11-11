@@ -3,7 +3,7 @@ from django import forms
 from apps.accounts.models import User
 from apps.projects.models import Role
 
-from .models import Decision
+from .models import Decision, StageTask
 
 
 class BootstrapMixin:
@@ -76,3 +76,24 @@ class StageForm(BootstrapMixin, forms.Form):
         self.fields["approver"].queryset = User.objects.filter(
             memberships__project=project, memberships__role__in=[Role.APPROVER, Role.PM], is_active=True
         ).order_by("full_name")
+
+
+class ReassignForm(BootstrapMixin, forms.Form):
+    task = forms.ModelChoiceField(queryset=StageTask.objects.none(), label="Stage")
+    new_approver = forms.ModelChoiceField(queryset=User.objects.none(), label="New approver")
+    reason = forms.CharField(widget=forms.Textarea(attrs={"rows": 3}), help_text="Recorded in the request history.")
+
+    def __init__(self, *args, approval_request, **kwargs):
+        super().__init__(*args, **kwargs)
+        cycle = approval_request.cycles.filter(ended_at__isnull=True).first()
+        tasks = StageTask.objects.none()
+        if cycle is not None:
+            tasks = cycle.tasks.filter(status__in=[StageTask.Status.ACTIVE, StageTask.Status.PENDING])
+        self.fields["task"].queryset = tasks.select_related("approver").order_by("position")
+        self.fields["task"].label_from_instance = lambda t: f"{t.position}. {t.name} (now {t.approver})"
+        self.fields["new_approver"].queryset = (
+            User.objects.filter(
+                memberships__project=approval_request.project,
+                memberships__role__in=[Role.APPROVER, Role.PM], is_active=True,
+            ).exclude(pk=approval_request.requester_id).order_by("full_name")
+        )

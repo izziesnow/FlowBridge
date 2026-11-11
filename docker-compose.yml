@@ -33,6 +33,22 @@ services:
       db:
         condition: service_healthy
 
+  scheduler:
+    # Runs the overdue-reminder job every 15 minutes (Section 3.3, "Scheduler").
+    build: .
+    command: ["sh", "-c", "while true; do python manage.py send_reminders; sleep 900; done"]
+    environment:
+      DJANGO_DEBUG: "1"
+      DJANGO_SECRET_KEY: dev-only-not-for-production
+      POSTGRES_DB: flowbridge
+      POSTGRES_USER: flowbridge
+      POSTGRES_PASSWORD: flowbridge
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+    depends_on:
+      web:
+        condition: service_started
+
 volumes:
   pgdata:
   private_media:

@@ -13,6 +13,7 @@ urlpatterns = [
     path("projects/<str:code>/requests/<int:number>/decide/", views.request_decide, name="request_decide"),
     path("projects/<str:code>/requests/<int:number>/resubmit/", views.request_resubmit, name="request_resubmit"),
     path("projects/<str:code>/requests/<int:number>/withdraw/", views.request_withdraw, name="request_withdraw"),
+    path("projects/<str:code>/requests/<int:number>/reassign/", views.request_reassign, name="request_reassign"),
     path("documents/<int:version_id>/download/", views.document_download, name="document_download"),
     path("projects/<str:code>/workflows/", views.workflow_list, name="workflow_list"),
     path("projects/<str:code>/workflows/<int:number>/", views.workflow_detail, name="workflow_detail"),

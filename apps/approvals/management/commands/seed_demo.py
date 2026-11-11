@@ -7,15 +7,19 @@ carry the same evidence and audit trail as real use would.
     python manage.py seed_demo           # load once into an empty database
     python manage.py seed_demo --flush   # wipe the database first, then load
 """
+from datetime import timedelta
+
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from django.utils import timezone
 
-from apps.approvals.models import Decision
+from apps.approvals.models import Decision, StageTask
 from apps.approvals.services import WorkflowService
 from apps.audit.models import record
+from apps.discussion.services import post_comment, post_project_message
 from apps.projects.models import Membership, Project, Role
 
 PASSWORD = "ztl-demo-2026"
@@ -131,6 +135,12 @@ class Command(BaseCommand):
                  [("upgrade-plan.md", "# TLS upgrade plan\nVersion 1.\n")])
         WorkflowService.submit(r2, emeka)
         decide(r2, 1, A)
+        # Simulate the passage of time so the demo shows an overdue stage (the reminder job will flag it).
+        StageTask.objects.filter(cycle__request=r2, status=StageTask.Status.ACTIVE).update(
+            activated_at=timezone.now() - timedelta(hours=75), due_at=timezone.now() - timedelta(hours=27)
+        )
+        stage3 = StageTask.objects.get(cycle__request=r2, position=3)
+        WorkflowService.reassign_stage(r2, pm, stage3, pm, "Ibrahim is on leave this week; I will sign off for him.")
 
         # PAY-003: changes requested in cycle 1, revised, then approved in cycle 2.
         r3 = new(aisha, "Daily settlement report export to CSV",
@@ -138,6 +148,8 @@ class Command(BaseCommand):
                  "Risk: low. Rollback: hide the export button.",
                  [("report-spec.md", "# Settlement export spec\nVersion 1: all columns.\n")])
         WorkflowService.submit(r3, aisha)
+        post_comment(r3, tl, "Does the export include full card numbers? Finance only needs the last four digits.")
+        post_comment(r3, aisha, "It currently includes the full PAN. I can mask it if that is acceptable.")
         decide(r3, 1, A)
         decide(r3, 2, C, "Mask card numbers in the export and state the retention period.")
         WorkflowService.add_document_version(
@@ -146,6 +158,7 @@ class Command(BaseCommand):
             document=r3.documents.get(name="report-spec"),
         )
         WorkflowService.resubmit(r3, aisha)
+        post_comment(r3, aisha, "Revision 2 masks card numbers and keeps export files for 30 days.")
         decide(r3, 1, A)
         decide(r3, 2, A, "Masking confirmed.")
         decide(r3, 3, A)
@@ -172,3 +185,6 @@ class Command(BaseCommand):
         new(emeka, "Switch error logging to structured JSON",
             "Emit gateway logs as structured JSON for the new log platform.",
             [("logging-change.md", "# Logging change\nDraft.\n")])
+
+        post_project_message(pay, pm, "Release freeze starts on Friday. Please get change requests in by Wednesday.")
+        post_project_message(pay, tl, "Noted. I will clear the review queue by Thursday.")

@@ -301,6 +301,8 @@ class StageTask(models.Model):
     activated_at = models.DateTimeField(null=True, blank=True)
     due_at = models.DateTimeField(null=True, blank=True)
     completed_at = models.DateTimeField(null=True, blank=True)
+    last_reminded_at = models.DateTimeField(null=True, blank=True)
+    reminder_count = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
         ordering = ["cycle", "position"]
@@ -324,6 +326,26 @@ class StageTask(models.Model):
         from django.utils import timezone
 
         return self.status == self.Status.ACTIVE and self.due_at is not None and self.due_at < timezone.now()
+
+
+class Reassignment(ImmutableModel):
+    """A project manager's move of one stage task to a different approver. Never changed."""
+
+    task = models.ForeignKey(StageTask, on_delete=models.PROTECT, related_name="reassignments")
+    from_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name="+")
+    to_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name="+")
+    actor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name="+")
+    reason = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_at"]
+        constraints = [
+            models.CheckConstraint(condition=~Q(reason=""), name="approvals_reassignment_reason_required"),
+        ]
+
+    def __str__(self):
+        return f"{self.task}: {self.from_user} → {self.to_user}"
 
 
 class Decision(ImmutableModel):

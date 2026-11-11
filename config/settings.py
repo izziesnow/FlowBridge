@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     "apps.projects",
     "apps.approvals",
     "apps.audit",
+    "apps.notifications",
+    "apps.discussion",
 ]
 
 MIDDLEWARE = [
@@ -60,6 +62,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "apps.notifications.context_processors.notifications",
             ],
         },
     },
@@ -108,6 +111,9 @@ DOCUMENT_MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 DOCUMENT_ALLOWED_EXTENSIONS = [
     "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt", "md", "csv", "png", "jpg", "jpeg",
 ]
+
+# Overdue stages: an approver is reminded at most once per interval (send_reminders command).
+REMINDER_INTERVAL_HOURS = int(env("REMINDER_INTERVAL_HOURS", "24"))
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

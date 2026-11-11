@@ -12,7 +12,17 @@ from apps.audit.models import AuditEvent
 from apps.projects.access import can_view, get_project_for_user, get_role, visible_projects
 from apps.projects.models import Role
 
-from .forms import DecisionForm, DocumentUploadForm, ReasonForm, RequestContentForm, StageForm, WorkflowVersionForm
+from apps.discussion.services import can_post
+
+from .forms import (
+    DecisionForm,
+    DocumentUploadForm,
+    ReasonForm,
+    ReassignForm,
+    RequestContentForm,
+    StageForm,
+    WorkflowVersionForm,
+)
 from .models import (
     ApprovalRequest,
     DocumentVersion,
@@ -88,7 +98,8 @@ def request_detail(request, code, number):
     cycles = (
         approval_request.cycles.select_related("revision", "workflow_version")
         .prefetch_related(
-            Prefetch("tasks", queryset=StageTask.objects.select_related("approver", "decision__actor")),
+            Prefetch("tasks", queryset=StageTask.objects.select_related("approver", "decision__actor")
+                     .prefetch_related("reassignments__from_user", "reassignments__to_user", "reassignments__actor")),
             Prefetch(
                 "revision__revision_documents",
                 queryset=RevisionDocument.objects.select_related("document_version__document"),
@@ -115,6 +126,10 @@ def request_detail(request, code, number):
         "decision_form": DecisionForm(),
         "reason_form": ReasonForm(),
         "upload_form": DocumentUploadForm(),
+        "comments": approval_request.comments.select_related("author", "revision"),
+        "can_comment": can_post(user, project),
+        "can_reassign": role == Role.PM and approval_request.state == RequestState.IN_REVIEW,
+        "reassign_form": ReassignForm(approval_request=approval_request),
     }
     return render(request, "approvals/request_detail.html", context)
 
@@ -215,6 +230,29 @@ def request_withdraw(request, code, number):
             _error_messages(request, error)
     else:
         messages.error(request, "A reason is required to withdraw a request.")
+    return redirect(approval_request)
+
+
+@login_required
+@require_POST
+def request_reassign(request, code, number):
+    project, approval_request = _get_request(request.user, code, number)
+    if get_role(request.user, project) != Role.PM:
+        raise PermissionDenied("Only the project manager can reassign a stage.")
+    form = ReassignForm(request.POST, approval_request=approval_request)
+    if form.is_valid():
+        try:
+            task = WorkflowService.reassign_stage(
+                approval_request, request.user, form.cleaned_data["task"], form.cleaned_data["new_approver"],
+                form.cleaned_data["reason"],
+            )
+            messages.success(request, f"Stage {task.position} reassigned to {task.approver}.")
+        except WorkflowError as error:
+            _error_messages(request, error)
+    else:
+        for errors in form.errors.values():
+            for error in errors:
+                messages.error(request, error)
     return redirect(approval_request)
 
 

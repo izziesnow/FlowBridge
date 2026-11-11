@@ -21,3 +21,9 @@ def test_seed_demo_loads_fictional_ztl_data(private_media):
     }
     # PAY-003 went through two review cycles and kept both.
     assert ApprovalRequest.objects.get(project=pay, number=3).cycles.count() == 2
+    # Increment 2 demo data: comments, a reassignment, project messages and an overdue stage.
+    pay2 = ApprovalRequest.objects.get(project=pay, number=2)
+    assert pay2.active_task().is_overdue
+    assert pay2.cycles.get().tasks.get(position=3).reassignments.count() == 1
+    assert ApprovalRequest.objects.get(project=pay, number=3).comments.count() == 3
+    assert pay.messages.count() == 2

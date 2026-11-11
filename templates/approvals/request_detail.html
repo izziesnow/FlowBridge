@@ -107,7 +107,11 @@
                   {% if task.decision.reason %}<div class="small mt-1">“{{ task.decision.reason }}”</div>{% endif %}
                 {% else %}
                   <span class="badge {{ task.status|badge_class }}">{{ task.get_status_display }}</span>
+                  {% if task.is_overdue %}<div class="small fb-overdue">Overdue</div>{% endif %}
                 {% endif %}
+                {% for move in task.reassignments.all %}
+                  <div class="small text-muted mt-1">Reassigned from {{ move.from_user }} by {{ move.actor }}, {{ move.created_at|date:"j M, H:i" }}: “{{ move.reason }}”</div>
+                {% endfor %}
               </li>
             {% endfor %}
           </ol>
@@ -116,6 +120,30 @@
       {% empty %}
         <p class="text-muted">Not yet submitted.</p>
       {% endfor %}
+    </section>
+
+    <section class="card mt-4" aria-labelledby="comments-h">
+      <div class="card-header"><h2 id="comments-h" class="h6 mb-0">Discussion ({{ comments|length }})</h2></div>
+      <div class="card-body">
+        {% for c in comments %}
+          <article id="comment-{{ c.id }}" class="fb-comment mb-3">
+            <div class="small"><strong>{{ c.author }}</strong>
+              <span class="text-muted">· {{ c.created_at|date:"j M Y, H:i" }} · {% if c.revision %}on revision {{ c.revision.number }}{% else %}on the draft{% endif %}</span></div>
+            <div style="white-space: pre-line">{{ c.body }}</div>
+          </article>
+        {% empty %}
+          <p class="text-muted">No comments yet.</p>
+        {% endfor %}
+        {% if can_comment %}
+        <form method="post" action="{% url 'discussion:comment_create' project.code req.number %}" class="border-top pt-3">
+          {% csrf_token %}
+          <label for="comment-body" class="form-label">Add a comment</label>
+          <textarea id="comment-body" name="body" rows="3" maxlength="4000" class="form-control mb-2" required></textarea>
+          <div class="form-text mb-2">Comments are kept with the revision under discussion and cannot be edited later.</div>
+          <button type="submit" class="btn btn-sm btn-primary">Post comment</button>
+        </form>
+        {% endif %}
+      </div>
     </section>
   </div>
 
@@ -142,6 +170,20 @@
         {% if req.closed_reason %}<p class="small mb-0"><strong>Withdrawal reason:</strong> {{ req.closed_reason }}</p>{% endif %}
       </div>
     </section>
+
+    {% if can_reassign %}
+    <section class="card mb-4" aria-labelledby="reassign-h">
+      <div class="card-header"><h2 id="reassign-h" class="h6 mb-0">Reassign a stage</h2></div>
+      <div class="card-body">
+        <p class="small text-muted">Applies to this review cycle only. An active stage gets a fresh due time.</p>
+        <form method="post" action="{% url 'approvals:request_reassign' project.code req.number %}">
+          {% csrf_token %}
+          {% for field in reassign_form %}{% include "_field.html" %}{% endfor %}
+          <button type="submit" class="btn btn-outline-primary w-100">Reassign</button>
+        </form>
+      </div>
+    </section>
+    {% endif %}
 
     <section class="card" aria-labelledby="hist-h">
       <div class="card-header"><h2 id="hist-h" class="h6 mb-0">History</h2></div>

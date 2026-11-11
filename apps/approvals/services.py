@@ -22,7 +22,10 @@ from django.db import transaction
 from django.db.models import Max
 from django.utils import timezone
 
+from apps.accounts.models import User
 from apps.audit.models import record
+from apps.notifications.models import Notification
+from apps.notifications.services import notify
 from apps.projects.access import get_role
 from apps.projects.models import Project, Role
 
@@ -32,6 +35,7 @@ from .models import (
     Decision,
     Document,
     DocumentVersion,
+    Reassignment,
     RequestState,
     ReviewCycle,
     Revision,
@@ -61,6 +65,15 @@ def _require_reason(reason, action):
 def _lock_request(request):
     """Re-read the request row under a row lock. Must be called inside a transaction."""
     return ApprovalRequest.objects.select_for_update().select_related("project").get(pk=request.pk)
+
+
+def project_managers(project):
+    return User.objects.filter(memberships__project=project, memberships__role=Role.PM, is_active=True)
+
+
+def _notify_action_needed(request, task):
+    notify([task.approver], Notification.Kind.ACTION_NEEDED,
+           f"{request.reference} is awaiting your decision at stage {task.position}: {task.name}", request=request)
 
 
 def latest_published_workflow(project):
@@ -289,6 +302,7 @@ class WorkflowService:
                actor=actor, request=request, revision=revision.number, cycle=cycle.number,
                workflow_version=workflow.number,
                documents=[{"id": rd.document_version_id} for rd in revision.revision_documents.all()])
+        _notify_action_needed(request, cycle.tasks.get(position=1))
         return request
 
     @classmethod
@@ -335,18 +349,28 @@ class WorkflowService:
                 next_task.activate(now, next_task.stage_definition.due_hours)
                 next_task.save(update_fields=["status", "activated_at", "due_at"])
                 summary = f"Stage {task.position} approved; stage {next_task.position} '{next_task.name}' now active"
+                _notify_action_needed(request, next_task)
+                notify([request.requester], Notification.Kind.DECISION,
+                       f"{request.reference}: stage {task.position} approved by {actor}; now with {next_task.approver}",
+                       request=request, exclude=[actor])
             else:
                 cls._end_cycle(cycle, ReviewCycle.Outcome.APPROVED, now)
                 request.state = RequestState.APPROVED
                 summary = f"Final stage approved; {request.reference} approved"
+                notify([request.requester, *project_managers(request.project)], Notification.Kind.OUTCOME,
+                       f"{request.reference} has been approved", request=request, exclude=[actor])
         elif outcome == Decision.Outcome.REJECT:
             cls._end_cycle(cycle, ReviewCycle.Outcome.REJECTED, now)
             request.state = RequestState.REJECTED
             summary = f"Rejected at stage {task.position}"
+            notify([request.requester, *project_managers(request.project)], Notification.Kind.OUTCOME,
+                   f"{request.reference} was rejected by {actor}: {reason}", request=request, exclude=[actor])
         else:
             cls._end_cycle(cycle, ReviewCycle.Outcome.CHANGES_REQUESTED, now)
             request.state = RequestState.CHANGES_REQUESTED
             summary = f"Changes requested at stage {task.position}; cycle {cycle.number} ended"
+            notify([request.requester], Notification.Kind.OUTCOME,
+                   f"{actor} requested changes to {request.reference}: {reason}", request=request, exclude=[actor])
 
         request.save(update_fields=["state", "updated_at"])
         record(f"decision.{outcome.lower()}", f"{request.reference}: {summary}", actor=actor, request=request,
@@ -394,6 +418,7 @@ class WorkflowService:
                f"{request.reference} resubmitted as revision {revision.number}; cycle {cycle.number} restarts at stage 1",
                actor=actor, request=request, revision=revision.number, cycle=cycle.number,
                previous_revision=previous.number)
+        _notify_action_needed(request, cycle.tasks.get(position=1))
         return request
 
     @classmethod
@@ -409,6 +434,7 @@ class WorkflowService:
         reason = _require_reason(reason, "withdraw a request")
         now = timezone.now()
         cycle = request.cycles.filter(ended_at__isnull=True).first()
+        active = cycle.tasks.filter(status=StageTask.Status.ACTIVE).select_related("approver").first() if cycle else None
         if cycle is not None:
             cls._end_cycle(cycle, ReviewCycle.Outcome.CANCELLED, now)
         previous_state = request.state
@@ -417,4 +443,57 @@ class WorkflowService:
         request.save(update_fields=["state", "closed_reason", "updated_at"])
         record("request.withdrawn", f"{request.reference} withdrawn", actor=actor, request=request,
                reason=reason, previous_state=previous_state)
+        notify([request.requester, active.approver if active else None], Notification.Kind.WITHDRAWN,
+               f"{request.reference} was withdrawn by {actor}: {reason}", request=request, exclude=[actor])
         return request
+
+    @classmethod
+    @transaction.atomic
+    def reassign_stage(cls, request, actor, task, new_approver, reason):
+        """Project manager moves an active or waiting stage of the open cycle to another approver.
+
+        Only the current cycle changes. The published workflow stays as it is, so
+        later cycles use its named approvers again. The change is kept as an
+        immutable Reassignment record and an audit event.
+        """
+        request = _lock_request(request)
+        project = request.project
+        if get_role(actor, project) != Role.PM:
+            raise PermissionDenied("Only the project manager can reassign a stage.")
+        if request.state != RequestState.IN_REVIEW:
+            raise WorkflowError("Stages can only be reassigned while the request is in review.")
+        task = StageTask.objects.select_for_update().select_related("cycle", "stage_definition", "approver").get(pk=task.pk)
+        if task.cycle.request_id != request.pk or task.cycle.ended_at is not None:
+            raise WorkflowError("That stage is not part of the request's open review cycle.")
+        if task.status not in (StageTask.Status.ACTIVE, StageTask.Status.PENDING):
+            raise WorkflowError("Only an active or waiting stage can be reassigned.")
+        reason = _require_reason(reason, "reassign a stage")
+        if new_approver == task.approver:
+            raise WorkflowError(f"{new_approver} is already the approver for this stage.")
+        if new_approver == request.requester:
+            raise WorkflowError("The requester cannot approve their own request.")
+        if not new_approver.is_active or get_role(new_approver, project) not in (Role.APPROVER, Role.PM):
+            raise WorkflowError(f"{new_approver} must be an active approver (or the project manager) on {project.code}.")
+
+        previous = task.approver
+        now = timezone.now()
+        task.approver = new_approver
+        fields = ["approver"]
+        if task.status == StageTask.Status.ACTIVE:
+            # The new approver gets the stage's full decision window from now.
+            task.activate(now, task.stage_definition.due_hours)
+            task.last_reminded_at = None
+            task.reminder_count = 0
+            fields += ["status", "activated_at", "due_at", "last_reminded_at", "reminder_count"]
+        task.save(update_fields=fields)
+        Reassignment.objects.create(task=task, from_user=previous, to_user=new_approver, actor=actor, reason=reason)
+        record("stage.reassigned",
+               f"{request.reference}: stage {task.position} reassigned from {previous} to {new_approver}",
+               actor=actor, request=request, cycle=task.cycle.number, stage=task.position,
+               from_user=previous.email, to_user=new_approver.email, reason=reason)
+        notify([new_approver], Notification.Kind.REASSIGNED,
+               f"Stage {task.position} of {request.reference} has been assigned to you: {reason}", request=request)
+        notify([previous], Notification.Kind.REASSIGNED,
+               f"Stage {task.position} of {request.reference} was reassigned to {new_approver}", request=request,
+               exclude=[actor])
+        return task

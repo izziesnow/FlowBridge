@@ -2,11 +2,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
-from django.db.models import Count, Q
+from django.db.models import Count, Exists, OuterRef, Q
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from apps.approvals.models import RequestState
+from apps.approvals.models import RequestState, StageTask
 from apps.approvals.services import latest_published_workflow
 from apps.audit.models import AuditEvent, record
 
@@ -51,15 +52,27 @@ def project_detail(request, code):
     project = get_project_for_user(request.user, code)
     role = get_role(request.user, project)
     state = request.GET.get("state", "")
-    requests_qs = project.requests.select_related("requester").order_by("-updated_at")
+    now = timezone.now()
+    overdue_tasks = StageTask.objects.filter(
+        cycle__request=OuterRef("pk"), status=StageTask.Status.ACTIVE, due_at__lt=now
+    )
+    requests_qs = (
+        project.requests.select_related("requester")
+        .annotate(is_overdue=Exists(overdue_tasks))
+        .order_by("-updated_at")
+    )
     if state in RequestState.values:
         requests_qs = requests_qs.filter(state=state)
+    overdue_only = request.GET.get("overdue") == "1"
+    if overdue_only:
+        requests_qs = requests_qs.filter(is_overdue=True)
     return render(request, "projects/project_detail.html", {
         "project": project,
         "role": role,
         "role_label": Role(role).label if role else None,
         "requests": requests_qs,
         "state_filter": state,
+        "overdue_only": overdue_only,
         "states": RequestState.choices,
         "workflow": latest_published_workflow(project),
         "can_raise": role == Role.REQUESTER,

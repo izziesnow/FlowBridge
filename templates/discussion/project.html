@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Discussion · {{ project.code }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Discussion</li>
+</ol></nav>
+<h1 class="h4">Project discussion</h1>
+<p class="text-muted">For general project conversation. Discussion about a specific change belongs in that request's comments, where it stays beside the evidence.</p>
+<div class="row g-4">
+  <div class="col-lg-8">
+    {% for m in thread %}
+      <article id="message-{{ m.id }}" class="card card-body mb-3">
+        <div class="small"><strong>{{ m.author }}</strong> <span class="text-muted">· {{ m.created_at|date:"j M Y, H:i" }}</span></div>
+        <div style="white-space: pre-line">{{ m.body }}</div>
+      </article>
+    {% empty %}
+      <p class="text-muted">No messages yet.</p>
+    {% endfor %}
+  </div>
+  {% if can_post %}
+  <div class="col-lg-4">
+    <form method="post" class="card card-body">
+      {% csrf_token %}
+      <label for="message-body" class="form-label">New message</label>
+      <textarea id="message-body" name="body" rows="5" maxlength="4000" class="form-control mb-2" required></textarea>
+      <div class="form-text mb-2">Every project member is notified. Messages cannot be edited later.</div>
+      <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

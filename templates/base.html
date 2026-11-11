@@ -23,6 +23,7 @@
           {% if user.is_staff %}<li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Administration</a></li>{% endif %}
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="{% url 'notifications:list' %}">Notifications{% if unread_notifications %} <span class="badge rounded-pill text-bg-warning">{{ unread_notifications }}<span class="visually-hidden"> unread</span></span>{% endif %}</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'accounts:password_change' %}">{{ user.full_name }}</a></li>
           <li class="nav-item">
             <form method="post" action="{% url 'accounts:logout' %}">{% csrf_token %}
@@ -50,7 +51,7 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="container pb-4 text-muted small">Flowbridge · increment 1 · MIT final project, MIVA Open University</footer>
+  <footer class="container pb-4 text-muted small">Flowbridge · increment 2 · MIT final project, MIVA Open University</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

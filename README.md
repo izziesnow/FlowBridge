@@ -6,7 +6,7 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 
 > **Fictional setting.** The system is demonstrated at **Zenkora Technologies Limited (ZTL)**, a fictional Lagos-based IT services firm created for this project. ZTL is not a real company, and every user, project, request and document in the demo data is synthetic.
 
-## What it does (increment 1)
+## What it does (increments 1 and 2)
 
 - **Accounts.** Email sign-in with administrator-managed accounts. Passwords are stored as salted hashes.
 - **Projects and roles.** Each person holds one role per project: project manager, requester, approver or viewer. Non-members get a 404 for every project page, request and document.
@@ -15,7 +15,11 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 - **Decisions.** Approvers approve, reject or request changes. A reason is required to reject, request changes or withdraw. Requesters can never approve their own requests.
 - **Review cycles.** Requesting changes ends the cycle. Resubmitting creates a new revision and a new cycle that restarts at stage 1. Earlier cycles keep their decisions and evidence.
 - **Documents.** Every upload is a new immutable version with a SHA-256 checksum. Files sit in private storage and are served only through a permission-checked view that re-verifies the checksum.
-- **Audit history.** Every state change, decision, upload and membership change writes an append-only audit event.
+- **Audit history.** Every state change, decision, upload, comment, reassignment and membership change writes an append-only audit event.
+- **Discussion.** Each request has a comment thread, and each comment records the revision it was written about. Each project also has a general discussion page. Comments and messages cannot be edited or deleted. Viewers can read but not post.
+- **Notifications.** In-app notifications tell approvers when a stage needs them and tell requesters about decisions and outcomes. They also cover comments, project messages, reassignments, withdrawals and overdue stages. The person who acted is never notified of their own action.
+- **Overdue flags and reminders.** A stage is overdue once its due time passes. Overdue requests are flagged and can be filtered on the project page. `python manage.py send_reminders` reminds the approver at most once every 24 hours, and the project manager is told the first time.
+- **Stage reassignment.** The project manager can move an active or waiting stage of the open cycle to another approver, with a reason. An active stage gets a fresh due time. The published workflow does not change, and each move is kept as an immutable record and an audit event.
 
 ### Request states
 
@@ -50,7 +54,7 @@ docker compose up --build
 docker compose exec web python manage.py seed_demo
 ```
 
-Open http://localhost:8000.
+Open http://localhost:8000. The `scheduler` service runs `send_reminders` every 15 minutes.
 
 ### Without Docker
 
@@ -80,7 +84,7 @@ All demo accounts use the password `ztl-demo-2026`. The `.example` domain is res
 | ngozi.obi@ztl.example | Viewer, PAY |
 | bola.adekunle@ztl.example | Project manager, HRM only (cannot see PAY) |
 
-Project **PAY** holds six requests covering each state, including PAY-003, which went through two review cycles. Run `python manage.py seed_demo --flush` to reset everything.
+Project **PAY** holds six requests covering each state. PAY-003 went through two review cycles with comments in each. PAY-002 is overdue at stage 2, and its stage 3 has been reassigned. Run `python manage.py send_reminders` to see the reminder job flag PAY-002. Run `python manage.py seed_demo --flush` to reset everything.
 
 ## Tests
 
@@ -89,7 +93,7 @@ pytest                       # needs PostgreSQL: the triggers and row locks are 
 pytest --cov                 # with coverage
 ```
 
-The suite covers every workflow transition and guard, permission checks on pages and downloads, immutability (model guard and database trigger), simultaneous decisions, document checksums and the demo seed. CI runs it on every push against a PostgreSQL 16 service container.
+The suite covers every workflow transition and guard and the permission checks on pages and downloads. It also covers immutability (model guard and database trigger), simultaneous decisions, document checksums, comments, notifications, reminders, reassignment and the demo seed. CI runs it on every push against a PostgreSQL 16 service container.
 
 ## Project layout
 
@@ -99,13 +103,15 @@ apps/accounts/     custom User model with email sign-in
 apps/projects/     Project, Membership and project-based access control
 apps/approvals/    workflows, requests, revisions, documents, cycles, decisions; WorkflowService
 apps/audit/        append-only AuditEvent
+apps/discussion/   request comments and project discussion
+apps/notifications/ in-app notifications and the overdue reminder job
 apps/core_immutable.py   immutable model base and PostgreSQL trigger SQL
 templates/, static/      Bootstrap 5 interface
 ```
 
 ## Roadmap
 
-1. **Increment 1 (this release):** accounts, projects, membership, sequential workflows, revisions, documents, decisions, audit.
-2. **Increment 2:** request comments and project discussion, in-app notifications, overdue flags with a reminder command, audited stage reassignment by the project manager.
+1. **Increment 1 (done):** accounts, projects, membership, sequential workflows, revisions, documents, decisions, audit.
+2. **Increment 2 (done):** request comments and project discussion, in-app notifications, overdue flags with a reminder command, audited stage reassignment by the project manager.
 3. **Increment 3:** dashboards and filters, history export, optional email, Nginx and Gunicorn in Compose, backup and restore.
 4. **Increment 4:** synthetic evaluation datasets and the manual baseline, usability fixes, frozen evaluation build.

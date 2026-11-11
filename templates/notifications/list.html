@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Notifications{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <h1 class="h4 mb-0">Notifications</h1>
+  <div class="d-flex gap-2">
+    <a class="btn btn-sm {% if show == 'all' %}btn-outline-secondary{% else %}btn-secondary{% endif %}" href="?show=unread">Unread</a>
+    <a class="btn btn-sm {% if show == 'all' %}btn-secondary{% else %}btn-outline-secondary{% endif %}" href="?show=all">All</a>
+    {% if unread_notifications %}
+      <form method="post" action="{% url 'notifications:mark_all' %}">{% csrf_token %}
+        <button type="submit" class="btn btn-sm btn-outline-primary">Mark all as read</button></form>
+    {% endif %}
+  </div>
+</div>
+<div class="list-group">
+  {% for n in items %}
+    <form method="post" action="{% url 'notifications:open' n.id %}" class="list-group-item{% if n.is_unread %} list-group-item-light border-start border-4 border-primary{% endif %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-link p-0 text-start text-decoration-none">
+        <div class="small text-muted">{{ n.get_kind_display }} · {{ n.created_at|date:"j M Y, H:i" }}{% if n.is_unread %} · <strong>unread</strong>{% endif %}</div>
+        <div>{{ n.message }}</div>
+      </button>
+    </form>
+  {% empty %}
+    <div class="list-group-item text-muted">{% if show == 'all' %}No notifications yet.{% else %}You're all caught up.{% endif %}</div>
+  {% endfor %}
+</div>
+{% endblock %}
