@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Reset evaluation data{% endblock %}
+{% block content %}
+<h1 class="h4">Reset evaluation data</h1>
+<p>Run this before every participant. It deletes everything in this copy and reloads the 120-request evaluation dataset from its fixed seed, so every participant starts from the same data. Every account keeps the hosted password.</p>
+{% if running %}
+  <div class="alert alert-info" role="status">A reset started at {{ started }} is still running. It takes one to three minutes. Reload this page to check; when it finishes you will need to sign in again.</div>
+{% elif status.state == "done" %}
+  <div class="alert alert-success" role="status">Last reset finished at {{ finished }} (started by {{ status.requested_by }}). The data are ready for the next participant.</div>
+{% elif status.state == "failed" %}
+  <div class="alert alert-danger" role="alert">The last reset failed at {{ finished }}: {{ status.error }}. Try again; if it fails twice, check the service logs.</div>
+{% endif %}
+{% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+{% if not running %}
+<form method="post" class="mt-3" style="max-width: 28rem">
+  {% csrf_token %}
+  <label for="confirm" class="form-label">Type <strong>RESET</strong> to confirm</label>
+  <input id="confirm" name="confirm" class="form-control mb-2" autocomplete="off" required>
+  <button type="submit" class="btn btn-danger">Reset all data now</button>
+</form>
+{% endif %}
+<p class="mt-4"><a href="{% url 'evaluation:files' %}">Participant files</a></p>
+{% endblock %}

@@ -178,6 +178,10 @@ EMAIL_NOTIFICATIONS_ENABLED = env_bool("EMAIL_NOTIFICATIONS_ENABLED", True)
 EMAIL_MAX_ATTEMPTS = 3
 SITE_URL = env("SITE_URL", f"https://{RENDER_EXTERNAL_HOSTNAME}" if RENDER_EXTERNAL_HOSTNAME else "http://localhost:8000")
 
+# Remote evaluation sessions (apps/evaluation/ops.py): participant downloads and an admin-only reset.
+# Switch on only on the copy used for the user acceptance test.
+EVALUATION_TOOLS = env_bool("EVALUATION_TOOLS", False)
+
 # Overdue stages: an approver is reminded at most once per interval (send_reminders command).
 REMINDER_INTERVAL_HOURS = int(env("REMINDER_INTERVAL_HOURS", "24"))
 

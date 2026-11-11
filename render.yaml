@@ -30,3 +30,36 @@ services:
         value: "1"
       - key: WEB_CONCURRENCY
         value: "2"
+
+  # A second copy for the user acceptance test (evaluation/protocol). It runs the 120-request
+  # evaluation dataset and adds the participant downloads and the admin-only reset page
+  # (EVALUATION_TOOLS), so sessions never disturb the demo copy above. It needs its own
+  # database: create a second database in the same Neon project and paste its connection string.
+  - type: web
+    name: flowbridge-uat
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerCommand: sh deploy/render-start.sh
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: HOSTED_PASSWORD
+        sync: false
+      - key: HOSTED_DATASET
+        value: evaluation
+      - key: EVALUATION_TOOLS
+        value: "1"
+      - key: DJANGO_DEBUG
+        value: "0"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DOCUMENT_STORAGE
+        value: database
+      - key: SECURITY_HEADERS_IN_APP
+        value: "1"
+      - key: WEB_CONCURRENCY
+        value: "2"

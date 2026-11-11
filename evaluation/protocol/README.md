@@ -20,6 +20,7 @@ in the manual baseline and five in Flowbridge, in one of four counterbalanced or
 | `../scenario-sets/A`, `../scenario-sets/B` | Task cards and the files participants need |
 | `../ground_truth/answer-key-A.md`, `answer-key-B.md` | Correct answers (moderator and scorers only) |
 | `../baseline/` | The manual-process sandbox |
+| `remote-sessions.md` | How to run the sessions over a video call, with the hosted sessions copy |
 | `../accounts.csv` | Every synthetic account; all passwords are `ztl-eval-2026` |
 
 ## Preparing the two conditions

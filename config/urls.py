@@ -26,4 +26,5 @@ urlpatterns = [
     path("", include("apps.discussion.urls")),
     path("notifications/", include("apps.notifications.urls")),
     path("admin/", admin.site.urls),
+    path("evaluation/", include("apps.evaluation.urls")),
 ]

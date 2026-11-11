@@ -78,6 +78,15 @@ Render's free plan has no console, so the reset is done from the database side:
 
 On start-up the app finds an empty database, recreates the tables and loads the chosen dataset.
 
+## A second copy for the evaluation sessions
+
+`render.yaml` also defines `flowbridge-uat`, a separate copy for the user acceptance test, so sessions never disturb the demo copy. It loads the 120-request evaluation dataset and switches on two extras (`EVALUATION_TOOLS=1`):
+
+- `/evaluation/files/`: public downloads of the baseline sandbox and the task materials for sets A and B. The answer keys are never offered.
+- `/evaluation/reset/`: administrators only. It reloads the evaluation dataset before each participant.
+
+It needs its own database. In the Neon console, open the project, go to **Databases → New database**, and name it `flowbridge_uat`. Copy its connection string; it is the same as the first one except for the database name at the end. On Render, add it as `DATABASE_URL` on `flowbridge-uat`, together with `HOSTED_PASSWORD`. How to run the sessions: `evaluation/protocol/remote-sessions.md`.
+
 ## Updating the app
 
 Every push to the `main` branch redeploys the app automatically. Data are kept, and new database migrations run on start-up.

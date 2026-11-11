@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Evaluation files{% endblock %}
+{% block content %}
+<h1 class="h4">Files for your evaluation session</h1>
+<p>Download only the file your session moderator asks for. Zenkora Technologies Limited (ZTL) is a fictional organisation, and every person, request, message and document in these files is synthetic.</p>
+<ul class="list-group mb-3" style="max-width: 40rem">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span><strong>Manual process sandbox</strong><br><span class="text-muted small">Emails (open <code>mail/inbox.html</code>), chat exports, the change log spreadsheet and the shared drive</span></span>
+    <a class="btn btn-sm btn-primary" href="{% url 'evaluation:file' 'baseline.zip' %}">baseline.zip</a>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span><strong>Task materials, set A</strong></span>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'evaluation:file' 'materials-A.zip' %}">materials-A.zip</a>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span><strong>Task materials, set B</strong></span>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'evaluation:file' 'materials-B.zip' %}">materials-B.zip</a>
+  </li>
+</ul>
+<p class="small text-muted">Unzip each file to a new folder on your computer. The first download after a quiet period can take up to a minute while the files are prepared.</p>
+{% endblock %}
