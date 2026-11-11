@@ -62,10 +62,11 @@ comment. The run used the 120-request evaluation dataset.
 | Run | Requests | Failures | Median | 95th percentile | Result |
 |---|---|---|---|---|---|
 | Workspace: Gunicorn (3 workers) over HTTPS, `DEBUG` off, 2 minutes | 1,020 | 0 | 45 ms | 100 ms | Pass |
+| CI: full Compose stack through Nginx (HTTPS), GitHub-hosted runner, 3 minutes (run 43083966017) | 1,556 | 0 | 29 ms | 46 ms | Pass |
 
 Signing in is the slowest step (median 580 ms), because password hashing is deliberately slow (PBKDF2).
-The CI job repeats the test through Nginx against the full Docker Compose stack and keeps the Locust report as
-an artifact.
+The CI job repeats the test through Nginx against the full Docker Compose stack on every push and keeps the
+Locust report as an artifact.
 
 ## Backup and restore (NFR08)
 
