@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 06 June 2026
 
 ## Summary
-Beatae est libero quas saepe amet. Consequuntur omnis cupiditate harum. Ipsam iure in omnis.
+The rollback has been rehearsed in the staging environment. The change is limited to the loan officer dashboard and does not alter any shared database tables. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

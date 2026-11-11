@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 13 June 2026
 
 ## Summary
-Sunt eveniet a ea quasi esse. Dolorum quis cupiditate beatae voluptatibus error.
+The change is limited to the settlement report and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

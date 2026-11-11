@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 28 October 2026
 
 ## Summary
-Natus libero reiciendis minima. Consequuntur minima eveniet mollitia saepe. Illo dolores itaque officiis modi accusantium animi omnis.
+Monitoring dashboards will be checked for one hour after release. The rollback has been rehearsed in the staging environment. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

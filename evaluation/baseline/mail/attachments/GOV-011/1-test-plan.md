@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 16 September 2026
 
 ## Summary
-Id debitis vitae nulla illo. Porro qui a amet accusamus quaerat numquam.
+This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

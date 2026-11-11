@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 22 August 2026
 
 ## Summary
-Consectetur quasi repudiandae repellat. Natus quis eius consequuntur quae. Ratione at nemo adipisci.
+The rollback has been rehearsed in the staging environment. Load on the repayment schedule is expected to stay within current limits. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

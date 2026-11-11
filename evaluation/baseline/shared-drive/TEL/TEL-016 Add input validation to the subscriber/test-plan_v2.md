@@ -6,10 +6,10 @@ Prepared by: Somadina Obi
 Date: 30 October 2026
 
 ## Summary
-Vel autem officia labore fuga ab vel. Rerum odio quia dolores.
+Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
-Revised after review: Possimus veritatis nesciunt minima explicabo dolorum temporibus facere ad a.
+Revised after review: listed the monitoring to watch after release.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

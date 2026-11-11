@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 10 July 2026
 
 ## Summary
-Nisi incidunt perspiciatis blanditiis fugiat. Placeat unde harum veniam explicabo quasi ipsa. Eligendi ex quas. Error impedit nesciunt accusantium.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Existing records are not modified; new fields default to empty for older records. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

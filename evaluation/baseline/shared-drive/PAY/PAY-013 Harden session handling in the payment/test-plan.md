@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 22 October 2026
 
 ## Summary
-Est exercitationem earum maiores. Ipsam placeat fuga enim.
+The rollback has been rehearsed in the staging environment. The change is limited to the payment status page and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

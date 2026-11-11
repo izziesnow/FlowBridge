@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 11 September 2026
 
 ## Summary
-Blanditiis in officia eius distinctio. Commodi qui minus.
+The rollback has been rehearsed in the staging environment. The change is limited to the TIN validation and does not alter any shared database tables. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

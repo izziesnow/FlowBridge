@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 23 July 2026
 
 ## Summary
-Iure veritatis aspernatur earum. Laudantium itaque ipsam.
+The rollback has been rehearsed in the staging environment. Load on the leave request screen is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

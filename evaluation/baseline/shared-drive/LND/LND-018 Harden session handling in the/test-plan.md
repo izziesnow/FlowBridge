@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 28 October 2026
 
 ## Summary
-Earum reprehenderit aperiam quis. Earum repellat vitae provident nihil distinctio rerum.
+This document describes the change, the components it touches and how it will be tested. The change is limited to the disbursement API and does not alter any shared database tables. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

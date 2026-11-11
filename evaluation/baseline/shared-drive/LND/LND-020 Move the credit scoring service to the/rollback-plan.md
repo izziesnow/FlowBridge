@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 31 October 2026
 
 ## Summary
-Recusandae iste quisquam nesciunt. Cupiditate aliquid assumenda labore pariatur voluptate.
+This document describes the change, the components it touches and how it will be tested. The change is limited to the credit scoring service and does not alter any shared database tables. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

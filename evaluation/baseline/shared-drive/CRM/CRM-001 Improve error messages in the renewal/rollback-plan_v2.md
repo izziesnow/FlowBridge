@@ -6,10 +6,10 @@ Prepared by: Fatima Suleiman
 Date: 11 June 2026
 
 ## Summary
-Tempora mollitia sint incidunt rem sint. Id minima sapiente natus voluptatem maiores rem.
+The rollback has been rehearsed in the staging environment. Load on the renewal reminder job is expected to stay within current limits. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
-Revised after review: Enim consequuntur officia quaerat est sed fuga itaque.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

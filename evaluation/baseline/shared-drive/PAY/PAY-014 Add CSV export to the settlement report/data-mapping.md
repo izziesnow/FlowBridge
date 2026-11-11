@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 27 October 2026
 
 ## Summary
-Nostrum ea impedit voluptatem quibusdam animi. Doloribus quidem vitae error occaecati quia unde.
+Load on the settlement report is expected to stay within current limits. Existing records are not modified; new fields default to empty for older records. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 18 September 2026
 
 ## Summary
-Debitis temporibus numquam voluptatum molestiae facere. Ullam debitis repellat aliquid quae corporis sapiente id.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. Load on the leave request screen is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

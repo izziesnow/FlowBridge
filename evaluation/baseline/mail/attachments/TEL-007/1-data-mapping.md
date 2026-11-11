@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 14 August 2026
 
 ## Summary
-Quo sed fugit similique. Nemo nostrum reiciendis perferendis exercitationem quas.
+Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested. The change is limited to the usage alert service and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

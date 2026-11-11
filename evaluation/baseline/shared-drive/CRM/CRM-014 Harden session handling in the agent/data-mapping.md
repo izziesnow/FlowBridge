@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 07 October 2026
 
 ## Summary
-Tempore vitae incidunt molestias corporis. Enim facilis ab maxime suscipit. Laborum consequuntur recusandae nam voluptas iste.
+Monitoring dashboards will be checked for one hour after release. The change is limited to the agent dashboard and does not alter any shared database tables. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

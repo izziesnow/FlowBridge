@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 08 June 2026
 
 ## Summary
-Ut asperiores soluta assumenda quisquam eaque. Similique sint est qui non debitis.
+Load on the TIN validation is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

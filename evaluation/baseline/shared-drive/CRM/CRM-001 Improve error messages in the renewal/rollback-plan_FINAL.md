@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 11 June 2026
 
 ## Summary
-In nemo sapiente quod laudantium quo ipsam. Nostrum beatae repellendus. Accusamus tempora laudantium et id expedita voluptatum. Rem voluptatum maiores asperiores excepturi nam.
+The change is limited to the renewal reminder job and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

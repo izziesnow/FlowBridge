@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 02 September 2026
 
 ## Summary
-Consectetur velit tenetur aliquid architecto. At dicta dicta molestiae adipisci et.
+Load on the tax return form is expected to stay within current limits. The rollback has been rehearsed in the staging environment. The change is limited to the tax return form and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

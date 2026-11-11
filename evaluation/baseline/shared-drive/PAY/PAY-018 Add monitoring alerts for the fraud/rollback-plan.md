@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 31 October 2026
 
 ## Summary
-Iusto accusamus mollitia. Debitis consectetur natus eum iste dignissimos laudantium.
+The change is limited to the fraud rules engine and does not alter any shared database tables. This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

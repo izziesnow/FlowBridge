@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 10 October 2026
 
 ## Summary
-Earum ea in doloremque. Possimus praesentium placeat quod quasi.
+The client's acceptance criteria are listed in the test plan. Monitoring dashboards will be checked for one hour after release. Load on the loan application form is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

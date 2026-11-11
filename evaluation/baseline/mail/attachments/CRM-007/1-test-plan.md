@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 02 September 2026
 
 ## Summary
-Aliquid hic molestiae voluptas repellat optio vitae. Assumenda quasi ex ea.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

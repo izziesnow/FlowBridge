@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 01 November 2026
 
 ## Summary
-Esse quidem reprehenderit voluptatem odit. Corporis libero placeat officia quos ipsa. Reprehenderit possimus temporibus quam tempore.
+Existing records are not modified; new fields default to empty for older records. The change is limited to the USSD menu and does not alter any shared database tables. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

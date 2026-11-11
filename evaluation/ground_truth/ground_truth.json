@@ -25,7 +25,7 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "5d642bd279666e278711b24a7304e219ce6487abbac75e99743c5de4958ac4b5"
+              "sha256": "8e5dd51f916bd99c0666a99e6cf11374272a53dfaeaff9dde58f2dad3ba05adb"
             }
           ]
         },
@@ -38,7 +38,7 @@
               "document": "rollback-plan",
               "version": 3,
               "filename": "rollback-plan_v3.md",
-              "sha256": "aaaf6f56cf7ad5df91e49494ec32675aa82f729b044a3af657b77e461dc7511b"
+              "sha256": "2a3753151aba312d54dad7b9e3ff16242215750deaba2c9b84f462e598b17ad9"
             }
           ]
         }
@@ -116,36 +116,28 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "bcb9b25cd2fae84ad3fe6c4bbfbc0a72d3285409140a585af4761f9869acbfd0",
+          "sha256": "4cf63fc1728cf7862ed26b18783c1bab13d51f0bf866b04c58a3e712a4a8e951",
           "uploaded_at": "2026-06-11T00:33:25.899706+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "5d642bd279666e278711b24a7304e219ce6487abbac75e99743c5de4958ac4b5",
+          "sha256": "8e5dd51f916bd99c0666a99e6cf11374272a53dfaeaff9dde58f2dad3ba05adb",
           "uploaded_at": "2026-06-11T20:48:34.188961+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 3,
           "filename": "rollback-plan_v3.md",
-          "sha256": "aaaf6f56cf7ad5df91e49494ec32675aa82f729b044a3af657b77e461dc7511b",
+          "sha256": "2a3753151aba312d54dad7b9e3ff16242215750deaba2c9b84f462e598b17ad9",
           "uploaded_at": "2026-06-15T15:36:21.316849+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3",
-        "P4"
+        "P3"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 2,
-            "reason_location": "chat"
-          }
-        ],
         "P3": {
           "decoys": {
             "rollback-plan_FINAL.md": "v1",
@@ -178,7 +170,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "59f759c03aebfece5f710ba886ddcf751c04b1ce8d6c24194bd0f9a41a44cf24"
+              "sha256": "dfc8c912f41f545602ddd1c6f5717ec544d4f1bc9827671b0a36f8924422f37f"
             }
           ]
         }
@@ -230,14 +222,14 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "583e8e92d736c1d76f028d860e044098bc1a100119328da115132474498510c8",
+          "sha256": "fd93c509fb98240e49ea9e52ec645e14d385b596c68cd0d81c11515224cfeee2",
           "uploaded_at": "2026-06-25T11:05:01.095284+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "59f759c03aebfece5f710ba886ddcf751c04b1ce8d6c24194bd0f9a41a44cf24",
+          "sha256": "dfc8c912f41f545602ddd1c6f5717ec544d4f1bc9827671b0a36f8924422f37f",
           "uploaded_at": "2026-06-25T19:06:43.876270+01:00"
         }
       ],
@@ -274,7 +266,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "34a5fe318c8496303b3cbbfc2fc69667ceeaf2fe2d6a3ac9b5d7ebff83bce1ff"
+              "sha256": "576b14c64e55f229fdd2a9d008ddaa3b7e19e2a8f9c6a9b390df7aa0a3672bec"
             }
           ]
         }
@@ -326,19 +318,27 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "8093ceddbc1e3e86d1a011f98dbfc5289a3fe55107c268eae6c6aa9cf54d1f69",
+          "sha256": "fc5895a3aca22b51f2d847c71adf7177737601a78d9739e403cf1b8df550d7a4",
           "uploaded_at": "2026-07-02T19:06:54.459794+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "34a5fe318c8496303b3cbbfc2fc69667ceeaf2fe2d6a3ac9b5d7ebff83bce1ff",
+          "sha256": "576b14c64e55f229fdd2a9d008ddaa3b7e19e2a8f9c6a9b390df7aa0a3672bec",
           "uploaded_at": "2026-07-03T18:09:52.125843+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P2",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
+        }
+      },
       "task": null
     },
     {
@@ -363,13 +363,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "d5dff0f209a3607829e87d6f6ee36a893377f1c66fc7d68063de418c3d40286d"
+              "sha256": "f95692803f33d5cb52f58cf68b135c941c2570cbdd428eb165eb084b6f5cd5fd"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "8977fedfe7cc81075f7312f296622b1e9941a8db4b507488af76ebf56b43eee6"
+              "sha256": "0318fd2550317c5aef802a05c570a74959e0e69c066849708025210689f86e2b"
             }
           ]
         }
@@ -421,21 +421,25 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "d5dff0f209a3607829e87d6f6ee36a893377f1c66fc7d68063de418c3d40286d",
+          "sha256": "f95692803f33d5cb52f58cf68b135c941c2570cbdd428eb165eb084b6f5cd5fd",
           "uploaded_at": "2026-07-08T16:02:00.641292+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "8977fedfe7cc81075f7312f296622b1e9941a8db4b507488af76ebf56b43eee6",
+          "sha256": "0318fd2550317c5aef802a05c570a74959e0e69c066849708025210689f86e2b",
           "uploaded_at": "2026-07-08T16:02:00.641292+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P1"
       ],
-      "baseline_realisation": {},
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "Fatima Suleiman"
+        }
+      },
       "task": null
     },
     {
@@ -460,13 +464,13 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "36021e5c1c0b5e5dcead49f49bc0fc580c3c8d2087fc9d17ae017d1c8c09324b"
+              "sha256": "740171ebe46c34b87b1663e7b37ba6ad4a65e7e82fbc5bccd3227b37044df096"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "661ccd1c7ceb6a6b08880921efe969d427a97aed61ad2915fe8b7b96196ee587"
+              "sha256": "01b4655ec0a05071a39bf8eb7910157a1dfaf627c580f07748f02cde2b7f77d7"
             }
           ]
         }
@@ -518,29 +522,32 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "7037975fc9dc9b3947a36a00bcaff3be067e6d3c4ab3d6a300daa57e46b45950",
+          "sha256": "3f47ef5ebb49d27ed48686ccd8a5224e6df0564b7f08694d7495018e5e5e6384",
           "uploaded_at": "2026-07-10T11:52:53.382229+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "661ccd1c7ceb6a6b08880921efe969d427a97aed61ad2915fe8b7b96196ee587",
+          "sha256": "01b4655ec0a05071a39bf8eb7910157a1dfaf627c580f07748f02cde2b7f77d7",
           "uploaded_at": "2026-07-10T11:52:53.382229+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "36021e5c1c0b5e5dcead49f49bc0fc580c3c8d2087fc9d17ae017d1c8c09324b",
+          "sha256": "740171ebe46c34b87b1663e7b37ba6ad4a65e7e82fbc5bccd3227b37044df096",
           "uploaded_at": "2026-07-11T16:42:40.286572+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3",
-        "P4"
+        "P1",
+        "P3"
       ],
       "baseline_realisation": {
+        "P1": {
+          "log_owner": "Fatima Suleiman"
+        },
         "P3": {
           "decoys": {
             "rollback-plan_FINAL.md": "v1",
@@ -573,7 +580,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "3092d48cd04cfd44499dc5376b6d5b7246cfeee5415f14375dfba8d22f8ac4e3"
+              "sha256": "4ad216bd246d6921621f4120d5d187fdf27c235699fc1f734a7936132cf9b806"
             }
           ]
         },
@@ -586,7 +593,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "8f05335d86c0e1c29f4e037fab08076b47953b99a1432f883523dba11ba65974"
+              "sha256": "076cd5715d9e1370e442ddf4059bb8370fd917de2b493224b2997659267db89f"
             }
           ]
         }
@@ -677,28 +684,44 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "3092d48cd04cfd44499dc5376b6d5b7246cfeee5415f14375dfba8d22f8ac4e3",
+          "sha256": "4ad216bd246d6921621f4120d5d187fdf27c235699fc1f734a7936132cf9b806",
           "uploaded_at": "2026-08-27T23:44:07.537396+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "8f05335d86c0e1c29f4e037fab08076b47953b99a1432f883523dba11ba65974",
+          "sha256": "076cd5715d9e1370e442ddf4059bb8370fd917de2b493224b2997659267db89f",
           "uploaded_at": "2026-09-01T21:08:44.705949+01:00"
         }
       ],
       "baseline_patterns": [
         "P1",
-        "P2"
+        "P2",
+        "P3",
+        "P4"
       ],
       "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "call"
+          }
+        ],
         "P2": {
           "log_status": "Awaiting technical lead review",
           "true_status": "Approved"
         },
         "P1": {
-          "log_owner": "TBC"
+          "log_owner": "Sarah Ibrahim"
+        },
+        "P3": {
+          "decoys": {
+            "design-note_FINAL.md": "v1",
+            "design-note (1).md": "v2",
+            "design-note_final_reviewed.md": "v1"
+          }
         }
       },
       "task": null
@@ -725,7 +748,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "4f80924a77b5f04cb9879213494c236c8623aa13a9154a5498dd21c0728b2bc6"
+              "sha256": "eb8b18d811c12534f81500613a3fbd7f1cddb47354018ab96ddeeaef5961e73c"
             }
           ]
         }
@@ -777,7 +800,7 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "4f80924a77b5f04cb9879213494c236c8623aa13a9154a5498dd21c0728b2bc6",
+          "sha256": "eb8b18d811c12534f81500613a3fbd7f1cddb47354018ab96ddeeaef5961e73c",
           "uploaded_at": "2026-09-02T04:18:19.885874+01:00"
         }
       ],
@@ -807,7 +830,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "91ede71987d21218f90921649f32a40ada0124a700f80c6d162d98c212017951"
+              "sha256": "e16718556910eaf07d6094292104b0d250a4bf8482f11bba846a75abbd9f455a"
             }
           ]
         },
@@ -820,7 +843,7 @@
               "document": "data-mapping",
               "version": 3,
               "filename": "data-mapping_v3.md",
-              "sha256": "00b4840e334b3871a70f1c17e4723564d8b56ffb7a894f2b5ad0e89097443810"
+              "sha256": "00f89e13ef3501c052605f63c1ba07a2cf16e64109864e002f28a9f7477735e0"
             }
           ]
         }
@@ -898,40 +921,39 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "f492d5b491116dc3d11dfed56c4fc049bd7eedd65e139ce895d133b76d1921c4",
+          "sha256": "927b1354845fd88fb9be101083db603ec794aa74d9ec538d8902680ea9730fe6",
           "uploaded_at": "2026-09-07T08:02:46.612270+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "91ede71987d21218f90921649f32a40ada0124a700f80c6d162d98c212017951",
+          "sha256": "e16718556910eaf07d6094292104b0d250a4bf8482f11bba846a75abbd9f455a",
           "uploaded_at": "2026-09-08T09:37:01.213901+01:00"
         },
         {
           "document": "data-mapping",
           "version": 3,
           "filename": "data-mapping_v3.md",
-          "sha256": "00b4840e334b3871a70f1c17e4723564d8b56ffb7a894f2b5ad0e89097443810",
+          "sha256": "00f89e13ef3501c052605f63c1ba07a2cf16e64109864e002f28a9f7477735e0",
           "uploaded_at": "2026-09-10T20:49:32.802295+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P1",
+        "P3"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 3,
-            "reason_location": "chat"
-          },
-          {
-            "cycle": 2,
-            "stage": 2,
-            "reason_location": "call"
+        "P1": {
+          "log_owner": "TBC"
+        },
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v3",
+            "data-mapping_final_reviewed.md": "v2"
           }
-        ]
+        }
       },
       "task": null
     },
@@ -957,7 +979,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "ca24d96138ad7c0ff56ab57ebec91bef6ec535e82903ce4425d5436968c8139d"
+              "sha256": "bf17c74ee8c324dcc020e7f9d8e82c8ded8687ef1ce6a78931ac91a3eeae74a6"
             }
           ]
         },
@@ -970,7 +992,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "c625043f2cf16f5e474dc40d5dfa4b0f70815d2b66e3184931950e8f5a110ea7"
+              "sha256": "b72abbe1107363cb89e35b166faf4a17ba151568a6d82ac4ac6dcc0f874a3f1e"
             }
           ]
         }
@@ -1061,23 +1083,39 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "ca24d96138ad7c0ff56ab57ebec91bef6ec535e82903ce4425d5436968c8139d",
+          "sha256": "bf17c74ee8c324dcc020e7f9d8e82c8ded8687ef1ce6a78931ac91a3eeae74a6",
           "uploaded_at": "2026-09-10T23:31:00.418503+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "c625043f2cf16f5e474dc40d5dfa4b0f70815d2b66e3184931950e8f5a110ea7",
+          "sha256": "b72abbe1107363cb89e35b166faf4a17ba151568a6d82ac4ac6dcc0f874a3f1e",
           "uploaded_at": "2026-09-14T15:54:24.097700+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P1",
+        "P3",
+        "P4"
       ],
       "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "chat"
+          }
+        ],
         "P1": {
-          "log_owner": "Fatima Suleiman"
+          "log_owner": ""
+        },
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v2",
+            "data-mapping_final_reviewed.md": "v1"
+          }
         }
       },
       "task": null
@@ -1104,7 +1142,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "5a98be3daf1cba6da8608ba2077e5e6ec861095795ab64d169fca6d248e8dc5c"
+              "sha256": "3efdfd288ea8a6ebcb36e31fee33456672fbeace311fdf493770dfb1a5f739cf"
             }
           ]
         }
@@ -1156,24 +1194,29 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "a41a7e0410764110d6d4d730c7fc01603598a70c3754c771b449ad458726ec9b",
+          "sha256": "24234daaf3d6e9ad6ac1cb46b8d31afd3520a5753b138438f04498d0b4561020",
           "uploaded_at": "2026-09-21T14:35:06.027660+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "5a98be3daf1cba6da8608ba2077e5e6ec861095795ab64d169fca6d248e8dc5c",
+          "sha256": "3efdfd288ea8a6ebcb36e31fee33456672fbeace311fdf493770dfb1a5f739cf",
           "uploaded_at": "2026-09-22T01:58:18.070590+01:00"
         }
       ],
       "baseline_patterns": [
         "P1",
+        "P2",
         "P3"
       ],
       "baseline_realisation": {
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
+        },
         "P1": {
-          "log_owner": "TBC"
+          "log_owner": "Sarah Ibrahim"
         },
         "P3": {
           "decoys": {
@@ -1207,7 +1250,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "0c0f1df3ee32f4507e1b91149aeb3c8c7663f18c61e7316a41c9f30db87a3813"
+              "sha256": "c4104c20c66348629330caeb721c93a2d0f8b4830bdab09335d25738a1e856f0"
             }
           ]
         }
@@ -1259,18 +1302,12 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "0c0f1df3ee32f4507e1b91149aeb3c8c7663f18c61e7316a41c9f30db87a3813",
+          "sha256": "c4104c20c66348629330caeb721c93a2d0f8b4830bdab09335d25738a1e856f0",
           "uploaded_at": "2026-09-25T10:31:01.474727+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "log_owner": ""
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -1295,7 +1332,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "6343dc6fd05240f9d60cc1a0492d64c7a7c6885dc15b7d0225f9e5883ed8d686"
+              "sha256": "1bc2c051ce4cdba151d3bb4cc14ec3277260809d3c1dd4e22ee5790672a79188"
             }
           ]
         },
@@ -1308,7 +1345,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "4271461c822ba9314839c80af50478d5d7cd5c90fa84c89bb03b1ba737eeb787"
+              "sha256": "a472bb9bfec1b2e32f2a08205bf3203c741563be777c82c4d091f911251246cb"
             }
           ]
         }
@@ -1373,30 +1410,22 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "6343dc6fd05240f9d60cc1a0492d64c7a7c6885dc15b7d0225f9e5883ed8d686",
+          "sha256": "1bc2c051ce4cdba151d3bb4cc14ec3277260809d3c1dd4e22ee5790672a79188",
           "uploaded_at": "2026-09-26T22:09:21.894384+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "4271461c822ba9314839c80af50478d5d7cd5c90fa84c89bb03b1ba737eeb787",
+          "sha256": "a472bb9bfec1b2e32f2a08205bf3203c741563be777c82c4d091f911251246cb",
           "uploaded_at": "2026-09-29T08:25:46.810603+01:00"
         }
       ],
       "baseline_patterns": [
         "P2",
-        "P3",
-        "P4"
+        "P3"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 1,
-            "reason_location": "call"
-          }
-        ],
         "P2": {
           "log_status": "Awaiting project manager review",
           "true_status": "Approved"
@@ -1433,7 +1462,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "24fadc0a6eb369817ce340ebb53b897c8c19c6e3fbb6364496c82a5f2d9f470a"
+              "sha256": "9b87425a9c5e22f4ac22834a60b38946f72610179cfceccb0e8016eaee9b90b9"
             }
           ]
         }
@@ -1485,7 +1514,7 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "24fadc0a6eb369817ce340ebb53b897c8c19c6e3fbb6364496c82a5f2d9f470a",
+          "sha256": "9b87425a9c5e22f4ac22834a60b38946f72610179cfceccb0e8016eaee9b90b9",
           "uploaded_at": "2026-09-27T05:34:53.159654+01:00"
         }
       ],
@@ -1515,7 +1544,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "78ae07f6caadc4e5d5614d618ef64d7f9810b9577bc455fbaaf0e88c157f1b64"
+              "sha256": "7fc02da6029d276c5eee4e8260bdb91d5977639f58355c29bd1d06b749314e37"
             }
           ]
         },
@@ -1528,7 +1557,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "81f10614153f6ce2d40d25f6d91c4783fbfe7e7bc1d81967f3822e58b0f6f3a2"
+              "sha256": "acadd8943c3805dcd5b91c765710965e5b601ba76126e6d868db4ca76de8ba88"
             }
           ]
         }
@@ -1593,29 +1622,19 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "78ae07f6caadc4e5d5614d618ef64d7f9810b9577bc455fbaaf0e88c157f1b64",
+          "sha256": "7fc02da6029d276c5eee4e8260bdb91d5977639f58355c29bd1d06b749314e37",
           "uploaded_at": "2026-10-07T11:35:50.286978+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "81f10614153f6ce2d40d25f6d91c4783fbfe7e7bc1d81967f3822e58b0f6f3a2",
+          "sha256": "acadd8943c3805dcd5b91c765710965e5b601ba76126e6d868db4ca76de8ba88",
           "uploaded_at": "2026-10-09T17:06:11.539140+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P3"
-      ],
-      "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "data-mapping_FINAL.md": "v1",
-            "data-mapping (1).md": "v2",
-            "data-mapping_final_reviewed.md": "v1"
-          }
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -1640,7 +1659,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "1d85ca426dac5d1d73d4e6f765e59436b4a3aca32ff73f861a1b3c169ce6175d"
+              "sha256": "ca7bd5e1188a61b4db469e7abe79a1a3740be1b5fd5a0dc5634b683fdfe2f470"
             }
           ]
         }
@@ -1692,19 +1711,12 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "1d85ca426dac5d1d73d4e6f765e59436b4a3aca32ff73f861a1b3c169ce6175d",
+          "sha256": "ca7bd5e1188a61b4db469e7abe79a1a3740be1b5fd5a0dc5634b683fdfe2f470",
           "uploaded_at": "2026-10-18T16:48:14.159718+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -1736,13 +1748,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "f6235f5bf660e28120d0d44659782b63704f2db208ae508dd3b513ff61218018"
+              "sha256": "f1d74236732166c8f264c04d429e775c1c5e7d798f5341da2f18aad35d13373b"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "146bfcdf99e1dbe09b8ab88e08e9b7fa9201e1aa8e70dae9ef8f283208e116cc"
+              "sha256": "7682757c375be334111d0ba2d54009954ea706e8da31448f09601b3b1b28ba78"
             }
           ]
         }
@@ -1781,20 +1793,18 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "f6235f5bf660e28120d0d44659782b63704f2db208ae508dd3b513ff61218018",
+          "sha256": "f1d74236732166c8f264c04d429e775c1c5e7d798f5341da2f18aad35d13373b",
           "uploaded_at": "2026-10-27T08:28:44.332386+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "146bfcdf99e1dbe09b8ab88e08e9b7fa9201e1aa8e70dae9ef8f283208e116cc",
+          "sha256": "7682757c375be334111d0ba2d54009954ea706e8da31448f09601b3b1b28ba78",
           "uploaded_at": "2026-10-27T08:28:44.332386+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P4"
-      ],
+      "baseline_patterns": [],
       "baseline_realisation": {},
       "task": null
     },
@@ -1827,7 +1837,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "0ff4140aed2e7bbd87636aaf6242069f3b64405afe67b57613ce290b3c3c2aaa"
+              "sha256": "0ef3cec33f616a486c624d1eb0ea7cb7bba37335067d94b366511182c97496d4"
             }
           ]
         }
@@ -1866,19 +1876,12 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "0ff4140aed2e7bbd87636aaf6242069f3b64405afe67b57613ce290b3c3c2aaa",
+          "sha256": "0ef3cec33f616a486c624d1eb0ea7cb7bba37335067d94b366511182c97496d4",
           "uploaded_at": "2026-10-28T11:20:44.785069+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Awaiting product owner sign-off"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -1910,13 +1913,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "b7a5ffec71796f6ce4399db8f8f21647521418a36083cef3988ae1e3761608fc"
+              "sha256": "ab6818c0cbb9edd15f13370629c521a7a104bf3cc00f1a75ccf37c2ff2e321bd"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "5a79ea04aff77d3849f4e566299bd107d71a5800e8a172fddb5d44d9cff8ced8"
+              "sha256": "c1bd29c4404a64e419c3072899adbd1b54890e3cd48b08a6a5f3bd3e488c144d"
             }
           ]
         }
@@ -1955,26 +1958,19 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "b7a5ffec71796f6ce4399db8f8f21647521418a36083cef3988ae1e3761608fc",
+          "sha256": "ab6818c0cbb9edd15f13370629c521a7a104bf3cc00f1a75ccf37c2ff2e321bd",
           "uploaded_at": "2026-10-28T12:44:49.991533+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "5a79ea04aff77d3849f4e566299bd107d71a5800e8a172fddb5d44d9cff8ced8",
+          "sha256": "c1bd29c4404a64e419c3072899adbd1b54890e3cd48b08a6a5f3bd3e488c144d",
           "uploaded_at": "2026-10-28T12:44:49.991533+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Changes requested"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -1997,7 +1993,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "14772bc4fed5001d400242eb593ee26c0add53f65ade06456953065a4b0c902d",
+          "sha256": "6d7b5cc50358d9431704148db3a1a29c5a27e8184e48517c99a075450d08d1bc",
           "uploaded_at": "2026-10-30T07:33:54.544707+01:00"
         }
       ],
@@ -2025,14 +2021,14 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "1463b79a47f2e7a324af2855a93c7259e5b94c06ac0d809d2a52bd1f76015cae",
+          "sha256": "18a2fb9c25c97d305ba4a8e225be87fc17df4c048011bd32a6fac57da0a19170",
           "uploaded_at": "2026-10-31T14:03:40.977175+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "ca3f4b01ff7f7c072fdfe15039a435d0a16f1784bfedc484c66a04f4e10da632",
+          "sha256": "3c47ddc157393de3bb6dd416bd83c71305cec7da6eb505716fb8eb145f694f99",
           "uploaded_at": "2026-11-01T07:02:05.519397+01:00"
         }
       ],
@@ -2062,13 +2058,13 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "146f9ece57d9f54e230f3470b7adf68976c656145784a28ea9b4aabf3b94a1af"
+              "sha256": "6b30051494f0d33c04a800ea35dedab00a0b41a5cc1a6a485589358823fb83f4"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "7e473ceff56469f9fbf70a70443ddec196c49c577667ff1c32ac71bd1022633a"
+              "sha256": "21dc7e19268538a13ee63ddf16685b1635a52744222ca4658e1b0e58f87c54ae"
             }
           ]
         }
@@ -2120,20 +2116,18 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "146f9ece57d9f54e230f3470b7adf68976c656145784a28ea9b4aabf3b94a1af",
+          "sha256": "6b30051494f0d33c04a800ea35dedab00a0b41a5cc1a6a485589358823fb83f4",
           "uploaded_at": "2026-06-07T03:20:21.153342+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "7e473ceff56469f9fbf70a70443ddec196c49c577667ff1c32ac71bd1022633a",
+          "sha256": "21dc7e19268538a13ee63ddf16685b1635a52744222ca4658e1b0e58f87c54ae",
           "uploaded_at": "2026-06-07T03:20:21.153342+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P4"
-      ],
+      "baseline_patterns": [],
       "baseline_realisation": {},
       "task": null
     },
@@ -2159,13 +2153,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "fd8eacd88acf960e6d3786f7224eb5779fb4bddc22d23024f7bec0f7391f1407"
+              "sha256": "7780fc2927decfc716b44a934719dd278a267462864a62c94c408df6d5372797"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "fc6d4c40c59cda645cae98c4c437e0965e4f1c90f260d6ca6cb84dac01bde8f3"
+              "sha256": "8b469a5981d53438354f9ffcf948bf18276e08e70a24335c7be29028eacace35"
             }
           ]
         }
@@ -2217,20 +2211,18 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "fd8eacd88acf960e6d3786f7224eb5779fb4bddc22d23024f7bec0f7391f1407",
+          "sha256": "7780fc2927decfc716b44a934719dd278a267462864a62c94c408df6d5372797",
           "uploaded_at": "2026-06-08T15:55:18.568276+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "fc6d4c40c59cda645cae98c4c437e0965e4f1c90f260d6ca6cb84dac01bde8f3",
+          "sha256": "8b469a5981d53438354f9ffcf948bf18276e08e70a24335c7be29028eacace35",
           "uploaded_at": "2026-06-08T15:55:18.568276+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P4"
-      ],
+      "baseline_patterns": [],
       "baseline_realisation": {},
       "task": null
     },
@@ -2256,13 +2248,13 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "ad08f0280088068b0498186b302ddcbbbd4538a846408fe480d89a2e45c25f9f"
+              "sha256": "6ff7d31e027047409b87715a2d21a80b3cea8bca665a7c6a504de6f9f558073f"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "a6bf00b25f1ad8a3d737d2b1057b4cf8c109c55fafc59f90d1d8616f00dfd047"
+              "sha256": "5402f3472049ef658ebe22ea85657f5645df617ebe3607c777a134c7eb1b4642"
             }
           ]
         }
@@ -2314,37 +2306,29 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "8201a08fa335ef6ef6a45059bda44d846936748622195731192e8ea8719e9dec",
+          "sha256": "015b22756a94217002552eb2e009bc778637345e9b7ae6f533c51cdb9df56eb5",
           "uploaded_at": "2026-06-22T17:05:39.323047+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "a6bf00b25f1ad8a3d737d2b1057b4cf8c109c55fafc59f90d1d8616f00dfd047",
+          "sha256": "5402f3472049ef658ebe22ea85657f5645df617ebe3607c777a134c7eb1b4642",
           "uploaded_at": "2026-06-22T17:05:39.323047+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "ad08f0280088068b0498186b302ddcbbbd4538a846408fe480d89a2e45c25f9f",
+          "sha256": "6ff7d31e027047409b87715a2d21a80b3cea8bca665a7c6a504de6f9f558073f",
           "uploaded_at": "2026-06-23T20:52:33.444833+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P2",
-        "P3"
+        "P3",
+        "P4"
       ],
       "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        },
-        "P1": {
-          "log_owner": "Safiya Isah"
-        },
         "P3": {
           "decoys": {
             "design-note_FINAL.md": "v1",
@@ -2377,7 +2361,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "3a63cdbf066a3c082df876dc4c7ab45f4e1e47b665a4b206cf60b6832955dd22"
+              "sha256": "dc62fa17794c355188d4ee51ac2da1dd9a2ceb130adb9c3b6019133c6a094c9b"
             }
           ]
         }
@@ -2429,7 +2413,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "3a63cdbf066a3c082df876dc4c7ab45f4e1e47b665a4b206cf60b6832955dd22",
+          "sha256": "dc62fa17794c355188d4ee51ac2da1dd9a2ceb130adb9c3b6019133c6a094c9b",
           "uploaded_at": "2026-07-10T11:43:03.737171+01:00"
         }
       ],
@@ -2459,7 +2443,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "8e8626e6eff3e6173565e73cc399dab4f92f74a94faf768165eb6118830d9060"
+              "sha256": "b6fd396a9dc670490d4ef4c9e85b0a3a3a6da5831faec57b575aeacd2e3cd0fb"
             }
           ]
         }
@@ -2511,7 +2495,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "8e8626e6eff3e6173565e73cc399dab4f92f74a94faf768165eb6118830d9060",
+          "sha256": "b6fd396a9dc670490d4ef4c9e85b0a3a3a6da5831faec57b575aeacd2e3cd0fb",
           "uploaded_at": "2026-07-22T18:54:52.336265+01:00"
         }
       ],
@@ -2541,7 +2525,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "8a49bc008a9464e8b0d7d6c74df999b2218ec8a03da6eb469a76911272258ad9"
+              "sha256": "13e62c52ca0e519c9a5e55cf436b364748379ee4370683b8130d1206d256a86a"
             }
           ]
         }
@@ -2587,14 +2571,24 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "8a49bc008a9464e8b0d7d6c74df999b2218ec8a03da6eb469a76911272258ad9",
+          "sha256": "13e62c52ca0e519c9a5e55cf436b364748379ee4370683b8130d1206d256a86a",
           "uploaded_at": "2026-08-12T08:58:12.809515+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P1",
+        "P2"
       ],
-      "baseline_realisation": {},
+      "baseline_realisation": {
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Cancelled",
+          "chat_claim": "Approved"
+        },
+        "P1": {
+          "log_owner": ""
+        }
+      },
       "task": null
     },
     {
@@ -2619,7 +2613,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "755ceb9e9e43e493fdbcb4fc09c02a897012eacf2fc7fcf2e8d6fc6cb1186343"
+              "sha256": "5590c806199227200f537dc0ce870ffb6dc18d1c2e3c18a440ea60c9fcbd8804"
             }
           ]
         }
@@ -2671,11 +2665,13 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "755ceb9e9e43e493fdbcb4fc09c02a897012eacf2fc7fcf2e8d6fc6cb1186343",
+          "sha256": "5590c806199227200f537dc0ce870ffb6dc18d1c2e3c18a440ea60c9fcbd8804",
           "uploaded_at": "2026-09-02T23:14:05.511037+01:00"
         }
       ],
-      "baseline_patterns": [],
+      "baseline_patterns": [
+        "P4"
+      ],
       "baseline_realisation": {},
       "task": null
     },
@@ -2701,7 +2697,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "7e229bdca95edc23e2b29ec7e3d034b39b8ad7c65b24ee19b51710c0ad334829"
+              "sha256": "08c89b18aacb240a763b4ffeb3cde1eef40aba40cdff783b52838d9b96a0146a"
             }
           ]
         }
@@ -2753,12 +2749,18 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "7e229bdca95edc23e2b29ec7e3d034b39b8ad7c65b24ee19b51710c0ad334829",
+          "sha256": "08c89b18aacb240a763b4ffeb3cde1eef40aba40cdff783b52838d9b96a0146a",
           "uploaded_at": "2026-09-06T01:46:33.137389+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "TBC"
+        }
+      },
       "task": null
     },
     {
@@ -2783,13 +2785,13 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "c240a2f4a8238225f43691aa42a822fcf0ce53ba76783f35fdd87ba194fbe4d5"
+              "sha256": "19296c9e1a6b24f740cf393089c9610fa885497cec979e33e3f0f1378e97417b"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "3f59e8c8d9df4de805d3c4154fd3952983c854cbb13f8bf1e05d566d4141e95c"
+              "sha256": "b5983088440f57206b9888c4022478a238eacc10d97007889370ea120d8d4703"
             }
           ]
         }
@@ -2841,19 +2843,34 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "c240a2f4a8238225f43691aa42a822fcf0ce53ba76783f35fdd87ba194fbe4d5",
+          "sha256": "19296c9e1a6b24f740cf393089c9610fa885497cec979e33e3f0f1378e97417b",
           "uploaded_at": "2026-09-11T08:42:09.301155+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "3f59e8c8d9df4de805d3c4154fd3952983c854cbb13f8bf1e05d566d4141e95c",
+          "sha256": "b5983088440f57206b9888c4022478a238eacc10d97007889370ea120d8d4703",
           "uploaded_at": "2026-09-11T08:42:09.301155+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P2",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "chat"
+          }
+        ],
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Rejected"
+        }
+      },
       "task": null
     },
     {
@@ -2878,7 +2895,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "f79b7280774da95e62505dbea85858092f66a95827353df5ad711863b3ea55d9"
+              "sha256": "b72e7c0797fdde81f391652f1dea17d68f379e67a5a7307dd28809f46baa8893"
             }
           ]
         },
@@ -2891,7 +2908,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "c9daf5792047e64ced7d6f56192ddde2c9261a26a3bbd7dd880e8d5e94d44b86"
+              "sha256": "91e1b229da69aef8d43c93c8287bbfdb9aaf55d1572019ac8af2bf1723b17aca"
             }
           ]
         }
@@ -2956,14 +2973,14 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "f79b7280774da95e62505dbea85858092f66a95827353df5ad711863b3ea55d9",
+          "sha256": "b72e7c0797fdde81f391652f1dea17d68f379e67a5a7307dd28809f46baa8893",
           "uploaded_at": "2026-09-15T20:19:52.683422+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "c9daf5792047e64ced7d6f56192ddde2c9261a26a3bbd7dd880e8d5e94d44b86",
+          "sha256": "91e1b229da69aef8d43c93c8287bbfdb9aaf55d1572019ac8af2bf1723b17aca",
           "uploaded_at": "2026-09-17T22:32:47.776634+01:00"
         }
       ],
@@ -3003,7 +3020,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "d1b4f010979060b5448bd9348c1aa7a9ad1169aba97f1f6ce05724e0dc27f544"
+              "sha256": "f0d7f5e6c6c169f4b2a154a00a143dc61e59c5181a406e95271ffad2ffcb8f32"
             }
           ]
         }
@@ -3022,18 +3039,12 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "d1b4f010979060b5448bd9348c1aa7a9ad1169aba97f1f6ce05724e0dc27f544",
+          "sha256": "f0d7f5e6c6c169f4b2a154a00a143dc61e59c5181a406e95271ffad2ffcb8f32",
           "uploaded_at": "2026-09-16T06:37:06.679207+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "log_owner": "Stephen Balogun"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -3058,7 +3069,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "0725c9f6d82e93845a769717e205a62c8ae625833bc6b5bfe134aa4f7aabc103"
+              "sha256": "6e165c5535e8b1e5498442b3b9d68e6b6facc2eb3cd7da6054f29077460a4ccc"
             }
           ]
         }
@@ -3084,17 +3095,16 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "0725c9f6d82e93845a769717e205a62c8ae625833bc6b5bfe134aa4f7aabc103",
+          "sha256": "6e165c5535e8b1e5498442b3b9d68e6b6facc2eb3cd7da6054f29077460a4ccc",
           "uploaded_at": "2026-09-18T00:56:28.692747+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2"
+        "P1"
       ],
       "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting project manager review",
-          "true_status": "Rejected"
+        "P1": {
+          "log_owner": ""
         }
       },
       "task": null
@@ -3128,13 +3138,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "bbea006a41090ed958674fbd2b79acc7821fbca00a0ae1fe0ce1a74511a78ab0"
+              "sha256": "dbe458c258186ecd2b76a5e065fe67c6726426ee93cee0cc809e731800822ebc"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "8331c879812d26240e22492d0f907dd0ffe5db9e8dd97150b0cd7a4b7c81927b"
+              "sha256": "4f446f652d8de6aeea22213b9bb34be8243f42ec908afc0a995bdc26a84e442e"
             }
           ]
         },
@@ -3147,13 +3157,13 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "03d7384d4b381312e5af87880856a00464420f022a7dc1a1c3db35546fc90bb8"
+              "sha256": "a6bbe5ca9b4421f5663fb958cc598bf919ffba426db90bf878eb4439e7640bad"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "8331c879812d26240e22492d0f907dd0ffe5db9e8dd97150b0cd7a4b7c81927b"
+              "sha256": "4f446f652d8de6aeea22213b9bb34be8243f42ec908afc0a995bdc26a84e442e"
             }
           ]
         }
@@ -3218,31 +3228,37 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "bbea006a41090ed958674fbd2b79acc7821fbca00a0ae1fe0ce1a74511a78ab0",
+          "sha256": "dbe458c258186ecd2b76a5e065fe67c6726426ee93cee0cc809e731800822ebc",
           "uploaded_at": "2026-10-27T13:45:17.992405+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "8331c879812d26240e22492d0f907dd0ffe5db9e8dd97150b0cd7a4b7c81927b",
+          "sha256": "4f446f652d8de6aeea22213b9bb34be8243f42ec908afc0a995bdc26a84e442e",
           "uploaded_at": "2026-10-27T13:45:17.992405+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "03d7384d4b381312e5af87880856a00464420f022a7dc1a1c3db35546fc90bb8",
+          "sha256": "a6bbe5ca9b4421f5663fb958cc598bf919ffba426db90bf878eb4439e7640bad",
           "uploaded_at": "2026-10-31T11:23:19.699953+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P1",
+        "P2"
       ],
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Abdullahi Yusuf",
-          "log_owner": "TBC"
+          "log_owner": "Stephen Balogun"
+        },
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Awaiting technical lead review",
+          "chat_claim": "Approved"
         }
       },
       "task": null
@@ -3276,7 +3292,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "7690a67cdec1ae173d7835fd2bcde523897416f353a12a3d0590fbb365ca7e43"
+              "sha256": "2dd0f3c7087d5242885b5369e5b81bcab0e36a1f69407764e41cd714d1f583b8"
             }
           ]
         }
@@ -3302,14 +3318,19 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "7690a67cdec1ae173d7835fd2bcde523897416f353a12a3d0590fbb365ca7e43",
+          "sha256": "2dd0f3c7087d5242885b5369e5b81bcab0e36a1f69407764e41cd714d1f583b8",
           "uploaded_at": "2026-10-29T01:41:27.705532+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P1"
       ],
-      "baseline_realisation": {},
+      "baseline_realisation": {
+        "P1": {
+          "wrong_owner_named": "Abdullahi Yusuf",
+          "log_owner": "TBC"
+        }
+      },
       "task": null
     },
     {
@@ -3341,13 +3362,13 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "75c093e2e6e6eec0688005d969a49e41bf204a10380d3c6f737d0e51e2ecf9fb"
+              "sha256": "e75babed63d1883f43cba2de8cac2d701c301a4dddf20f67f414e2add4bbc3ce"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "4928fbb96f8bbbbd1d50b85bc05b082a59a86dc6845be67da01f1a041831548d"
+              "sha256": "a8c40f39c8445f562b668fddefa8d6f5404ae65bec53ac9c42ac3bb2e9ea041e"
             }
           ]
         }
@@ -3373,31 +3394,19 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "75c093e2e6e6eec0688005d969a49e41bf204a10380d3c6f737d0e51e2ecf9fb",
+          "sha256": "e75babed63d1883f43cba2de8cac2d701c301a4dddf20f67f414e2add4bbc3ce",
           "uploaded_at": "2026-10-29T06:36:40.709137+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "4928fbb96f8bbbbd1d50b85bc05b082a59a86dc6845be67da01f1a041831548d",
+          "sha256": "a8c40f39c8445f562b668fddefa8d6f5404ae65bec53ac9c42ac3bb2e9ea041e",
           "uploaded_at": "2026-10-29T06:36:40.709137+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1",
-        "P2"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "wrong_owner_named": "Abdullahi Yusuf",
-          "log_owner": ""
-        },
-        "P2": {
-          "log_status": "Awaiting project manager review",
-          "true_status": "Awaiting technical lead review"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -3429,13 +3438,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "13012620cc657c6f32fc2f9c597b33c6867f29b7df00e031811dcf1d01f704dd"
+              "sha256": "36af0060664420e1c3f406f3d77708319cdaf9c1ebf3847b4ce6de82eb9be8ca"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "43e902ac9bec5ace75b78498713fa1f778217818f3303860ca54f9c8c2a8ffd2"
+              "sha256": "aba72e09032f17af16270313d4539a02a11f990167b52c6fe9324a33566986f8"
             }
           ]
         }
@@ -3447,14 +3456,14 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "13012620cc657c6f32fc2f9c597b33c6867f29b7df00e031811dcf1d01f704dd",
+          "sha256": "36af0060664420e1c3f406f3d77708319cdaf9c1ebf3847b4ce6de82eb9be8ca",
           "uploaded_at": "2026-10-29T16:07:23.403634+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "43e902ac9bec5ace75b78498713fa1f778217818f3303860ca54f9c8c2a8ffd2",
+          "sha256": "aba72e09032f17af16270313d4539a02a11f990167b52c6fe9324a33566986f8",
           "uploaded_at": "2026-10-29T16:07:23.403634+01:00"
         }
       ],
@@ -3464,7 +3473,7 @@
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Abdullahi Yusuf",
-          "log_owner": "TBC"
+          "log_owner": "Safiya Isah"
         }
       },
       "task": null
@@ -3489,7 +3498,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "20fbd8324649ed2cdbeddbf1f7c869ec0e2a5b8002697d3d755a84b80fc126bc",
+          "sha256": "ea6e09b221156b6125043114c4ccd89e8dd5a828b945c3669d277f2d7ef1f277",
           "uploaded_at": "2026-10-30T12:29:54.593282+01:00"
         }
       ],
@@ -3526,13 +3535,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "cc03b32c6807896087ce4bec8b2dfd3d716367d0ea93beb4ae3d04190233085b"
+              "sha256": "1fdc80116b3eb22e4df02e7757e7455a02b5cb1856345464850d1771e720764d"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "d29849de667cce56321f59e31135d035d2fb2aaf9c26ca1c44e7c5357f147ba8"
+              "sha256": "c1e700566bf10955890b313af794f549c9b6e21d63da62560750c42fa3f0362a"
             }
           ]
         }
@@ -3544,14 +3553,14 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "cc03b32c6807896087ce4bec8b2dfd3d716367d0ea93beb4ae3d04190233085b",
+          "sha256": "1fdc80116b3eb22e4df02e7757e7455a02b5cb1856345464850d1771e720764d",
           "uploaded_at": "2026-10-30T14:11:20.410725+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "d29849de667cce56321f59e31135d035d2fb2aaf9c26ca1c44e7c5357f147ba8",
+          "sha256": "c1e700566bf10955890b313af794f549c9b6e21d63da62560750c42fa3f0362a",
           "uploaded_at": "2026-10-30T14:11:20.410725+01:00"
         }
       ],
@@ -3588,7 +3597,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "49abf180fb31e8a6aa6c3dfd92742d8e7e5d9009556a8709fa25ec1319230c3d"
+              "sha256": "b0e845b057e2a71a5ddc7d2e43fe1c6327ed382c2a536009e34f5a6c7491b9eb"
             }
           ]
         },
@@ -3601,7 +3610,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "b9c6ea11684fcdd78bef3494d581ba6ede2e0b67b11389de020c6ec68e17de4d"
+              "sha256": "42495d943d93a798deb6c88f936de0994e538d4446415630724ccd433f4963ef"
             }
           ]
         }
@@ -3640,28 +3649,28 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "49abf180fb31e8a6aa6c3dfd92742d8e7e5d9009556a8709fa25ec1319230c3d",
+          "sha256": "b0e845b057e2a71a5ddc7d2e43fe1c6327ed382c2a536009e34f5a6c7491b9eb",
           "uploaded_at": "2026-10-31T09:14:32.334987+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "b9c6ea11684fcdd78bef3494d581ba6ede2e0b67b11389de020c6ec68e17de4d",
+          "sha256": "42495d943d93a798deb6c88f936de0994e538d4446415630724ccd433f4963ef",
           "uploaded_at": "2026-11-01T07:04:37.607351+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P3"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 1,
-            "reason_location": "chat"
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v2",
+            "data-mapping_final_reviewed.md": "v1"
           }
-        ]
+        }
       },
       "task": null
     },
@@ -3685,14 +3694,14 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "732cff2941df9503db81d4103517bc74e69167c5f7c5bddb571898908aba5282",
+          "sha256": "4ce2ed33cfd7020cc45680fd291039b9074185d30fc5b64d4793339aa0938ebc",
           "uploaded_at": "2026-11-01T18:29:50.426620+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "ac2956a7d5ef6201e9a929e9ebb264b237336d2c7bf98dad90ef1eae214be091",
+          "sha256": "8939a021f0fba99795f53155bbe489713f70f86bb368876027e974255021696d",
           "uploaded_at": "2026-11-01T18:29:50.426620+01:00"
         }
       ],
@@ -3722,13 +3731,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "04a7f668d2f30fbb0e6e144e0db6cf4773c0e9fefc510906e9a0ff5b5b13fd5c"
+              "sha256": "38971383cd936a1b759c616733a90bd94bd868ef4abeec406b2b50fcc5546da0"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "aba243a1de9356c557df2569439493648e8b9627eae54c6eab07301d0e39c549"
+              "sha256": "29586d2b8575d9e9838ab18e1b15aa51a599a6d7b1c18188f0a13eaf6116abd4"
             }
           ]
         },
@@ -3741,13 +3750,13 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "71e2e234dad95c52162d4f1d3474e836973f0d6d788b46f983f12e1105d918c3"
+              "sha256": "9acb2894e6292d04ab0a941b24a7493e2d4dbcdf75cb8a370d75d46e1b97009e"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "aba243a1de9356c557df2569439493648e8b9627eae54c6eab07301d0e39c549"
+              "sha256": "29586d2b8575d9e9838ab18e1b15aa51a599a6d7b1c18188f0a13eaf6116abd4"
             }
           ]
         }
@@ -3812,49 +3821,26 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "04a7f668d2f30fbb0e6e144e0db6cf4773c0e9fefc510906e9a0ff5b5b13fd5c",
+          "sha256": "38971383cd936a1b759c616733a90bd94bd868ef4abeec406b2b50fcc5546da0",
           "uploaded_at": "2026-06-09T14:46:03.230532+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "aba243a1de9356c557df2569439493648e8b9627eae54c6eab07301d0e39c549",
+          "sha256": "29586d2b8575d9e9838ab18e1b15aa51a599a6d7b1c18188f0a13eaf6116abd4",
           "uploaded_at": "2026-06-09T14:46:03.230532+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "71e2e234dad95c52162d4f1d3474e836973f0d6d788b46f983f12e1105d918c3",
+          "sha256": "9acb2894e6292d04ab0a941b24a7493e2d4dbcdf75cb8a370d75d46e1b97009e",
           "uploaded_at": "2026-06-10T14:14:46.778538+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2",
-        "P3",
-        "P4"
-      ],
-      "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 1,
-            "reason_location": "call"
-          }
-        ],
-        "P2": {
-          "log_status": "Awaiting project manager review",
-          "true_status": "Approved"
-        },
-        "P3": {
-          "decoys": {
-            "design-note_FINAL.md": "v1",
-            "design-note (1).md": "v2",
-            "design-note_final_reviewed.md": "v1"
-          }
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -3879,7 +3865,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "41cdadfe08ec1c175225496c46be2df918805dcae9935aaec685ee7ed93b3164"
+              "sha256": "f09cfa7cdf0b512c5ff90cbbc5981d3b84c1f662696d79e72442d82345909fd6"
             }
           ]
         }
@@ -3931,7 +3917,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "41cdadfe08ec1c175225496c46be2df918805dcae9935aaec685ee7ed93b3164",
+          "sha256": "f09cfa7cdf0b512c5ff90cbbc5981d3b84c1f662696d79e72442d82345909fd6",
           "uploaded_at": "2026-06-11T20:54:22.081331+01:00"
         }
       ],
@@ -3943,7 +3929,7 @@
           {
             "cycle": 1,
             "stage": 3,
-            "reason_location": "chat"
+            "reason_location": "call"
           }
         ]
       },
@@ -3971,7 +3957,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "e91a9adc3b03e1997569948c83c40ae9baeaafb463a6dfd536e31c910e65b653"
+              "sha256": "a7073d7206eb4b9c3cc635812a40bcd6f2adfdb9b253c06feee4fc6486b88f36"
             }
           ]
         }
@@ -4023,13 +4009,11 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "e91a9adc3b03e1997569948c83c40ae9baeaafb463a6dfd536e31c910e65b653",
+          "sha256": "a7073d7206eb4b9c3cc635812a40bcd6f2adfdb9b253c06feee4fc6486b88f36",
           "uploaded_at": "2026-06-25T04:56:49.349388+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P4"
-      ],
+      "baseline_patterns": [],
       "baseline_realisation": {},
       "task": null
     },
@@ -4055,13 +4039,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "966d8fa45fb86a61f1bdef121a81f2f2c75ed3c3d0984bc0a28ca839cbcfd4ef"
+              "sha256": "af87c2f9cc6ecb6d1471a3284fb0d58d0bfed754ad544b8f7b0a89df349690ba"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "ae388ba7abb6169765383d2af38c8c99be5f8fb3568d9076d522894176e25478"
+              "sha256": "bb55e00faa27fc1b3bd675f7887dd3e00e431c4a3bd8c995c3b1810cd3038b54"
             }
           ]
         }
@@ -4113,27 +4097,22 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "966d8fa45fb86a61f1bdef121a81f2f2c75ed3c3d0984bc0a28ca839cbcfd4ef",
+          "sha256": "af87c2f9cc6ecb6d1471a3284fb0d58d0bfed754ad544b8f7b0a89df349690ba",
           "uploaded_at": "2026-07-06T14:07:04.682925+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "ae388ba7abb6169765383d2af38c8c99be5f8fb3568d9076d522894176e25478",
+          "sha256": "bb55e00faa27fc1b3bd675f7887dd3e00e431c4a3bd8c995c3b1810cd3038b54",
           "uploaded_at": "2026-07-06T14:07:04.682925+01:00"
         }
       ],
       "baseline_patterns": [
         "P1",
-        "P2",
         "P4"
       ],
       "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        },
         "P1": {
           "log_owner": "Nonso Anyanwu"
         }
@@ -4162,7 +4141,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "cda9a56a5b761034e8aa98bef36ca3178241be58872608d54675bceeb9dea57c"
+              "sha256": "e0700d1927a541d3ec1a6be653cdbb87210eaa47179abfa8406a0032d163a1ee"
             }
           ]
         }
@@ -4214,20 +4193,19 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "3a7223da10b6d3b6e23a489f6b08fec7482f0ed61f1aa49a6c8a79b15e13d9ae",
+          "sha256": "b9a95b347345d5816d1fc373b16872822b3add769d23e987fa9415fb152a73f3",
           "uploaded_at": "2026-07-15T18:17:50.325202+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "cda9a56a5b761034e8aa98bef36ca3178241be58872608d54675bceeb9dea57c",
+          "sha256": "e0700d1927a541d3ec1a6be653cdbb87210eaa47179abfa8406a0032d163a1ee",
           "uploaded_at": "2026-07-15T23:19:26.160436+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2",
-        "P4"
+        "P2"
       ],
       "baseline_realisation": {
         "P2": {
@@ -4259,7 +4237,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "9a721fe9d194a751b3c64b610cee74a41b911ac3387efa87c50130f8a4bfb5fc"
+              "sha256": "cf5171ff5d4b1081f3a6a505a7d217103e48096ef704f0fbdc7d9a07965fb35c"
             }
           ]
         }
@@ -4311,7 +4289,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "9a721fe9d194a751b3c64b610cee74a41b911ac3387efa87c50130f8a4bfb5fc",
+          "sha256": "cf5171ff5d4b1081f3a6a505a7d217103e48096ef704f0fbdc7d9a07965fb35c",
           "uploaded_at": "2026-07-18T18:06:29.277161+01:00"
         }
       ],
@@ -4341,7 +4319,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "e5841f811b9bf4911224e37d266f3f7272ff3dd72b4e0b314c7f3bb4642e61e4"
+              "sha256": "62272d3e2422d8e8994627be37f23a000324a851b4621f317f5d887e1843ff2b"
             }
           ]
         }
@@ -4393,12 +4371,18 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "e5841f811b9bf4911224e37d266f3f7272ff3dd72b4e0b314c7f3bb4642e61e4",
+          "sha256": "62272d3e2422d8e8994627be37f23a000324a851b4621f317f5d887e1843ff2b",
           "uploaded_at": "2026-07-23T09:38:06.165242+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "Similoluwa Kolade"
+        }
+      },
       "task": null
     },
     {
@@ -4423,7 +4407,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "3090b26d5232bde674edda713c46c4035d00f732bce3e5b82373ba1a8c8baa20"
+              "sha256": "2eeb10de671e090dfd1c13327a57e6734f2ba82573f47b1012ab70e366a17848"
             }
           ]
         }
@@ -4475,20 +4459,12 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "3090b26d5232bde674edda713c46c4035d00f732bce3e5b82373ba1a8c8baa20",
+          "sha256": "2eeb10de671e090dfd1c13327a57e6734f2ba82573f47b1012ab70e366a17848",
           "uploaded_at": "2026-07-30T03:43:11.940422+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2",
-        "P4"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -4513,7 +4489,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "9a9e8b31a2a88c71367a0be52a1d81a91e02bcbaf98bb5182659c331c72bcd4a"
+              "sha256": "1919e02c729a4ca5954c1ea1ebc232bc2b6cc3acee09003e375265106fdda059"
             }
           ]
         }
@@ -4565,19 +4541,29 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "aee18e25fbff2c155dfe1724fd4afdb9dce57df8bc8273218c5ec2d66a9e4eb1",
+          "sha256": "5d2ed5846230757d2719179cff9284ace12fd07a9fdbdbda487cbfed830b60af",
           "uploaded_at": "2026-08-01T06:14:35.742166+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "9a9e8b31a2a88c71367a0be52a1d81a91e02bcbaf98bb5182659c331c72bcd4a",
+          "sha256": "1919e02c729a4ca5954c1ea1ebc232bc2b6cc3acee09003e375265106fdda059",
           "uploaded_at": "2026-08-01T14:22:16.151312+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P3"
+      ],
+      "baseline_realisation": {
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v2",
+            "data-mapping_final_reviewed.md": "v1"
+          }
+        }
+      },
       "task": null
     },
     {
@@ -4602,7 +4588,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "021b6b85f65022e38df1af931efeb9a59f84a3c87df0b5ddbd22a845831cacff"
+              "sha256": "637139f30b5e32993671237dd76a75c024dfe3db531a7f229322d03f86f5b1b3"
             }
           ]
         }
@@ -4654,13 +4640,12 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "021b6b85f65022e38df1af931efeb9a59f84a3c87df0b5ddbd22a845831cacff",
+          "sha256": "637139f30b5e32993671237dd76a75c024dfe3db531a7f229322d03f86f5b1b3",
           "uploaded_at": "2026-08-30T03:22:24.587807+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P4"
+        "P1"
       ],
       "baseline_realisation": {
         "P1": {
@@ -4691,7 +4676,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "1ba2c5304d1be38a9013531f3c58d88eafa8f6e70a5688b0f2e4e32fd561c656"
+              "sha256": "5190438abb39d050a59889b4a9b5a1534ceb7c14d145188c8218f75bb075f7da"
             }
           ]
         },
@@ -4704,7 +4689,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "f8a52269870576f45e50dfe2b752d3fab93ee66976bc063477030e9be40b5686"
+              "sha256": "60a9fa52539b870ab9903e3fd07b61ed694a045a9aec0549812f9323480a3bb6"
             }
           ]
         }
@@ -4782,27 +4767,23 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "1ba2c5304d1be38a9013531f3c58d88eafa8f6e70a5688b0f2e4e32fd561c656",
+          "sha256": "5190438abb39d050a59889b4a9b5a1534ceb7c14d145188c8218f75bb075f7da",
           "uploaded_at": "2026-09-02T10:56:34.169330+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "f8a52269870576f45e50dfe2b752d3fab93ee66976bc063477030e9be40b5686",
+          "sha256": "60a9fa52539b870ab9903e3fd07b61ed694a045a9aec0549812f9323480a3bb6",
           "uploaded_at": "2026-09-06T00:22:50.668037+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3"
+        "P1"
       ],
       "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v2",
-            "test-plan_final_reviewed.md": "v1"
-          }
+        "P1": {
+          "log_owner": "TBC"
         }
       },
       "task": null
@@ -4829,7 +4810,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "51314fb7a7057a0c8473fc0683ec9739087e8c15d91c8135ff0b73b3c70e7aa5"
+              "sha256": "ea15d6b22b7f0f907b424b59634ca9163c96f0b8c13f6196d50d1d236707c2f2"
             }
           ]
         }
@@ -4881,11 +4862,13 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "51314fb7a7057a0c8473fc0683ec9739087e8c15d91c8135ff0b73b3c70e7aa5",
+          "sha256": "ea15d6b22b7f0f907b424b59634ca9163c96f0b8c13f6196d50d1d236707c2f2",
           "uploaded_at": "2026-09-12T23:19:39.947081+01:00"
         }
       ],
-      "baseline_patterns": [],
+      "baseline_patterns": [
+        "P4"
+      ],
       "baseline_realisation": {},
       "task": null
     },
@@ -4911,7 +4894,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "37e758f65e42e005efbea0457fde5ac71480bda7072f9cb3d7ff170917091a46"
+              "sha256": "2bfdee27610488080d4ce0be99e3830c1e9d47b2978e36b08f5589683a2e3470"
             }
           ]
         }
@@ -4930,18 +4913,12 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "37e758f65e42e005efbea0457fde5ac71480bda7072f9cb3d7ff170917091a46",
+          "sha256": "2bfdee27610488080d4ce0be99e3830c1e9d47b2978e36b08f5589683a2e3470",
           "uploaded_at": "2026-09-17T17:10:04.268632+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "log_owner": ""
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -4966,7 +4943,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "187ebb7c35eb18773746a5d0e4e2c98cdc80ddee1c6dea72d8a0eab950a37b64"
+              "sha256": "8cd0c147681e1579bc67418be875578abeab90a8335935e76becc72a0505b69a"
             }
           ]
         }
@@ -5018,19 +4995,35 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "61e57b5a892c70f4e17017d1e915bb611d32547f424b9587d38ec6874c625361",
+          "sha256": "aeee07be9ad5661d31d781d7c9d54bc7707d848c26ed1cf8db0eb1abc0b7026f",
           "uploaded_at": "2026-09-18T22:17:48.893476+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "187ebb7c35eb18773746a5d0e4e2c98cdc80ddee1c6dea72d8a0eab950a37b64",
+          "sha256": "8cd0c147681e1579bc67418be875578abeab90a8335935e76becc72a0505b69a",
           "uploaded_at": "2026-09-19T00:29:31.488060+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
+        },
+        "P3": {
+          "decoys": {
+            "test-plan_FINAL.md": "v1",
+            "test-plan (1).md": "v2",
+            "test-plan_final_reviewed.md": "v1"
+          }
+        }
+      },
       "task": null
     },
     {
@@ -5055,7 +5048,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "0a9b30690f1d8001b48144fd51089f1a6bc9e34a342280d105c09cce4ef77d45"
+              "sha256": "da7c73f6aae304821b1ee33c2199fc67d473d9b413a6b9d30083532158212863"
             }
           ]
         }
@@ -5088,7 +5081,7 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "0a9b30690f1d8001b48144fd51089f1a6bc9e34a342280d105c09cce4ef77d45",
+          "sha256": "da7c73f6aae304821b1ee33c2199fc67d473d9b413a6b9d30083532158212863",
           "uploaded_at": "2026-09-27T01:19:31.175786+01:00"
         }
       ],
@@ -5118,7 +5111,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "3bf94d50cd3759042a0bf73b14e20c982489f07e9c682789b9282387183f5c86"
+              "sha256": "7f8a957cba95d4e69a2d10b12f2c4742f0b1dab1838f9a135c31ac79b17b4e2e"
             }
           ]
         }
@@ -5170,7 +5163,7 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "3bf94d50cd3759042a0bf73b14e20c982489f07e9c682789b9282387183f5c86",
+          "sha256": "7f8a957cba95d4e69a2d10b12f2c4742f0b1dab1838f9a135c31ac79b17b4e2e",
           "uploaded_at": "2026-10-06T03:40:29.047303+01:00"
         }
       ],
@@ -5206,7 +5199,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "693e5c8397aabff05620caf659c1f77663978c518c1b266e7a24a286559635aa"
+              "sha256": "a832f42e3eaff7303aa1b0824ca8c14ec7005c1ee1c06c79f92ad83303ce701a"
             }
           ]
         }
@@ -5232,7 +5225,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "693e5c8397aabff05620caf659c1f77663978c518c1b266e7a24a286559635aa",
+          "sha256": "a832f42e3eaff7303aa1b0824ca8c14ec7005c1ee1c06c79f92ad83303ce701a",
           "uploaded_at": "2026-10-10T07:49:43.873795+01:00"
         }
       ],
@@ -5262,7 +5255,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "5e9d9353ccf5dbc1406594944d355747bd891df6b755438860bbc39227c06dd1"
+              "sha256": "1c47e333f1462b1e7b3e88ceeb20ad291fd74e40c8b44f98761101a989c47dff"
             }
           ]
         }
@@ -5314,32 +5307,31 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "b242e302311349e6b78e9048b620cb8cc4b9b1eb29f8e1682012d30ea5690877",
+          "sha256": "d7f574aeb93f25c74f307590dfd08cc58085e2ff625596be6edbb859ecf19dce",
           "uploaded_at": "2026-10-17T03:59:33.006610+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "5e9d9353ccf5dbc1406594944d355747bd891df6b755438860bbc39227c06dd1",
+          "sha256": "1c47e333f1462b1e7b3e88ceeb20ad291fd74e40c8b44f98761101a989c47dff",
           "uploaded_at": "2026-10-17T15:29:22.780045+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2",
-        "P4"
+        "P1",
+        "P3"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 3,
-            "reason_location": "call"
+        "P1": {
+          "log_owner": "Nonso Anyanwu"
+        },
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v2",
+            "data-mapping_final_reviewed.md": "v1"
           }
-        ],
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Rejected"
         }
       },
       "task": null
@@ -5373,13 +5365,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "f34902c458eaf037a7a19464cf344fa64ec8688da2719538496ffae5cdd015d0"
+              "sha256": "a5cc5a062583fa315546a05a857465bd2679db81abfdd05dfc4a1f21132521de"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "ad3f3c755e14525be7ab8df10c3362b503440f1b89bfa9139c143e1626590aff"
+              "sha256": "cdbb732b90cbc252efc562fa10abadf0d32b21818aad258eb6abf5f37ff29af6"
             }
           ]
         }
@@ -5405,19 +5397,31 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "f34902c458eaf037a7a19464cf344fa64ec8688da2719538496ffae5cdd015d0",
+          "sha256": "a5cc5a062583fa315546a05a857465bd2679db81abfdd05dfc4a1f21132521de",
           "uploaded_at": "2026-10-28T10:39:38.556050+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "ad3f3c755e14525be7ab8df10c3362b503440f1b89bfa9139c143e1626590aff",
+          "sha256": "cdbb732b90cbc252efc562fa10abadf0d32b21818aad258eb6abf5f37ff29af6",
           "uploaded_at": "2026-10-28T10:39:38.556050+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1",
+        "P2"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "wrong_owner_named": "Niyilolawa Ogulana",
+          "log_owner": "TBC"
+        },
+        "P2": {
+          "log_status": "Awaiting project manager review",
+          "true_status": "Awaiting technical lead review"
+        }
+      },
       "task": null
     },
     {
@@ -5449,7 +5453,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "033c26096b8053b86fc3505c28e2ed77bf3b0dc2a28f4f81df9a2ab677f84911"
+              "sha256": "cbf26a2d8b0db0d5c4a40139f75186f212be4362e8ec0b9977835b1e05f491d6"
             }
           ]
         }
@@ -5488,16 +5492,18 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "033c26096b8053b86fc3505c28e2ed77bf3b0dc2a28f4f81df9a2ab677f84911",
+          "sha256": "cbf26a2d8b0db0d5c4a40139f75186f212be4362e8ec0b9977835b1e05f491d6",
           "uploaded_at": "2026-10-29T04:30:02.950796+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P2"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": "TBC"
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Changes requested",
+          "chat_claim": "Approved"
         }
       },
       "task": null
@@ -5524,13 +5530,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "76e17ad5f0212bdb337dc31429a99ca1ebec9baff196cbd7183cda40ad122eb2"
+              "sha256": "45141fe90530a3dd9104ca4273278c43aa6ffb9014ecd44f144e0c99ee430129"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "d405723bbcff730e49e5ba8ecb6e66efa3bfb3c87b5e8d7e46d9498ac1b6f4a1"
+              "sha256": "36baebcc743459bf006ba474f02f5a04d2d3d570dd2ad3b6d6271d25723e56e3"
             }
           ]
         },
@@ -5543,13 +5549,13 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "dc41754be6203cfa9da54de55623d1ed4549b60ef3463c4ad3b7e88114b6b837"
+              "sha256": "33cdd0504ec7239614bb1c20bfc761a2c03a101117f121894ef0ea72a9fba256"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "d405723bbcff730e49e5ba8ecb6e66efa3bfb3c87b5e8d7e46d9498ac1b6f4a1"
+              "sha256": "36baebcc743459bf006ba474f02f5a04d2d3d570dd2ad3b6d6271d25723e56e3"
             }
           ]
         }
@@ -5614,27 +5620,25 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "76e17ad5f0212bdb337dc31429a99ca1ebec9baff196cbd7183cda40ad122eb2",
+          "sha256": "45141fe90530a3dd9104ca4273278c43aa6ffb9014ecd44f144e0c99ee430129",
           "uploaded_at": "2026-06-06T16:05:21.367435+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "d405723bbcff730e49e5ba8ecb6e66efa3bfb3c87b5e8d7e46d9498ac1b6f4a1",
+          "sha256": "36baebcc743459bf006ba474f02f5a04d2d3d570dd2ad3b6d6271d25723e56e3",
           "uploaded_at": "2026-06-06T16:05:21.367435+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "dc41754be6203cfa9da54de55623d1ed4549b60ef3463c4ad3b7e88114b6b837",
+          "sha256": "33cdd0504ec7239614bb1c20bfc761a2c03a101117f121894ef0ea72a9fba256",
           "uploaded_at": "2026-06-10T21:37:58.464017+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P3",
         "P4"
       ],
       "baseline_realisation": {
@@ -5649,17 +5653,7 @@
             "stage": 2,
             "reason_location": "chat"
           }
-        ],
-        "P1": {
-          "log_owner": "Gambo Isah"
-        },
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v2",
-            "test-plan_final_reviewed.md": "v1"
-          }
-        }
+        ]
       },
       "task": null
     },
@@ -5685,7 +5679,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "01ad051c44b20f0ade566a71f3ac0f85cda7b48f734dad5247e2af247d8f98b6"
+              "sha256": "fb446f9b0fe4c3bb910f24ec2a0ee277dff0c778a3d6c24787f54d8d6d1d7d86"
             }
           ]
         }
@@ -5704,19 +5698,33 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "21af196792852ee9a2568700c89af53b3970455d36b49a844e3f6662af91dadb",
+          "sha256": "a87989810fd660038adb9be920a97f4ed61b7154f73a81728e314b437ab7ad9a",
           "uploaded_at": "2026-06-09T06:17:06.895561+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "01ad051c44b20f0ade566a71f3ac0f85cda7b48f734dad5247e2af247d8f98b6",
+          "sha256": "fb446f9b0fe4c3bb910f24ec2a0ee277dff0c778a3d6c24787f54d8d6d1d7d86",
           "uploaded_at": "2026-06-10T03:23:53.893979+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1",
+        "P3"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "Gambo Isah"
+        },
+        "P3": {
+          "decoys": {
+            "design-note_FINAL.md": "v1",
+            "design-note (1).md": "v2",
+            "design-note_final_reviewed.md": "v1"
+          }
+        }
+      },
       "task": null
     },
     {
@@ -5741,7 +5749,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "f6bfcb4020536bef17068385a9a9ca2563e3f72a223e89aeefbf4284d55f320a"
+              "sha256": "0271c3e552007df9ca841d041b7f70329915bcb736e7fca5bb6f1495788bd9c9"
             }
           ]
         },
@@ -5754,7 +5762,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "3c637d3b21d85c7cb8fb29a42b2633d9301bbe4e83f7c7f083030a3d5c9b53af"
+              "sha256": "c48ac2d23ae64a710c119f2a227e49ed41df3673a4b6278c5bf8288958025b57"
             }
           ]
         }
@@ -5845,14 +5853,14 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "f6bfcb4020536bef17068385a9a9ca2563e3f72a223e89aeefbf4284d55f320a",
+          "sha256": "0271c3e552007df9ca841d041b7f70329915bcb736e7fca5bb6f1495788bd9c9",
           "uploaded_at": "2026-06-17T01:29:35.485342+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "3c637d3b21d85c7cb8fb29a42b2633d9301bbe4e83f7c7f083030a3d5c9b53af",
+          "sha256": "c48ac2d23ae64a710c119f2a227e49ed41df3673a4b6278c5bf8288958025b57",
           "uploaded_at": "2026-06-21T11:24:35.736565+01:00"
         }
       ],
@@ -5892,7 +5900,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "560aa9bcd97975e72b8c4d48c5b877a212b19115144e8d942c66feecfb387036"
+              "sha256": "a02c8ee40ed9d9d5a69ad649dc2499b8cedaf7a5a0e0fe111cb2d3edafe3e88d"
             }
           ]
         }
@@ -5944,13 +5952,11 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "560aa9bcd97975e72b8c4d48c5b877a212b19115144e8d942c66feecfb387036",
+          "sha256": "a02c8ee40ed9d9d5a69ad649dc2499b8cedaf7a5a0e0fe111cb2d3edafe3e88d",
           "uploaded_at": "2026-06-25T18:03:51.203529+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P4"
-      ],
+      "baseline_patterns": [],
       "baseline_realisation": {},
       "task": null
     },
@@ -5976,7 +5982,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "cfb8b9cdf285662269c442c1df42d9531940049162ac43b4d264e2aa473e1623"
+              "sha256": "c28a6d0302ad0b6ea6172371bcce7d48b96f9893cf829d79ad2f2a1ec75cc9e4"
             }
           ]
         }
@@ -6028,7 +6034,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "cfb8b9cdf285662269c442c1df42d9531940049162ac43b4d264e2aa473e1623",
+          "sha256": "c28a6d0302ad0b6ea6172371bcce7d48b96f9893cf829d79ad2f2a1ec75cc9e4",
           "uploaded_at": "2026-07-02T10:11:05.746762+01:00"
         }
       ],
@@ -6058,13 +6064,13 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "741abe5d7adc98f463a78c3701d7c3a03e6dacb60507b0cd9b5663d39289ef28"
+              "sha256": "6a578add4c7bc6cf8121d599357abb43780651c5a7ee9dfa58e3dd74990ba9d9"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "27a72193ffe211033fcfb56d2daa0335b8a9d7afdd49995a1896be8655a368db"
+              "sha256": "581e827e2cac9c849b5d9f2fa425210d2a0243532c4dff89fc3c1c46bd486690"
             }
           ]
         }
@@ -6116,26 +6122,37 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "e5bf2ac6959623a59a24a54e995d74ac6b79cd4ad749f313ca3d0abc1dc7d05b",
+          "sha256": "0c3782fdb68bb99314fe487cd1de560ad74933f8e4d6aea7472189232985bc4a",
           "uploaded_at": "2026-07-12T02:43:09.376282+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "27a72193ffe211033fcfb56d2daa0335b8a9d7afdd49995a1896be8655a368db",
+          "sha256": "581e827e2cac9c849b5d9f2fa425210d2a0243532c4dff89fc3c1c46bd486690",
           "uploaded_at": "2026-07-12T02:43:09.376282+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "741abe5d7adc98f463a78c3701d7c3a03e6dacb60507b0cd9b5663d39289ef28",
+          "sha256": "6a578add4c7bc6cf8121d599357abb43780651c5a7ee9dfa58e3dd74990ba9d9",
           "uploaded_at": "2026-07-12T09:37:06.981691+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P3",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P3": {
+          "decoys": {
+            "design-note_FINAL.md": "v1",
+            "design-note (1).md": "v2",
+            "design-note_final_reviewed.md": "v1"
+          }
+        }
+      },
       "task": null
     },
     {
@@ -6160,7 +6177,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "7a8892f7d64b943fc4fe4a526eeb25abb783ff47c2aa09cee1322dfd8b8020ad"
+              "sha256": "3fdd1d7a0fe77de54f1221c98eb8445bc625679299efd1b710dc66082dfcd500"
             }
           ]
         }
@@ -6212,12 +6229,18 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "7a8892f7d64b943fc4fe4a526eeb25abb783ff47c2aa09cee1322dfd8b8020ad",
+          "sha256": "3fdd1d7a0fe77de54f1221c98eb8445bc625679299efd1b710dc66082dfcd500",
           "uploaded_at": "2026-08-04T10:31:07.162156+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "TBC"
+        }
+      },
       "task": null
     },
     {
@@ -6242,13 +6265,13 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "e44e1df707e78f99f4e5a748152ced161cf13281c759ce5262a71933564568d5"
+              "sha256": "9f92e9abe0c66a9e0cb046346a285d9f830331b6bebf3bc279df35676d7cb11c"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "09e11a4b647164366576025583361fcea713e595934d6472d3f464cd425b73bc"
+              "sha256": "9c0a5bb1971e705792b5011e5b087cea95267d22778a48cbd2bbc9583d165df6"
             }
           ]
         },
@@ -6261,13 +6284,13 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "9105eb2211fb6ffe4ca84bd308cb0229dee0d0ae5b4c796ebe9bb2dcde4b4ee8"
+              "sha256": "8eca8469952845a3c85a8403fc43a248e957a366e627b2bfb0f6792ca1e75c1b"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "09e11a4b647164366576025583361fcea713e595934d6472d3f464cd425b73bc"
+              "sha256": "9c0a5bb1971e705792b5011e5b087cea95267d22778a48cbd2bbc9583d165df6"
             }
           ]
         }
@@ -6345,21 +6368,21 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "e44e1df707e78f99f4e5a748152ced161cf13281c759ce5262a71933564568d5",
+          "sha256": "9f92e9abe0c66a9e0cb046346a285d9f830331b6bebf3bc279df35676d7cb11c",
           "uploaded_at": "2026-08-10T23:06:21.398046+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "09e11a4b647164366576025583361fcea713e595934d6472d3f464cd425b73bc",
+          "sha256": "9c0a5bb1971e705792b5011e5b087cea95267d22778a48cbd2bbc9583d165df6",
           "uploaded_at": "2026-08-10T23:06:21.398046+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "9105eb2211fb6ffe4ca84bd308cb0229dee0d0ae5b4c796ebe9bb2dcde4b4ee8",
+          "sha256": "8eca8469952845a3c85a8403fc43a248e957a366e627b2bfb0f6792ca1e75c1b",
           "uploaded_at": "2026-08-16T01:15:14.832643+01:00"
         }
       ],
@@ -6399,13 +6422,13 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "02ffe5ec778498f0a9db828ac80e20856732042b689b79a2fd3926d5f8d43de0"
+              "sha256": "34a8a17b3432faaec4f3a58ff498f1fc2ce917c3af1591cfb11759ae8e1ea265"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "496b99dd68e03d163e8e594b2b226c4c99ec7c295cebbfff8ba48391a68be6b6"
+              "sha256": "3c96789688e2f2f42dc71275e43fd9e9c7bd4538f61c7365c26d01e19aa72cc9"
             }
           ]
         },
@@ -6418,13 +6441,13 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "a7ce96e71ffbf72326ba18f30d45acd0999c852f00e5ce68e9b07e812f6fa20c"
+              "sha256": "dfce5fb0d9d78838238e6ae8f9c5f2e30139afcad35a6d96672f680c0b6b61a8"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "496b99dd68e03d163e8e594b2b226c4c99ec7c295cebbfff8ba48391a68be6b6"
+              "sha256": "3c96789688e2f2f42dc71275e43fd9e9c7bd4538f61c7365c26d01e19aa72cc9"
             }
           ]
         }
@@ -6489,35 +6512,31 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "02ffe5ec778498f0a9db828ac80e20856732042b689b79a2fd3926d5f8d43de0",
+          "sha256": "34a8a17b3432faaec4f3a58ff498f1fc2ce917c3af1591cfb11759ae8e1ea265",
           "uploaded_at": "2026-08-22T23:43:27.688462+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "496b99dd68e03d163e8e594b2b226c4c99ec7c295cebbfff8ba48391a68be6b6",
+          "sha256": "3c96789688e2f2f42dc71275e43fd9e9c7bd4538f61c7365c26d01e19aa72cc9",
           "uploaded_at": "2026-08-22T23:43:27.688462+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "a7ce96e71ffbf72326ba18f30d45acd0999c852f00e5ce68e9b07e812f6fa20c",
+          "sha256": "dfce5fb0d9d78838238e6ae8f9c5f2e30139afcad35a6d96672f680c0b6b61a8",
           "uploaded_at": "2026-08-24T05:19:56.514164+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
         "P2"
       ],
       "baseline_realisation": {
         "P2": {
           "log_status": "Awaiting project manager review",
           "true_status": "Approved"
-        },
-        "P1": {
-          "log_owner": "Gambo Isah"
         }
       },
       "task": null
@@ -6544,13 +6563,13 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "1db03e805057bfa83c4bbfab3dcb4da9bbb7184ab0c14b33f57d2e120b8b7652"
+              "sha256": "a815e7e09a88a974cc912c649f858db0fac8a9732e9d86d110f0e65c98ba5a76"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "45f09d469879b1f7da3d6a96f3777d191e8d744e7d47d39061f1e41084d7a1a2"
+              "sha256": "868647b3461d26490f74ff64c7cde093428b7954143561bb742f792243b4da45"
             }
           ]
         }
@@ -6576,14 +6595,14 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "1db03e805057bfa83c4bbfab3dcb4da9bbb7184ab0c14b33f57d2e120b8b7652",
+          "sha256": "a815e7e09a88a974cc912c649f858db0fac8a9732e9d86d110f0e65c98ba5a76",
           "uploaded_at": "2026-08-26T12:25:11.124456+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "45f09d469879b1f7da3d6a96f3777d191e8d744e7d47d39061f1e41084d7a1a2",
+          "sha256": "868647b3461d26490f74ff64c7cde093428b7954143561bb742f792243b4da45",
           "uploaded_at": "2026-08-26T12:25:11.124456+01:00"
         }
       ],
@@ -6619,7 +6638,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "2c160a42656a94d032a433abb8e9fca9990578c40fcdace029209b540bcf10c3"
+              "sha256": "9f112bcfb696449ecd6d04f55b26eee33d0311ef38b1e15d731a5c2738c02464"
             }
           ]
         },
@@ -6632,7 +6651,7 @@
               "document": "test-plan",
               "version": 3,
               "filename": "test-plan_v3.md",
-              "sha256": "c0802c4fe6d774f740be4b723754fee5f7b32a596e73b92bd7106dfb0e510611"
+              "sha256": "566872cb8be3646d34e605abc339dbede5002e61eee8da1ebe9ce6dc59de7a20"
             }
           ]
         }
@@ -6710,34 +6729,31 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "769b4e1a61db76570a6e4fa4b557fda6994341281ee8ad1050f8707f2c3651c3",
+          "sha256": "895f0dd7c3a6aef5d24308a317edbde902451cfa738404a7edf579c79bbf803a",
           "uploaded_at": "2026-09-10T14:44:13.627617+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "2c160a42656a94d032a433abb8e9fca9990578c40fcdace029209b540bcf10c3",
+          "sha256": "9f112bcfb696449ecd6d04f55b26eee33d0311ef38b1e15d731a5c2738c02464",
           "uploaded_at": "2026-09-11T13:54:50.173981+01:00"
         },
         {
           "document": "test-plan",
           "version": 3,
           "filename": "test-plan_v3.md",
-          "sha256": "c0802c4fe6d774f740be4b723754fee5f7b32a596e73b92bd7106dfb0e510611",
+          "sha256": "566872cb8be3646d34e605abc339dbede5002e61eee8da1ebe9ce6dc59de7a20",
           "uploaded_at": "2026-09-18T01:16:28.935708+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v3",
-            "test-plan_final_reviewed.md": "v2"
-          }
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
         }
       },
       "task": null
@@ -6769,7 +6785,7 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "fb562b9abe8bcaebf09b6ed57bedf83f0c60e507c24e9c6def3e38feb22109ae",
+          "sha256": "c5bce7c0fda4a529e382de01358aee8499b6149b4b58de4773b5f42603b816bf",
           "uploaded_at": "2026-09-13T10:35:48.132665+01:00"
         }
       ],
@@ -6799,7 +6815,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "c74274bb508a67eb37a4d3bf9d99aa06478a1f1c9b3761a0a254cdf6888373d6"
+              "sha256": "9b9588159567507ba9ef999b53ea6f27a7da7bc56b8ad352ec7cfaf2d40a1a09"
             }
           ]
         },
@@ -6812,7 +6828,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "9cf7cd99c4fc22889bc3475c9cd90a9d2a45e95de4a61d2b050c525ba5d05feb"
+              "sha256": "267f03c2054b31618a689d544778934479701d9e5307409f4cb5b1f378c04331"
             }
           ]
         }
@@ -6877,19 +6893,29 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "c74274bb508a67eb37a4d3bf9d99aa06478a1f1c9b3761a0a254cdf6888373d6",
+          "sha256": "9b9588159567507ba9ef999b53ea6f27a7da7bc56b8ad352ec7cfaf2d40a1a09",
           "uploaded_at": "2026-10-10T09:15:28.100049+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "9cf7cd99c4fc22889bc3475c9cd90a9d2a45e95de4a61d2b050c525ba5d05feb",
+          "sha256": "267f03c2054b31618a689d544778934479701d9e5307409f4cb5b1f378c04331",
           "uploaded_at": "2026-10-12T18:26:08.377434+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 1,
+            "reason_location": "call"
+          }
+        ]
+      },
       "task": null
     },
     {
@@ -6914,13 +6940,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "75670c1e71563421aa9af7418e7387e56ad62509a7ad293e7c33d28872e8eeeb"
+              "sha256": "3614d41079471c59fba70429a4522788478a0938e6869f4b2491f5af113fd34a"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "4e8faa4717ddc9cc141f5f071e1230a60c6b7035a6975866f907254df8a11393"
+              "sha256": "0c4954e8db97b6ad27be01be824c044979cdddb07f44c938481d31b749d77716"
             }
           ]
         }
@@ -6972,14 +6998,14 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "75670c1e71563421aa9af7418e7387e56ad62509a7ad293e7c33d28872e8eeeb",
+          "sha256": "3614d41079471c59fba70429a4522788478a0938e6869f4b2491f5af113fd34a",
           "uploaded_at": "2026-10-11T21:39:12.215783+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "4e8faa4717ddc9cc141f5f071e1230a60c6b7035a6975866f907254df8a11393",
+          "sha256": "0c4954e8db97b6ad27be01be824c044979cdddb07f44c938481d31b749d77716",
           "uploaded_at": "2026-10-11T21:39:12.215783+01:00"
         }
       ],
@@ -7016,7 +7042,7 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "92414c4105a49149107c192ec3379364fe79acb8d81c6bd6ea16e23f2551be86"
+              "sha256": "de92f9e1b66edac34d78a5d48f54c7dc624a86fd21a0dc6e9f3b32ed50c6f308"
             }
           ]
         }
@@ -7068,28 +7094,28 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "38a304b92786f8e265d4ed7000a17637a9132bd9cc353b1cbb60c814f3aa04f6",
+          "sha256": "6cc4feb774b8293f2476cb249dd33e9b29165f83135668016bc37279cc4ce77c",
           "uploaded_at": "2026-10-27T22:04:10.430013+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "92414c4105a49149107c192ec3379364fe79acb8d81c6bd6ea16e23f2551be86",
+          "sha256": "de92f9e1b66edac34d78a5d48f54c7dc624a86fd21a0dc6e9f3b32ed50c6f308",
           "uploaded_at": "2026-10-28T10:00:14.898648+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3"
+        "P4"
       ],
       "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "rollback-plan_FINAL.md": "v1",
-            "rollback-plan (1).md": "v2",
-            "rollback-plan_final_reviewed.md": "v1"
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "call"
           }
-        }
+        ]
       },
       "task": null
     },
@@ -7122,7 +7148,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "dbfe24001e60e6f970ed672507f5dae996c95258cdc6435f55a489bbd4228961"
+              "sha256": "21a0d9cc802b94de1f02ec722fe50069aa8dec04311639791a794ae33d4e83a0"
             }
           ]
         }
@@ -7148,18 +7174,12 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "dbfe24001e60e6f970ed672507f5dae996c95258cdc6435f55a489bbd4228961",
+          "sha256": "21a0d9cc802b94de1f02ec722fe50069aa8dec04311639791a794ae33d4e83a0",
           "uploaded_at": "2026-10-28T12:47:18.821495+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "log_owner": "Gambo Isah"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -7191,7 +7211,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "34cdcbb2742c8c4a600939100b3c21ef4c5087982c6d0d6b217b7294987196ed"
+              "sha256": "c86bd3ac280b0ce0278fc5c41fa1aa1a08c9bcb79ab0c79e28284dca32119b91"
             }
           ]
         }
@@ -7217,7 +7237,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "34cdcbb2742c8c4a600939100b3c21ef4c5087982c6d0d6b217b7294987196ed",
+          "sha256": "c86bd3ac280b0ce0278fc5c41fa1aa1a08c9bcb79ab0c79e28284dca32119b91",
           "uploaded_at": "2026-10-28T17:23:49.433836+01:00"
         }
       ],
@@ -7228,7 +7248,7 @@
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Nasiru Lawal",
-          "log_owner": ""
+          "log_owner": "Agnes Adetokunbo"
         },
         "P2": {
           "log_status": "Awaiting project manager review",
@@ -7266,7 +7286,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "6896b608b6839241eaa09abf9108792691de9794533b1e530a591a671f6bc80d"
+              "sha256": "ba861da8cd56b46395f2365bb5567fd0ebaf32ddfacf186f354f5d8449801547"
             }
           ]
         }
@@ -7292,24 +7312,27 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "47f0ff97ac176c8f342722c9c6e508fa16cfe9dbbf124215284d7404e1b936f4",
+          "sha256": "ccc3bf8b45758ed5ac411b9f44c27ece80677da97579708131ebbeb9137788d4",
           "uploaded_at": "2026-10-28T19:55:30.321054+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "6896b608b6839241eaa09abf9108792691de9794533b1e530a591a671f6bc80d",
+          "sha256": "ba861da8cd56b46395f2365bb5567fd0ebaf32ddfacf186f354f5d8449801547",
           "uploaded_at": "2026-10-29T01:29:16.047729+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P3"
       ],
       "baseline_realisation": {
-        "P1": {
-          "wrong_owner_named": "Nasiru Lawal",
-          "log_owner": "Agnes Adetokunbo"
+        "P3": {
+          "decoys": {
+            "test-plan_FINAL.md": "v1",
+            "test-plan (1).md": "v2",
+            "test-plan_final_reviewed.md": "v1"
+          }
         }
       },
       "task": null
@@ -7343,7 +7366,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "a02f722a30f54e5bb74029e608adb14b1270d4910c6e317f726f174c0dcb0a5e"
+              "sha256": "e86a0bba7125a28be7e39af9506877a099a326333393972a89857b07ac5e29bf"
             }
           ]
         }
@@ -7382,7 +7405,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "a02f722a30f54e5bb74029e608adb14b1270d4910c6e317f726f174c0dcb0a5e",
+          "sha256": "e86a0bba7125a28be7e39af9506877a099a326333393972a89857b07ac5e29bf",
           "uploaded_at": "2026-10-31T06:02:06.117486+01:00"
         }
       ],
@@ -7410,21 +7433,21 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "75f68765e8e0bc5a96d24951dfe91fd1523adcfc79df929643331d4df11186ed",
+          "sha256": "0c2761a1c207b64464fdf65ac1f29452579fbfba7621e5bee04556dcbd9fbdbb",
           "uploaded_at": "2026-10-31T11:09:19.156144+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "4db3dd3d2e97df10bf6521633ac5febd7d8268fbfdd05de2b680ef04dca11260",
+          "sha256": "7d6049dc6edb5526c5d21abf4eb2653049bbdae9d5f972c7329475d2cc1fd758",
           "uploaded_at": "2026-10-31T11:09:19.156144+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "400b5592387d7b46e8ff6e660a64ed93ca5677625fa7cdc0f328e539ce0e3a5a",
+          "sha256": "e4a4f172142fccf9e85f3d70b495818a6d8bacd7d8b612ed8d9632391b0e5147",
           "uploaded_at": "2026-11-01T06:27:09.485713+01:00"
         }
       ],
@@ -7454,7 +7477,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "673d40c2a618816771a3123d05bb7c3b55e4fdfd5a6072ea01c0fe3434833e91"
+              "sha256": "bc05abb29558db8e3e7a9ac91969c4989cc471ef6d7ab84a0b3ed280129177c0"
             }
           ]
         }
@@ -7506,23 +7529,27 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "8ce0e75680d9001005fd891b574cb099194fee23a4da6006cc1e552fcf761162",
+          "sha256": "4dd7199e31b3f6743c33cb4e5ed38d3261707d68d2dc924816a4d72783ff90ef",
           "uploaded_at": "2026-06-13T11:39:05.656138+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "673d40c2a618816771a3123d05bb7c3b55e4fdfd5a6072ea01c0fe3434833e91",
+          "sha256": "bc05abb29558db8e3e7a9ac91969c4989cc471ef6d7ab84a0b3ed280129177c0",
           "uploaded_at": "2026-06-14T15:18:46.910476+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P3"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": ""
+        "P3": {
+          "decoys": {
+            "data-mapping_FINAL.md": "v1",
+            "data-mapping (1).md": "v2",
+            "data-mapping_final_reviewed.md": "v1"
+          }
         }
       },
       "task": null
@@ -7549,7 +7576,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "fd76ae020ce9595599b276e95b200eda5e207c18be708b08d33b16724348cf01"
+              "sha256": "a813cbc5bca5e5a30e6bd392592f00e4fe9f382266841b1e62a1e7aa7345e8d9"
             }
           ]
         }
@@ -7601,20 +7628,12 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "fd76ae020ce9595599b276e95b200eda5e207c18be708b08d33b16724348cf01",
+          "sha256": "a813cbc5bca5e5a30e6bd392592f00e4fe9f382266841b1e62a1e7aa7345e8d9",
           "uploaded_at": "2026-06-16T06:07:34.425581+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2",
-        "P4"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -7639,13 +7658,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "0bfcb47cb574e6bb6b3e6aff72d703cc94c7fa4ee26fb7d1ebb9db8535f9aae4"
+              "sha256": "c2b2b76ff36736b85f7dab5791c23e6f775a03b982b2c74569923b4c1f6d075a"
             },
             {
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "4e01de5340627b47fe04c92143f08d082ac0655ae59c31b777f43ae4d432fa47"
+              "sha256": "e49fe1ef5863d92449e832a51af09e54aab4af9c96c4d28f6958957b29fbb2f5"
             }
           ]
         }
@@ -7697,19 +7716,25 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "0bfcb47cb574e6bb6b3e6aff72d703cc94c7fa4ee26fb7d1ebb9db8535f9aae4",
+          "sha256": "c2b2b76ff36736b85f7dab5791c23e6f775a03b982b2c74569923b4c1f6d075a",
           "uploaded_at": "2026-06-17T19:49:33.875130+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "4e01de5340627b47fe04c92143f08d082ac0655ae59c31b777f43ae4d432fa47",
+          "sha256": "e49fe1ef5863d92449e832a51af09e54aab4af9c96c4d28f6958957b29fbb2f5",
           "uploaded_at": "2026-06-17T19:49:33.875130+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "log_owner": "Chukwudi Okafor"
+        }
+      },
       "task": null
     },
     {
@@ -7734,7 +7759,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "b2212f6d686826682ce162709bdceea2a5e30aa84cedb2e3bb6c3e464dde104a"
+              "sha256": "3ceef3b721032b1dd7155a9f69cc2e8e958f71b5176477712fa824eda3d55603"
             }
           ]
         },
@@ -7747,7 +7772,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "d9149b7ca3cc63fe081382b2dabf9d0635c61377b8ffd785ac03edf02cf91b5f"
+              "sha256": "8c05bc9839cac078c60fd00be7c740ebd14bc63307039388c32d256704661625"
             }
           ]
         }
@@ -7838,27 +7863,24 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "b2212f6d686826682ce162709bdceea2a5e30aa84cedb2e3bb6c3e464dde104a",
+          "sha256": "3ceef3b721032b1dd7155a9f69cc2e8e958f71b5176477712fa824eda3d55603",
           "uploaded_at": "2026-07-14T07:02:06.650584+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "d9149b7ca3cc63fe081382b2dabf9d0635c61377b8ffd785ac03edf02cf91b5f",
+          "sha256": "8c05bc9839cac078c60fd00be7c740ebd14bc63307039388c32d256704661625",
           "uploaded_at": "2026-07-16T20:16:36.415103+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v2",
-            "test-plan_final_reviewed.md": "v1"
-          }
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
         }
       },
       "task": null
@@ -7885,7 +7907,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "a55ce423fc9174acac3c6f64df30dd8e413c9e912f10a02a3cd204be2496b8df"
+              "sha256": "3a516afdaa3100e3327fde2559e593feb7eeea7e89057164c06057e5275f3345"
             }
           ]
         },
@@ -7898,7 +7920,7 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "ff447faa3936ff57b0dc81e0cbdcd778e4f2ffd3e255e24f805afb04eab56980"
+              "sha256": "9916826814fcb99a70d5d29e53938f00c6b93d884902b89f2e950764624da649"
             }
           ]
         }
@@ -7963,32 +7985,25 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "a55ce423fc9174acac3c6f64df30dd8e413c9e912f10a02a3cd204be2496b8df",
+          "sha256": "3a516afdaa3100e3327fde2559e593feb7eeea7e89057164c06057e5275f3345",
           "uploaded_at": "2026-07-25T20:43:37.550321+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "ff447faa3936ff57b0dc81e0cbdcd778e4f2ffd3e255e24f805afb04eab56980",
+          "sha256": "9916826814fcb99a70d5d29e53938f00c6b93d884902b89f2e950764624da649",
           "uploaded_at": "2026-07-31T21:11:13.980188+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2",
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
         "P2": {
           "log_status": "Awaiting project manager review",
-          "true_status": "Rejected"
-        },
-        "P3": {
-          "decoys": {
-            "design-note_FINAL.md": "v1",
-            "design-note (1).md": "v2",
-            "design-note_final_reviewed.md": "v1"
-          }
+          "true_status": "Rejected",
+          "chat_claim": "Approved"
         }
       },
       "task": null
@@ -8015,7 +8030,7 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "50028143eb5e3d29cff405f7d3a590b166976466bda63b094519b3a548a4a64c"
+              "sha256": "3645ea1b9548ef57d85561caeb38e426d6a8e218186164133b6514b6a7ad3217"
             }
           ]
         }
@@ -8041,23 +8056,45 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "4d44a02f15dceb86d46687ffad9b566918df444cf281ebfcc536b3d0642103ed",
+          "sha256": "58ff6d8bc8671da733596e8160b94a84108aa7e2718076b44367b86490e1b67c",
           "uploaded_at": "2026-08-07T22:43:31.175573+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "50028143eb5e3d29cff405f7d3a590b166976466bda63b094519b3a548a4a64c",
+          "sha256": "3645ea1b9548ef57d85561caeb38e426d6a8e218186164133b6514b6a7ad3217",
           "uploaded_at": "2026-08-08T13:33:04.022473+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P1",
+        "P2",
+        "P3",
+        "P4"
       ],
       "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 1,
+            "reason_location": "chat"
+          }
+        ],
+        "P2": {
+          "log_status": "Awaiting project manager review",
+          "true_status": "Rejected",
+          "chat_claim": "Approved"
+        },
         "P1": {
           "log_owner": "Mojisoluwa Fagunwa"
+        },
+        "P3": {
+          "decoys": {
+            "rollback-plan_FINAL.md": "v1",
+            "rollback-plan (1).md": "v2",
+            "rollback-plan_final_reviewed.md": "v1"
+          }
         }
       },
       "task": null
@@ -8084,7 +8121,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "f5341d0da4216a736e7959cda3da736b020b6acc070465abc9e3f0e182866b31"
+              "sha256": "dc73566222f646b2aaf205f7f730407726fe025512b1ac2923aea84ad33c3701"
             }
           ]
         }
@@ -8103,18 +8140,12 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "f5341d0da4216a736e7959cda3da736b020b6acc070465abc9e3f0e182866b31",
+          "sha256": "dc73566222f646b2aaf205f7f730407726fe025512b1ac2923aea84ad33c3701",
           "uploaded_at": "2026-08-20T19:20:05.366621+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P1"
-      ],
-      "baseline_realisation": {
-        "P1": {
-          "log_owner": ""
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -8139,7 +8170,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "114ff6e70ee06996d49bae4b599dc68a674c0b8d0f85360cbfadfac80c65b268"
+              "sha256": "98cec60632afaea3991cd9d2f204b1ac897454d9dde0ea339b745fa7b30cac4f"
             }
           ]
         }
@@ -8191,19 +8222,14 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "114ff6e70ee06996d49bae4b599dc68a674c0b8d0f85360cbfadfac80c65b268",
+          "sha256": "98cec60632afaea3991cd9d2f204b1ac897454d9dde0ea339b745fa7b30cac4f",
           "uploaded_at": "2026-08-26T22:16:42.914489+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2"
+        "P4"
       ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        }
-      },
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -8228,13 +8254,13 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "5717b137b9de116afa7b8406bcf1d1ed18425195615b1b1fc3c8857d77d79d70"
+              "sha256": "bef21153bb39b1b1075df5be5313a6aad51751d5ba38cb1926fcddc172b5a8a1"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "204479afb57987d34c94d00dfe230a86335ff886f42ea65217c0ba8852bd3839"
+              "sha256": "57a51c7c5788a0e08991d9c5f3dac605dadb37ae8a19ba7e322d713f3a803f43"
             }
           ]
         }
@@ -8286,18 +8312,20 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "5717b137b9de116afa7b8406bcf1d1ed18425195615b1b1fc3c8857d77d79d70",
+          "sha256": "bef21153bb39b1b1075df5be5313a6aad51751d5ba38cb1926fcddc172b5a8a1",
           "uploaded_at": "2026-09-07T07:46:49.291170+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "204479afb57987d34c94d00dfe230a86335ff886f42ea65217c0ba8852bd3839",
+          "sha256": "57a51c7c5788a0e08991d9c5f3dac605dadb37ae8a19ba7e322d713f3a803f43",
           "uploaded_at": "2026-09-07T07:46:49.291170+01:00"
         }
       ],
-      "baseline_patterns": [],
+      "baseline_patterns": [
+        "P4"
+      ],
       "baseline_realisation": {},
       "task": null
     },
@@ -8323,7 +8351,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "fe053ab4b375168af71d0c302f2890b4589914c4173f5760130265e3c3a2e177"
+              "sha256": "4dbb49858f9e63c26411fc1428e853da8e539029fb25e6b26ee13d7246245e10"
             }
           ]
         }
@@ -8375,11 +8403,13 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "fe053ab4b375168af71d0c302f2890b4589914c4173f5760130265e3c3a2e177",
+          "sha256": "4dbb49858f9e63c26411fc1428e853da8e539029fb25e6b26ee13d7246245e10",
           "uploaded_at": "2026-09-10T13:03:51.210260+01:00"
         }
       ],
-      "baseline_patterns": [],
+      "baseline_patterns": [
+        "P4"
+      ],
       "baseline_realisation": {},
       "task": null
     },
@@ -8405,13 +8435,13 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "051b9069470886efc5e790daa1f49a8352dedd1f95b3a8657d25fed294cae513"
+              "sha256": "e0e79438dde8bcf3585cc4dbd4c1c8f1876a01b95d679d6eb8de232a7a82f3c3"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "411fcaebee7f2a371a0aaf5267a6db41f844b5dbe45f13a7f15a3a9af2fb494b"
+              "sha256": "422a3329a230a3c77882385c83d8fd08d1231bf05fdcb3d8ea1f7c42b5b31dd0"
             }
           ]
         },
@@ -8424,13 +8454,13 @@
               "document": "test-plan",
               "version": 3,
               "filename": "test-plan_v3.md",
-              "sha256": "9f4d00be032e7d807d788efa199d0683970ffb9436c04619ebe31dab24603ef5"
+              "sha256": "d17382236b7a6a40dcca9d481029f3cdb87b12a2800e19d59a6b4bf506773286"
             },
             {
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "411fcaebee7f2a371a0aaf5267a6db41f844b5dbe45f13a7f15a3a9af2fb494b"
+              "sha256": "422a3329a230a3c77882385c83d8fd08d1231bf05fdcb3d8ea1f7c42b5b31dd0"
             }
           ]
         }
@@ -8495,33 +8525,48 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "db8d78ff4335ee3c202590bfb09edeb6c5733ea36a9f7d4ba3ebbc3b2c3faa7f",
+          "sha256": "e4a12dda460ad4037bbc0cfb54dbbbe7893c3a7d977c9f76ab9a595ffe859d76",
           "uploaded_at": "2026-10-14T08:16:34.008888+01:00"
         },
         {
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "411fcaebee7f2a371a0aaf5267a6db41f844b5dbe45f13a7f15a3a9af2fb494b",
+          "sha256": "422a3329a230a3c77882385c83d8fd08d1231bf05fdcb3d8ea1f7c42b5b31dd0",
           "uploaded_at": "2026-10-14T08:16:34.008888+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "051b9069470886efc5e790daa1f49a8352dedd1f95b3a8657d25fed294cae513",
+          "sha256": "e0e79438dde8bcf3585cc4dbd4c1c8f1876a01b95d679d6eb8de232a7a82f3c3",
           "uploaded_at": "2026-10-14T19:24:44.165569+01:00"
         },
         {
           "document": "test-plan",
           "version": 3,
           "filename": "test-plan_v3.md",
-          "sha256": "9f4d00be032e7d807d788efa199d0683970ffb9436c04619ebe31dab24603ef5",
+          "sha256": "d17382236b7a6a40dcca9d481029f3cdb87b12a2800e19d59a6b4bf506773286",
           "uploaded_at": "2026-10-19T22:26:04.629808+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "chat"
+          },
+          {
+            "cycle": 2,
+            "stage": 1,
+            "reason_location": "chat"
+          }
+        ]
+      },
       "task": null
     },
     {
@@ -8546,7 +8591,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "f3806dad6e50bbaade8bae75e76e2db4cc7717b5ad9e0fd7d1de7f12c3680af9"
+              "sha256": "5d042381d3256821dc98ca950e54be2a8d86baf10a578da4bd9c842def172111"
             }
           ]
         }
@@ -8598,21 +8643,17 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "f3806dad6e50bbaade8bae75e76e2db4cc7717b5ad9e0fd7d1de7f12c3680af9",
+          "sha256": "5d042381d3256821dc98ca950e54be2a8d86baf10a578da4bd9c842def172111",
           "uploaded_at": "2026-10-19T14:16:59.770766+01:00"
         }
       ],
       "baseline_patterns": [
-        "P4"
+        "P1"
       ],
       "baseline_realisation": {
-        "P4": [
-          {
-            "cycle": 1,
-            "stage": 3,
-            "reason_location": "chat"
-          }
-        ]
+        "P1": {
+          "log_owner": "Mojisoluwa Fagunwa"
+        }
       },
       "task": null
     },
@@ -8638,13 +8679,13 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "f127bb2d1b9e93a27af027303665c77f77706130a9e0483815d72e2bc0f459b5"
+              "sha256": "18db5ca2a67fac81d2f7bdbb6edd2270b29efc791080242479e9d6205ec37437"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "8a43c64fe3aa5dbf59bec01063c4c299a15ff89be8136f581c514bcfec692f5a"
+              "sha256": "f5423ddd9a7858dee5ee98bf14289fd7a5195e23c9c50aea20ec9ac7cc30959f"
             }
           ]
         }
@@ -8696,34 +8737,32 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "b40979f0e80c92faa88c7e84120eae99e66f1291688602e89447fe31d72ff1b6",
+          "sha256": "094b170bbd565062a497666637503dec36ce7aeb60ae2846303839ef0c51b07d",
           "uploaded_at": "2026-10-22T09:06:49.311077+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "8a43c64fe3aa5dbf59bec01063c4c299a15ff89be8136f581c514bcfec692f5a",
+          "sha256": "f5423ddd9a7858dee5ee98bf14289fd7a5195e23c9c50aea20ec9ac7cc30959f",
           "uploaded_at": "2026-10-22T09:06:49.311077+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "f127bb2d1b9e93a27af027303665c77f77706130a9e0483815d72e2bc0f459b5",
+          "sha256": "18db5ca2a67fac81d2f7bdbb6edd2270b29efc791080242479e9d6205ec37437",
           "uploaded_at": "2026-10-23T03:34:33.110426+01:00"
         }
       ],
       "baseline_patterns": [
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v2",
-            "test-plan_final_reviewed.md": "v1"
-          }
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Rejected",
+          "chat_claim": "Approved"
         }
       },
       "task": null
@@ -8757,13 +8796,13 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "1f86228cd9b2f73cc3489cedfbf6352c621b1ec0aa92b10c1993601e44c5d487"
+              "sha256": "7cae7513ff86dbf67f9cb36b64a147721c6b7fce7371c6247dddcb594d26f70e"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "9e4156ed4cc0d565b9f734f05f0481efca8c7f59b37a5663e594a9b286f01579"
+              "sha256": "984c8aafb0a95efb5a679d373a484c70736e586e31c2de650c7ef91179f111a2"
             }
           ]
         },
@@ -8776,13 +8815,13 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "3629e0f2664abb371230f5d8773d811a270054b775819ed2fe84d11a8ffcc5b8"
+              "sha256": "0dbaaca2bc58f7e08f591b1e1a025964aba8e199b28ad401c003847ada940e53"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "9e4156ed4cc0d565b9f734f05f0481efca8c7f59b37a5663e594a9b286f01579"
+              "sha256": "984c8aafb0a95efb5a679d373a484c70736e586e31c2de650c7ef91179f111a2"
             }
           ]
         }
@@ -8834,21 +8873,21 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "1f86228cd9b2f73cc3489cedfbf6352c621b1ec0aa92b10c1993601e44c5d487",
+          "sha256": "7cae7513ff86dbf67f9cb36b64a147721c6b7fce7371c6247dddcb594d26f70e",
           "uploaded_at": "2026-10-27T04:58:34.452147+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "9e4156ed4cc0d565b9f734f05f0481efca8c7f59b37a5663e594a9b286f01579",
+          "sha256": "984c8aafb0a95efb5a679d373a484c70736e586e31c2de650c7ef91179f111a2",
           "uploaded_at": "2026-10-27T04:58:34.452147+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "3629e0f2664abb371230f5d8773d811a270054b775819ed2fe84d11a8ffcc5b8",
+          "sha256": "0dbaaca2bc58f7e08f591b1e1a025964aba8e199b28ad401c003847ada940e53",
           "uploaded_at": "2026-10-31T07:55:44.983667+01:00"
         }
       ],
@@ -8895,7 +8934,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "fdd20739ed5e910854e5f2b9359186448929f9ce7353d9dff8faefcddd5a0b71"
+              "sha256": "228e55a115d70f348a0a2e422164725f68e3dff5823ad5c8b14a7c2bfb662587"
             }
           ]
         }
@@ -8947,17 +8986,21 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "fdd20739ed5e910854e5f2b9359186448929f9ce7353d9dff8faefcddd5a0b71",
+          "sha256": "228e55a115d70f348a0a2e422164725f68e3dff5823ad5c8b14a7c2bfb662587",
           "uploaded_at": "2026-10-28T06:38:23.117706+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1"
+        "P4"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": "Chukwudi Okafor"
-        }
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 3,
+            "reason_location": "call"
+          }
+        ]
       },
       "task": null
     },
@@ -8990,13 +9033,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "90440abed6eb79ad1c4b688c606cd486b0b48963386056a4bb8ae7c6bc06acb6"
+              "sha256": "6570b9d33324caeb2dab1cfdd9a36425b2fa6074f3673d31bb0b730a1d9c27ef"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "62bbe69c281fa247d18fee7edc190a2ac9485e147b281a2a19895cbb260dd60b"
+              "sha256": "f4ecdfb8224b4b4e01ff43ff7055b336a19f02830059ba73d4a20609af2e9b8a"
             }
           ]
         }
@@ -9008,14 +9051,14 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "90440abed6eb79ad1c4b688c606cd486b0b48963386056a4bb8ae7c6bc06acb6",
+          "sha256": "6570b9d33324caeb2dab1cfdd9a36425b2fa6074f3673d31bb0b730a1d9c27ef",
           "uploaded_at": "2026-10-28T19:08:42.947588+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "62bbe69c281fa247d18fee7edc190a2ac9485e147b281a2a19895cbb260dd60b",
+          "sha256": "f4ecdfb8224b4b4e01ff43ff7055b336a19f02830059ba73d4a20609af2e9b8a",
           "uploaded_at": "2026-10-28T19:08:42.947588+01:00"
         }
       ],
@@ -9025,7 +9068,7 @@
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Ayinde Oshin",
-          "log_owner": "Chukwudi Okafor"
+          "log_owner": ""
         }
       },
       "task": null
@@ -9059,7 +9102,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "5dcc44ca8dbe2cb5f9636be3ef590d1d9a32d9c9be64b422e8f7d682b4f07f46"
+              "sha256": "42a3fdc69e0a6269d1316a29b0c8c13662d1bd4c0160587fa45f2ff10d5b06bf"
             }
           ]
         }
@@ -9098,12 +9141,27 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "5dcc44ca8dbe2cb5f9636be3ef590d1d9a32d9c9be64b422e8f7d682b4f07f46",
+          "sha256": "42a3fdc69e0a6269d1316a29b0c8c13662d1bd4c0160587fa45f2ff10d5b06bf",
           "uploaded_at": "2026-10-29T00:16:10.806839+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P2",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 2,
+            "reason_location": "chat"
+          }
+        ],
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Changes requested"
+        }
+      },
       "task": null
     },
     {
@@ -9135,7 +9193,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "e76159ea911154e983d01b319e70153e4d78fc10f5ce7f0845b7e363cd8ff2f7"
+              "sha256": "94c8f1298ec24a365e1f5f1c65dd116b06e68de30f78ffe823941391f2cfd560"
             }
           ]
         }
@@ -9161,7 +9219,7 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "e76159ea911154e983d01b319e70153e4d78fc10f5ce7f0845b7e363cd8ff2f7",
+          "sha256": "94c8f1298ec24a365e1f5f1c65dd116b06e68de30f78ffe823941391f2cfd560",
           "uploaded_at": "2026-10-31T08:38:33.832029+01:00"
         }
       ],
@@ -9198,13 +9256,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "670fbef2b56c74e7df4de8e55a4b14b41c2e748374b00eb6bff33497a049ea51"
+              "sha256": "a75e49221dc4a2368738ba85169af5da2e6fdcbeeb6be412ef3b2ea981f5a151"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "220f658ffbea2f65a709cfc8f7a0d72957519c77c61179d81638a57652ec4f73"
+              "sha256": "3cc9bf66f552a99af4995a240a75eaa95501234ad2776e1cd7ff636698ab4259"
             }
           ]
         }
@@ -9230,27 +9288,19 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "670fbef2b56c74e7df4de8e55a4b14b41c2e748374b00eb6bff33497a049ea51",
+          "sha256": "a75e49221dc4a2368738ba85169af5da2e6fdcbeeb6be412ef3b2ea981f5a151",
           "uploaded_at": "2026-10-31T19:11:46.418681+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "220f658ffbea2f65a709cfc8f7a0d72957519c77c61179d81638a57652ec4f73",
+          "sha256": "3cc9bf66f552a99af4995a240a75eaa95501234ad2776e1cd7ff636698ab4259",
           "uploaded_at": "2026-10-31T19:11:46.418681+01:00"
         }
       ],
-      "baseline_patterns": [
-        "P2"
-      ],
-      "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting project manager review",
-          "true_status": "Changes requested",
-          "chat_claim": "Approved"
-        }
-      },
+      "baseline_patterns": [],
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -9282,7 +9332,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "a452a6b0dd0b28e04186422e3fce5166d92566d14f190d133a9d5cf25563c5cd"
+              "sha256": "f8732561cc2b2a27e142b595d2444702f365ddc8c4ec33d0d2e50382b100410f"
             }
           ]
         }
@@ -9321,12 +9371,20 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "a452a6b0dd0b28e04186422e3fce5166d92566d14f190d133a9d5cf25563c5cd",
+          "sha256": "f8732561cc2b2a27e142b595d2444702f365ddc8c4ec33d0d2e50382b100410f",
           "uploaded_at": "2026-11-01T14:35:07.606235+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P2",
+        "P4"
+      ],
+      "baseline_realisation": {
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Awaiting product owner sign-off"
+        }
+      },
       "task": null
     },
     {
@@ -9351,7 +9409,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "b522c6b6071bc5822fe843b3a7c139dd455968406b0924e9401dac66fd22241b"
+              "sha256": "2545d62b0a80f5beb49246a7929e28beff4a0070ab6f096297dff8a831dd0eae"
             }
           ]
         }
@@ -9384,17 +9442,18 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "b522c6b6071bc5822fe843b3a7c139dd455968406b0924e9401dac66fd22241b",
+          "sha256": "2545d62b0a80f5beb49246a7929e28beff4a0070ab6f096297dff8a831dd0eae",
           "uploaded_at": "2026-06-09T05:28:58.325600+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
+        "P2",
         "P4"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": "TBC"
+        "P2": {
+          "log_status": "Awaiting project manager review",
+          "true_status": "Cancelled"
         }
       },
       "task": null
@@ -9421,7 +9480,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "385284beb82acd4c632a257114f6f73d1e32a3ce6ba98e2b0a9d014f904c760b"
+              "sha256": "37e917d055766ca97045356ad442ce5b046dc44fc86cd57bfe7fdca6bc1094cd"
             }
           ]
         }
@@ -9473,7 +9532,7 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "385284beb82acd4c632a257114f6f73d1e32a3ce6ba98e2b0a9d014f904c760b",
+          "sha256": "37e917d055766ca97045356ad442ce5b046dc44fc86cd57bfe7fdca6bc1094cd",
           "uploaded_at": "2026-06-19T22:31:23.982631+01:00"
         }
       ],
@@ -9503,7 +9562,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "7bcad4fa455539ac4e86b3f29121ddcc7d957ad9d4ea6ea0de702789cefc38bc"
+              "sha256": "177d64e8b5ce111eb63c9f4476a2bc5d314f83e72d726275e22b7e31ea9c95af"
             }
           ]
         },
@@ -9516,7 +9575,7 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "d8a2dda849856c88227e5b9da11a1c45568d84fc0c14ad5526d1c5bd51ce6c67"
+              "sha256": "2e8de281317e142902c17334d138e3f429f5ecb6fd1e8cec9ea625400efee239"
             }
           ]
         }
@@ -9607,14 +9666,14 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "7bcad4fa455539ac4e86b3f29121ddcc7d957ad9d4ea6ea0de702789cefc38bc",
+          "sha256": "177d64e8b5ce111eb63c9f4476a2bc5d314f83e72d726275e22b7e31ea9c95af",
           "uploaded_at": "2026-06-23T15:10:45.266359+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "d8a2dda849856c88227e5b9da11a1c45568d84fc0c14ad5526d1c5bd51ce6c67",
+          "sha256": "2e8de281317e142902c17334d138e3f429f5ecb6fd1e8cec9ea625400efee239",
           "uploaded_at": "2026-06-27T04:18:37.627102+01:00"
         }
       ],
@@ -9626,7 +9685,7 @@
           {
             "cycle": 1,
             "stage": 3,
-            "reason_location": "chat"
+            "reason_location": "call"
           }
         ]
       },
@@ -9654,13 +9713,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "73d2ccfc3885136ab1cca7c49039b6762c5b5763ca10f83f53f0bb42864916a9"
+              "sha256": "1bf207b960ea223fd68a2b748fded8f453b1a2a4f967a2486d66cefb31bfa76d"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "002678c3bb1760ff34fda05eb8b3174bc0397eb61b927667da7c3570621b40da"
+              "sha256": "e38cd73e6d6d47548f10c54f4d1e470cb5b7b3848e5a7141d0cd8d07d7b346d1"
             }
           ]
         }
@@ -9712,14 +9771,14 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "73d2ccfc3885136ab1cca7c49039b6762c5b5763ca10f83f53f0bb42864916a9",
+          "sha256": "1bf207b960ea223fd68a2b748fded8f453b1a2a4f967a2486d66cefb31bfa76d",
           "uploaded_at": "2026-06-28T18:36:28.538221+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "002678c3bb1760ff34fda05eb8b3174bc0397eb61b927667da7c3570621b40da",
+          "sha256": "e38cd73e6d6d47548f10c54f4d1e470cb5b7b3848e5a7141d0cd8d07d7b346d1",
           "uploaded_at": "2026-06-28T18:36:28.538221+01:00"
         }
       ],
@@ -9751,13 +9810,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "7361060c806e7400320c3613b260580c9e4f807a0a12fead1fa23b2a086d064b"
+              "sha256": "b51d9067931c2966942e29174cbc2a0e84e82d76d869a4c19799c2e50d89da54"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "6638eeadce765f1aa14af6e74d1f90a8398793cbdd49bdbb0fa5b2daec65e62a"
+              "sha256": "4e11c289183ccc4acb6a6b08b9aed704997c24f76f0f28d4a73e5e69948cbbaa"
             }
           ]
         },
@@ -9770,13 +9829,13 @@
               "document": "design-note",
               "version": 2,
               "filename": "design-note_v2.md",
-              "sha256": "057da14068f1c362ec954ef0071d47c6c2673ab0cb830ba33445744fdaaf16c0"
+              "sha256": "f4b999b6c24b952db81535ea87c5e7e6b38e24cda3ac36ddc0271e2f0c6d580e"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "6638eeadce765f1aa14af6e74d1f90a8398793cbdd49bdbb0fa5b2daec65e62a"
+              "sha256": "4e11c289183ccc4acb6a6b08b9aed704997c24f76f0f28d4a73e5e69948cbbaa"
             }
           ]
         }
@@ -9854,21 +9913,21 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "7361060c806e7400320c3613b260580c9e4f807a0a12fead1fa23b2a086d064b",
+          "sha256": "b51d9067931c2966942e29174cbc2a0e84e82d76d869a4c19799c2e50d89da54",
           "uploaded_at": "2026-07-23T22:07:26.979925+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "6638eeadce765f1aa14af6e74d1f90a8398793cbdd49bdbb0fa5b2daec65e62a",
+          "sha256": "4e11c289183ccc4acb6a6b08b9aed704997c24f76f0f28d4a73e5e69948cbbaa",
           "uploaded_at": "2026-07-23T22:07:26.979925+01:00"
         },
         {
           "document": "design-note",
           "version": 2,
           "filename": "design-note_v2.md",
-          "sha256": "057da14068f1c362ec954ef0071d47c6c2673ab0cb830ba33445744fdaaf16c0",
+          "sha256": "f4b999b6c24b952db81535ea87c5e7e6b38e24cda3ac36ddc0271e2f0c6d580e",
           "uploaded_at": "2026-07-28T13:09:58.818006+01:00"
         }
       ],
@@ -9908,7 +9967,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "5e34516bf0f32ca2231fa4ffdada0a20edb65a44ffc7273b3b5b212e387385ad"
+              "sha256": "f01e303e52bed86c559602107020e5ef5db3bef4c1fea59c1a0a82d4e5e9ff8d"
             }
           ]
         }
@@ -9960,22 +10019,16 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "5e34516bf0f32ca2231fa4ffdada0a20edb65a44ffc7273b3b5b212e387385ad",
+          "sha256": "f01e303e52bed86c559602107020e5ef5db3bef4c1fea59c1a0a82d4e5e9ff8d",
           "uploaded_at": "2026-07-31T10:44:49.622800+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P2",
-        "P4"
+        "P1"
       ],
       "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Approved"
-        },
         "P1": {
-          "log_owner": ""
+          "log_owner": "TBC"
         }
       },
       "task": null
@@ -10002,7 +10055,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "3de2a228f63acb2d4ef1f9f13dff9198334e118b4c7af3246f6a87d8f0fe8bc7"
+              "sha256": "6a3b4fe6cd9a6edc81023e6c93dec2e11f932a82e36c2cb421690ed25b34b609"
             }
           ]
         }
@@ -10054,7 +10107,7 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "3de2a228f63acb2d4ef1f9f13dff9198334e118b4c7af3246f6a87d8f0fe8bc7",
+          "sha256": "6a3b4fe6cd9a6edc81023e6c93dec2e11f932a82e36c2cb421690ed25b34b609",
           "uploaded_at": "2026-08-14T06:29:16.680067+01:00"
         }
       ],
@@ -10095,14 +10148,14 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "e23452b9dce27b4911666975065be8732b1c65fca369b7327213dca337cb896f",
+          "sha256": "dbc92b1079651a3ec9f42e917295fecfdab86949a66b46875c1b71f5255938be",
           "uploaded_at": "2026-08-15T18:57:27.503317+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "b1bea3ab600e2ce16b2807e9fa43f5fdfc39214a460d0f7f2b5498ae36e417e0",
+          "sha256": "83059f8b16db70600469cd733f9b53d40c112b6e469be026e9b61daca522856f",
           "uploaded_at": "2026-08-15T22:57:35.545971+01:00"
         }
       ],
@@ -10132,7 +10185,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "d94871722d662b7981fb5c05e3128e02e74585fb35283654c5913fe3fc421898"
+              "sha256": "744c9978f8ae82c0d7259a098013c47e5fda237d8a5426cc29df5588fc67b608"
             }
           ]
         },
@@ -10145,7 +10198,7 @@
               "document": "rollback-plan",
               "version": 2,
               "filename": "rollback-plan_v2.md",
-              "sha256": "40fdf4ed4e37705896b46d0d987a276024a0bfa7008a980798e3509bb00c1e2d"
+              "sha256": "4c52fa381cadd76c4c355fb08ec09a0087f9e66c1eb717cc709a0a28eb7ba5ca"
             }
           ]
         }
@@ -10210,31 +10263,28 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "d94871722d662b7981fb5c05e3128e02e74585fb35283654c5913fe3fc421898",
+          "sha256": "744c9978f8ae82c0d7259a098013c47e5fda237d8a5426cc29df5588fc67b608",
           "uploaded_at": "2026-08-27T09:51:56.372591+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "40fdf4ed4e37705896b46d0d987a276024a0bfa7008a980798e3509bb00c1e2d",
+          "sha256": "4c52fa381cadd76c4c355fb08ec09a0087f9e66c1eb717cc709a0a28eb7ba5ca",
           "uploaded_at": "2026-08-30T11:46:03.952371+01:00"
         }
       ],
       "baseline_patterns": [
         "P1",
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": "Somadina Obi"
+        "P2": {
+          "log_status": "Awaiting project manager review",
+          "true_status": "Approved"
         },
-        "P3": {
-          "decoys": {
-            "rollback-plan_FINAL.md": "v1",
-            "rollback-plan (1).md": "v2",
-            "rollback-plan_final_reviewed.md": "v1"
-          }
+        "P1": {
+          "log_owner": "TBC"
         }
       },
       "task": null
@@ -10261,7 +10311,7 @@
               "document": "data-mapping",
               "version": 1,
               "filename": "data-mapping.md",
-              "sha256": "1443d82e353c70f4fe3c8177afeebb17b9d17d73c6cdfd858f18c201b92f4eeb"
+              "sha256": "4064402196b574fc9619102b576615701061a332a524b59a8cbd26fc9d32d445"
             }
           ]
         }
@@ -10313,7 +10363,7 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "1443d82e353c70f4fe3c8177afeebb17b9d17d73c6cdfd858f18c201b92f4eeb",
+          "sha256": "4064402196b574fc9619102b576615701061a332a524b59a8cbd26fc9d32d445",
           "uploaded_at": "2026-09-07T03:26:33.732722+01:00"
         }
       ],
@@ -10343,13 +10393,13 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "4033cd05b86a6662bb139a7b1c7b358086ec0764fa02fe78cd96bddb48dd89e2"
+              "sha256": "706267b83a785511f943eba9c86af73efc1464030c97ed7827b6e0de75a9d72c"
             },
             {
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "f5476ccc8ce4fbe406a42d04fb4d897ee68250c8735a73e49bd1ce10b1feb66c"
+              "sha256": "f3cab539c5e1bb5f329375bb61a88f27ff431d4411e7c93b6fd7f11a3f797151"
             }
           ]
         }
@@ -10401,14 +10451,14 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "4033cd05b86a6662bb139a7b1c7b358086ec0764fa02fe78cd96bddb48dd89e2",
+          "sha256": "706267b83a785511f943eba9c86af73efc1464030c97ed7827b6e0de75a9d72c",
           "uploaded_at": "2026-09-24T14:37:36.947364+01:00"
         },
         {
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "f5476ccc8ce4fbe406a42d04fb4d897ee68250c8735a73e49bd1ce10b1feb66c",
+          "sha256": "f3cab539c5e1bb5f329375bb61a88f27ff431d4411e7c93b6fd7f11a3f797151",
           "uploaded_at": "2026-09-24T14:37:36.947364+01:00"
         }
       ],
@@ -10446,7 +10496,7 @@
               "document": "data-mapping",
               "version": 2,
               "filename": "data-mapping_v2.md",
-              "sha256": "c6b3d63c02bee32e48dc51552f1514dbfd93e5ddd5b15679c1bf1c84954227b8"
+              "sha256": "8eb40844d6b4ceb33c57a2f14a9d9973c19079dd882ecad66dcae42046e37c96"
             }
           ]
         },
@@ -10459,7 +10509,7 @@
               "document": "data-mapping",
               "version": 3,
               "filename": "data-mapping_v3.md",
-              "sha256": "89c946a8d45b866c73cce99d5fb6df005265a42be4ce1638914ef4c35cf4cba4"
+              "sha256": "7381b1e61277e0ea310b72b3645010d18bdde6282214a71a3ea31a242718cbd0"
             }
           ]
         }
@@ -10550,38 +10600,31 @@
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "ea1c8e128cf82691d91f20a794faa56f73b439d0a0dd80911c318ba32f5765ed",
+          "sha256": "e0f47ba1ea5f81055306a21661324c1692c9d18b409d867cc9e08af27cede637",
           "uploaded_at": "2026-10-02T13:20:26.832769+01:00"
         },
         {
           "document": "data-mapping",
           "version": 2,
           "filename": "data-mapping_v2.md",
-          "sha256": "c6b3d63c02bee32e48dc51552f1514dbfd93e5ddd5b15679c1bf1c84954227b8",
+          "sha256": "8eb40844d6b4ceb33c57a2f14a9d9973c19079dd882ecad66dcae42046e37c96",
           "uploaded_at": "2026-10-03T01:01:21.820341+01:00"
         },
         {
           "document": "data-mapping",
           "version": 3,
           "filename": "data-mapping_v3.md",
-          "sha256": "89c946a8d45b866c73cce99d5fb6df005265a42be4ce1638914ef4c35cf4cba4",
+          "sha256": "7381b1e61277e0ea310b72b3645010d18bdde6282214a71a3ea31a242718cbd0",
           "uploaded_at": "2026-10-08T07:46:59.055736+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P3"
+        "P2"
       ],
       "baseline_realisation": {
-        "P1": {
-          "log_owner": ""
-        },
-        "P3": {
-          "decoys": {
-            "data-mapping_FINAL.md": "v1",
-            "data-mapping (1).md": "v3",
-            "data-mapping_final_reviewed.md": "v2"
-          }
+        "P2": {
+          "log_status": "Awaiting technical lead review",
+          "true_status": "Approved"
         }
       },
       "task": null
@@ -10615,7 +10658,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "9ce63db536cf055416c6196e0e6816afeac06aa9e11b583ad23828be9f77da64"
+              "sha256": "9ee8c2d12742089ca189e33ba835b7ea6afcc793fe228d8ddd50673167b39426"
             }
           ]
         }
@@ -10654,19 +10697,21 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "9ce63db536cf055416c6196e0e6816afeac06aa9e11b583ad23828be9f77da64",
+          "sha256": "9ee8c2d12742089ca189e33ba835b7ea6afcc793fe228d8ddd50673167b39426",
           "uploaded_at": "2026-10-27T20:31:00.589441+01:00"
         }
       ],
       "baseline_patterns": [
-        "P2"
+        "P4"
       ],
       "baseline_realisation": {
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Changes requested",
-          "chat_claim": "Approved"
-        }
+        "P4": [
+          {
+            "cycle": 1,
+            "stage": 2,
+            "reason_location": "chat"
+          }
+        ]
       },
       "task": null
     },
@@ -10699,7 +10744,7 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "3d44e15d3ebec5c1129a1f6a51cb81a8b5f81658e4a84b0ec119d65d401d9ec9"
+              "sha256": "2cb8e15eae7345f6e30f6f073fad21998a56592244a29dcb23ffc61afd7649aa"
             }
           ]
         }
@@ -10738,7 +10783,7 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "3d44e15d3ebec5c1129a1f6a51cb81a8b5f81658e4a84b0ec119d65d401d9ec9",
+          "sha256": "2cb8e15eae7345f6e30f6f073fad21998a56592244a29dcb23ffc61afd7649aa",
           "uploaded_at": "2026-10-28T04:01:33.285179+01:00"
         }
       ],
@@ -10775,13 +10820,13 @@
               "document": "test-plan",
               "version": 1,
               "filename": "test-plan.md",
-              "sha256": "e9a6d229d71b5d5eb005c948d583a83585a0b76edf0a1b298973e656f58a6809"
+              "sha256": "15ac8df6c8cd79d61e866ab27debaa1926682a304408765ef667ef1e09e77767"
             },
             {
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "55ed33a7e3d44cd7a75fc6774362c322b22a7891f12c042f1a19377bf4766e08"
+              "sha256": "05e770b8b619f4791df9f0d643568cc9cf83c5850365e36a936a69d103cc77a5"
             }
           ]
         }
@@ -10820,29 +10865,24 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "e9a6d229d71b5d5eb005c948d583a83585a0b76edf0a1b298973e656f58a6809",
+          "sha256": "15ac8df6c8cd79d61e866ab27debaa1926682a304408765ef667ef1e09e77767",
           "uploaded_at": "2026-10-29T00:24:03.848984+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "55ed33a7e3d44cd7a75fc6774362c322b22a7891f12c042f1a19377bf4766e08",
+          "sha256": "05e770b8b619f4791df9f0d643568cc9cf83c5850365e36a936a69d103cc77a5",
           "uploaded_at": "2026-10-29T00:24:03.848984+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P2"
+        "P1"
       ],
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Okechukwu Chukwu",
-          "log_owner": "Somadina Obi"
-        },
-        "P2": {
-          "log_status": "Awaiting technical lead review",
-          "true_status": "Awaiting product owner sign-off"
+          "log_owner": "TBC"
         }
       },
       "task": null
@@ -10876,7 +10916,7 @@
               "document": "test-plan",
               "version": 2,
               "filename": "test-plan_v2.md",
-              "sha256": "ee7c1a3b27ae6e49a67a91bb7af5363abf1e768549aca23412bec341e6a347a2"
+              "sha256": "76841434794c58a4ffe3a908dc86424100a6c8784aacb8922703ae4c16b7eafb"
             }
           ]
         }
@@ -10902,34 +10942,21 @@
           "document": "test-plan",
           "version": 1,
           "filename": "test-plan.md",
-          "sha256": "c91f04c3072641b4867a4ad2a28af679520d8462c4c794b25c6c66a998f0d5fd",
+          "sha256": "de3b3c315016cbfc5d01dc09334ca406dd6b3687486862e0c8226a1bf8839acf",
           "uploaded_at": "2026-10-29T17:24:05.590213+01:00"
         },
         {
           "document": "test-plan",
           "version": 2,
           "filename": "test-plan_v2.md",
-          "sha256": "ee7c1a3b27ae6e49a67a91bb7af5363abf1e768549aca23412bec341e6a347a2",
+          "sha256": "76841434794c58a4ffe3a908dc86424100a6c8784aacb8922703ae4c16b7eafb",
           "uploaded_at": "2026-10-30T07:45:17.017967+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P3"
+        "P4"
       ],
-      "baseline_realisation": {
-        "P1": {
-          "wrong_owner_named": "Ololade Oyetoro",
-          "log_owner": "Somadina Obi"
-        },
-        "P3": {
-          "decoys": {
-            "test-plan_FINAL.md": "v1",
-            "test-plan (1).md": "v2",
-            "test-plan_final_reviewed.md": "v1"
-          }
-        }
-      },
+      "baseline_realisation": {},
       "task": null
     },
     {
@@ -10961,7 +10988,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "f0dd9823350b289b22ec85918b19b7de434015ef3fb5d75bcf586435b0849dff"
+              "sha256": "adb5470b6ea5beac44d65a223f3ac6ea439fe32a177b06423783755bc83c53f6"
             }
           ]
         }
@@ -10987,23 +11014,17 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "f0dd9823350b289b22ec85918b19b7de434015ef3fb5d75bcf586435b0849dff",
+          "sha256": "adb5470b6ea5beac44d65a223f3ac6ea439fe32a177b06423783755bc83c53f6",
           "uploaded_at": "2026-10-30T08:44:04.113573+01:00"
         }
       ],
       "baseline_patterns": [
-        "P1",
-        "P2"
+        "P1"
       ],
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Ololade Oyetoro",
-          "log_owner": "TBC"
-        },
-        "P2": {
-          "log_status": "Awaiting project manager review",
-          "true_status": "Awaiting technical lead review",
-          "chat_claim": "Approved"
+          "log_owner": ""
         }
       },
       "task": null
@@ -11037,7 +11058,7 @@
               "document": "design-note",
               "version": 1,
               "filename": "design-note.md",
-              "sha256": "46dff6c8257c5ec0cb893cbe87623095a06a052ca5a76c76485a7d6355c27f12"
+              "sha256": "688459b791f10a516d0ebd451a1e8270bbad53340fb7bad7785c93ddde24e7ce"
             }
           ]
         }
@@ -11063,7 +11084,7 @@
           "document": "design-note",
           "version": 1,
           "filename": "design-note.md",
-          "sha256": "46dff6c8257c5ec0cb893cbe87623095a06a052ca5a76c76485a7d6355c27f12",
+          "sha256": "688459b791f10a516d0ebd451a1e8270bbad53340fb7bad7785c93ddde24e7ce",
           "uploaded_at": "2026-10-30T09:36:54.453901+01:00"
         }
       ],
@@ -11074,7 +11095,7 @@
       "baseline_realisation": {
         "P1": {
           "wrong_owner_named": "Ololade Oyetoro",
-          "log_owner": "TBC"
+          "log_owner": "Somadina Obi"
         },
         "P2": {
           "log_status": "Awaiting project manager review",
@@ -11103,21 +11124,21 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "770040560b220221d31833e2cce444f90fd5f54af0e968a7ae3650ef57b98097",
+          "sha256": "07841f94b62d5f52360b7f74692306da636a316d7f2b956184029e65311ef568",
           "uploaded_at": "2026-11-01T12:09:06.840935+01:00"
         },
         {
           "document": "data-mapping",
           "version": 1,
           "filename": "data-mapping.md",
-          "sha256": "d8acfd9a3f55112537ebf68a89c084e04aba14374f76e8de593aff8e8662162c",
+          "sha256": "3ea335152e711cb66f87fb332f13f27eb85e023f55ed72549af5ef1f732c4ca9",
           "uploaded_at": "2026-11-01T12:09:06.840935+01:00"
         },
         {
           "document": "rollback-plan",
           "version": 2,
           "filename": "rollback-plan_v2.md",
-          "sha256": "0e345cc56f36755d5667bea38631b3e3ecf99a0feb248d7f044085f9b097cb2d",
+          "sha256": "7baa3420880a1ff7b32a8d5eedd6dc6eb59543a7a65a8d48812443723ecb396a",
           "uploaded_at": "2026-11-02T00:28:47.838617+01:00"
         }
       ],
@@ -11154,7 +11175,7 @@
               "document": "rollback-plan",
               "version": 1,
               "filename": "rollback-plan.md",
-              "sha256": "f7630bf07b391511a161a2943255027cadc028c73d062574b44680500af22221"
+              "sha256": "be8d1ab3ae6567a256e1c7879ec8d195294b57d5d19973a73b23fa629d1200d4"
             }
           ]
         }
@@ -11166,12 +11187,19 @@
           "document": "rollback-plan",
           "version": 1,
           "filename": "rollback-plan.md",
-          "sha256": "f7630bf07b391511a161a2943255027cadc028c73d062574b44680500af22221",
+          "sha256": "be8d1ab3ae6567a256e1c7879ec8d195294b57d5d19973a73b23fa629d1200d4",
           "uploaded_at": "2026-11-01T20:18:13.956963+01:00"
         }
       ],
-      "baseline_patterns": [],
-      "baseline_realisation": {},
+      "baseline_patterns": [
+        "P1"
+      ],
+      "baseline_realisation": {
+        "P1": {
+          "wrong_owner_named": "Ololade Oyetoro",
+          "log_owner": "TBC"
+        }
+      },
       "task": null
     }
   ]

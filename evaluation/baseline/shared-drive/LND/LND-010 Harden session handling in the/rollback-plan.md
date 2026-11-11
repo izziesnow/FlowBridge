@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 26 August 2026
 
 ## Summary
-Reprehenderit eum facilis placeat nobis adipisci. Dolorum ut enim earum dolor corrupti tempore.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. Load on the repayment schedule is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 07 August 2026
 
 ## Summary
-Quisquam quaerat officia officia in reiciendis. Eligendi ducimus sed deserunt voluptates.
+Load on the card tokenisation service is expected to stay within current limits. The change is limited to the card tokenisation service and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

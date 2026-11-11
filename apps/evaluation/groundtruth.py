@@ -276,7 +276,8 @@ Ground-truth fingerprint (SHA-256 of `ground_truth/ground_truth.json`): `{finger
 | Staff | {len(scenario.people)} coded synthetic users (6 PMs, 6 technical leads, 6 product owners, 18 requesters, 4 QA viewers) plus one administrator |
 | Requests | {len(scenario.stories)} software change requests raised over about five months |
 | Approval chain | Project manager review → technical lead review → product owner sign-off (sequential) |
-| Names | Faker locales yo_NG, ig_NG, ha_NG, en_NG, seeded; text from templates and Faker en_GB |
+| Names | Faker locales yo_NG, ig_NG, ha_NG, en_NG, seeded |
+| Text | Request, document, comment and email text from fixed English templates, chosen with the same seed |
 
 ## Outcome mix
 

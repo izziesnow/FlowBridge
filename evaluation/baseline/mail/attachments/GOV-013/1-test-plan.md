@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 27 October 2026
 
 ## Summary
-Occaecati a ab. Harum quidem vitae soluta.
+The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested. The change is limited to the TIN validation and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

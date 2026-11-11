@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 20 August 2026
 
 ## Summary
-Expedita rerum sint dicta officia impedit. Excepturi nihil ipsa alias minus.
+Load on the merchant API is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

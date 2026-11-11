@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 10 September 2026
 
 ## Summary
-Culpa quia omnis consectetur eaque. Eum sapiente ipsam corporis. Eaque ex corporis quo eaque nemo odio id.
+The change is limited to the agent dashboard and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

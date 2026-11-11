@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 17 June 2026
 
 ## Summary
-Alias voluptatum tempore nulla eligendi. Ullam fuga consequuntur. Assumenda libero expedita autem fugit atque ipsam.
+Monitoring dashboards will be checked for one hour after release. The client's acceptance criteria are listed in the test plan. Load on the payment status page is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 19 June 2026
 
 ## Summary
-Ab magnam eos commodi voluptas corporis id. Rem quaerat et cupiditate tenetur.
+Load on the USSD menu is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

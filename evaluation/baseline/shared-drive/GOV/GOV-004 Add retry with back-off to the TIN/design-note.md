@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 10 July 2026
 
 ## Summary
-Reprehenderit ipsam odio quos enim quos. Inventore earum qui minima. Dignissimos culpa reiciendis eos.
+The client's acceptance criteria are listed in the test plan. Load on the TIN validation is expected to stay within current limits. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

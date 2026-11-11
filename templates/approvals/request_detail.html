@@ -204,7 +204,9 @@
             {% with field=reason_form.reason %}{% include "_field.html" %}{% endwith %}
             <button type="submit" class="btn btn-outline-danger w-100">Withdraw request</button></form>
         {% endif %}
-        {% if not can_submit and not can_resubmit and not can_withdraw and not can_decide %}
+        {% if can_decide %}
+          <p class="small mb-0"><a href="#decide-h">Record your decision</a> in the panel on the left.</p>
+        {% elif not can_submit and not can_resubmit and not can_withdraw %}
           <p class="text-muted small mb-0">No actions are available to you on this request.</p>
         {% endif %}
         {% if req.closed_reason %}<p class="small mb-0"><strong>Withdrawal reason:</strong> {{ req.closed_reason }}</p>{% endif %}

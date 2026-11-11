@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 08 July 2026
 
 ## Summary
-Porro recusandae dolor nulla eligendi quibusdam quasi. Eos eaque nam aut ea veritatis cupiditate. Quis quam delectus occaecati.
+Existing records are not modified; new fields default to empty for older records. The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

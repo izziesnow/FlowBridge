@@ -123,6 +123,34 @@ WITHDRAW_REASONS = [
     "Raised in error.",
     "No longer needed after the vendor fix.",
 ]
+CLIENT_IMPACT = [
+    "None visible to end users.",
+    "Brief slowdown possible during the release window.",
+    "Customers see clearer error messages.",
+    "Support staff need a short briefing before release.",
+    "The client's operations team must be told the release date.",
+    "No downtime expected; the change is behind a feature flag.",
+]
+SUMMARY_SENTENCES = [
+    "This document describes the change, the components it touches and how it will be tested.",
+    "The change is limited to the {c} and does not alter any shared database tables.",
+    "Configuration is held in the environment, so the change can be switched off without a redeploy.",
+    "Existing records are not modified; new fields default to empty for older records.",
+    "Monitoring dashboards will be checked for one hour after release.",
+    "The client's acceptance criteria are listed in the test plan.",
+    "Load on the {c} is expected to stay within current limits.",
+    "The rollback has been rehearsed in the staging environment.",
+]
+REVISION_NOTES = [
+    "added the rollback steps and named who will run them",
+    "attached test evidence for the failure cases",
+    "stated the change window and expected downtime",
+    "confirmed the data retention period with the client",
+    "described how existing records will be migrated",
+    "listed the monitoring to watch after release",
+    "clarified which client environments are affected",
+]
+
 COMMENT_PAIRS = [
     ("Has this been tested against the staging data set?", "Yes, the staging run passed last night."),
     ("Which release window are you targeting?", "The Thursday evening window."),
@@ -438,17 +466,18 @@ def _render_texts(rng, story, scenario, faker):
     story.description = (
         f"{action_body.format(c=story.component)}\n"
         f"Risk: {story.risk}. Rollback: redeploy the previous release and restore the configuration snapshot.\n"
-        f"Client impact: {faker.sentence(nb_words=8)}"
+        f"Client impact: {rng.choice(CLIENT_IMPACT)}"
     )
     for v in story.versions:
-        changes = "First issue." if v.number == 1 else f"Revised after review: {faker.sentence(nb_words=9)}"
+        changes = "First issue." if v.number == 1 else f"Revised after review: {rng.choice(REVISION_NOTES)}."
+        summary = " ".join(s.format(c=story.component) for s in rng.sample(SUMMARY_SENTENCES, 3))
         text = (
             f"# {v.title}: {story.title}\n\n"
             f"Request: {story.ref}\n"
             f"Document version: {v.number}\n"
             f"Prepared by: {requester}\n"
             f"Date: {v.at:%d %B %Y}\n\n"
-            f"## Summary\n{faker.paragraph(nb_sentences=3)}\n\n"
+            f"## Summary\n{summary}\n\n"
             f"## Changes in this version\n{changes}\n\n"
             f"---\nSynthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).\n"
         )

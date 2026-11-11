@@ -6,10 +6,10 @@ Prepared by: Sarah Ibrahim
 Date: 01 November 2026
 
 ## Summary
-Harum tempora facilis veniam doloribus nesciunt. Sint sint adipisci doloremque cupiditate nulla. Voluptatum culpa maiores fugiat molestias voluptatem blanditiis.
+Monitoring dashboards will be checked for one hour after release. Load on the claims upload form is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Sunt veniam magni reiciendis rerum nostrum expedita voluptatibus quibusdam minima accusamus.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

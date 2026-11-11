@@ -6,10 +6,10 @@ Prepared by: Agnes Adetokunbo
 Date: 18 September 2026
 
 ## Summary
-Nesciunt sint praesentium unde culpa. Sunt quas praesentium fugit perspiciatis doloremque laboriosam.
+The change is limited to the disbursement API and does not alter any shared database tables. Load on the disbursement API is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Repellendus qui dolor sed repellendus excepturi saepe hic quo.
+Revised after review: attached test evidence for the failure cases.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

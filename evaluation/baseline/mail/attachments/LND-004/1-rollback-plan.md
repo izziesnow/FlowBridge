@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 25 June 2026
 
 ## Summary
-Rerum unde cupiditate porro expedita repudiandae dicta. Id minus atque quod. Sit deleniti id sequi adipisci.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Load on the KYC verification step is expected to stay within current limits. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

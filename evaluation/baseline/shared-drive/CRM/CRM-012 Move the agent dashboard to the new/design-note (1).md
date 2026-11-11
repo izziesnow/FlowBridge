@@ -6,10 +6,10 @@ Prepared by: Sarah Ibrahim
 Date: 29 September 2026
 
 ## Summary
-Maiores suscipit at perspiciatis illum. Corporis magni iusto animi explicabo sapiente.
+The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
-Revised after review: Consectetur cumque possimus quibusdam perspiciatis impedit numquam totam vero.
+Revised after review: listed the monitoring to watch after release.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

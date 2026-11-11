@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 12 August 2026
 
 ## Summary
-Nihil iusto deleniti quis vel. Aperiam odit consequatur voluptatibus reiciendis reiciendis aliquid. Exercitationem vel quaerat labore ullam totam corrupti.
+Monitoring dashboards will be checked for one hour after release. Load on the tax return form is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

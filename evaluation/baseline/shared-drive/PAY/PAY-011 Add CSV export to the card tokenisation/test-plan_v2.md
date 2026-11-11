@@ -6,10 +6,10 @@ Prepared by: Chukwudi Okafor
 Date: 14 October 2026
 
 ## Summary
-Commodi ex molestias perferendis repellendus illum quae. Optio sit est perferendis architecto minus.
+Existing records are not modified; new fields default to empty for older records. Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Nesciunt labore nihil corporis sit aperiam ad unde sint.
+Revised after review: described how existing records will be migrated.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

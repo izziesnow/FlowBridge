@@ -6,10 +6,10 @@ Prepared by: Similoluwa Kolade
 Date: 15 July 2026
 
 ## Summary
-Necessitatibus sequi atque minima tempora enim. Itaque eaque quaerat accusamus neque. Magnam quasi fuga maxime explicabo ipsa repellat consequuntur.
+The change is limited to the expense claim form and does not alter any shared database tables. The client's acceptance criteria are listed in the test plan. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Nesciunt ex sunt ratione debitis laborum dolorem odit.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

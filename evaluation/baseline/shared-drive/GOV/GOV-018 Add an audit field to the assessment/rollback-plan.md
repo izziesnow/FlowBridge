@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 30 October 2026
 
 ## Summary
-Ut corporis expedita culpa explicabo culpa facilis quaerat. Earum tempore nobis dolorum.
+The rollback has been rehearsed in the staging environment. The change is limited to the assessment calculator and does not alter any shared database tables. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

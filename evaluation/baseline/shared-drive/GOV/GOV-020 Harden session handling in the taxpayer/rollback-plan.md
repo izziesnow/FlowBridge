@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 01 November 2026
 
 ## Summary
-Hic amet facere accusantium nemo. Veniam ab impedit excepturi eaque dolore. Magni unde sed nobis harum. Iure ab quidem nobis eligendi enim repudiandae.
+The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested. Load on the taxpayer portal login is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 06 September 2026
 
 ## Summary
-Quia dolor facere perspiciatis quaerat vel laborum. Aperiam officiis soluta dicta vel mollitia. Exercitationem illo similique aspernatur officia quidem accusantium.
+Load on the taxpayer portal login is expected to stay within current limits. Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

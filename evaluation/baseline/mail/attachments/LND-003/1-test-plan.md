@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 17 June 2026
 
 ## Summary
-In aliquam deserunt dignissimos at ipsam. Illo molestias nobis ratione. Maiores suscipit quibusdam voluptatibus voluptas aspernatur.
+Monitoring dashboards will be checked for one hour after release. This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

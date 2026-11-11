@@ -1,121 +1,121 @@
 Ref,Title,Requester,Raised,Status,With,Last update,Notes
-CRM-001,Improve error messages in the renewal reminder job,Fatima Suleiman,11/06/2026,Approved,,17/06/2026,
+CRM-001,Improve error messages in the renewal reminder job,Fatima Suleiman,11/06/2026,Approved,,17/06/2026,Fine from my side.
 CRM-002,Add CSV export to the agent dashboard,Sarah Ibrahim,25/06/2026,Awaiting technical lead review,,26/06/2026,Fine from my side.
-CRM-003,Add an audit field to the premium calculator,Fatima Suleiman,02/07/2026,Approved,,06/07/2026,Approved; please schedule outside peak hours.
-CRM-004,Add CSV export to the agent dashboard,Fatima Suleiman,08/07/2026,Approved,,10/07/2026,
-CRM-005,Harden session handling in the agent dashboard,Fatima Suleiman,10/07/2026,Approved,,13/07/2026,
-CRM-006,Remove the deprecated endpoint from the claims upload form,Sarah Ibrahim,27/08/2026,Awaiting technical lead review,TBC,28/08/2026,Fine from my side.
+CRM-003,Add an audit field to the premium calculator,Fatima Suleiman,02/07/2026,Awaiting technical lead review,,04/07/2026,
+CRM-004,Add CSV export to the agent dashboard,Fatima Suleiman,08/07/2026,Approved,Fatima Suleiman,10/07/2026,Approved; please schedule outside peak hours.
+CRM-005,Harden session handling in the agent dashboard,Fatima Suleiman,10/07/2026,Approved,Fatima Suleiman,13/07/2026,Approved. Keep the feature flag off until sign-off.
+CRM-006,Remove the deprecated endpoint from the claims upload form,Sarah Ibrahim,27/08/2026,Awaiting technical lead review,Sarah Ibrahim,28/08/2026,
 CRM-007,Add CSV export to the agent dashboard,Sarah Ibrahim,02/09/2026,Approved,,06/09/2026,Approved. Keep the feature flag off until sign-off.
-CRM-008,Add CSV export to the claims upload form,Sarah Ibrahim,07/09/2026,Rejected,,11/09/2026,
-CRM-009,Remove the deprecated endpoint from the agent dashboard,Fatima Suleiman,10/09/2026,Approved,Fatima Suleiman,17/09/2026,Fine from my side.
-CRM-010,Cache lookups in the claims upload form,Sarah Ibrahim,21/09/2026,Approved,TBC,24/09/2026,Fine from my side.
+CRM-008,Add CSV export to the claims upload form,Sarah Ibrahim,07/09/2026,Rejected,TBC,11/09/2026,Duplicates work already planned for the next release.
+CRM-009,Remove the deprecated endpoint from the agent dashboard,Fatima Suleiman,10/09/2026,Approved,,17/09/2026,
+CRM-010,Cache lookups in the claims upload form,Sarah Ibrahim,21/09/2026,Awaiting technical lead review,Sarah Ibrahim,22/09/2026,Fine from my side.
 CRM-011,Add monitoring alerts for the premium calculator,Sarah Ibrahim,25/09/2026,Approved,,30/09/2026,Approved; please schedule outside peak hours.
-CRM-012,Move the agent dashboard to the new database cluster,Sarah Ibrahim,26/09/2026,Awaiting project manager review,,27/09/2026,
+CRM-012,Move the agent dashboard to the new database cluster,Sarah Ibrahim,26/09/2026,Awaiting project manager review,,27/09/2026,Looks good.
 CRM-013,Add rate limiting to the renewal reminder job,Fatima Suleiman,27/09/2026,Approved,,29/09/2026,Fine from my side.
 CRM-014,Harden session handling in the agent dashboard,Sarah Ibrahim,07/10/2026,Approved,,10/10/2026,Approved. Keep the feature flag off until sign-off.
-CRM-015,Remove the deprecated endpoint from the renewal reminder job,Sarah Ibrahim,18/10/2026,Awaiting technical lead review,,19/10/2026,Approved. Keep the feature flag off until sign-off.
-CRM-016,Cache lookups in the document vault,Fatima Suleiman,27/10/2026,Awaiting product owner sign-off,Toluwanimi Babtunde,29/10/2026,
-CRM-017,Add input validation to the policy search page,Fatima Suleiman,28/10/2026,Awaiting technical lead review,Toluwanimi Babtunde,28/10/2026,Fine from my side.
-CRM-018,Add input validation to the claims upload form,Fatima Suleiman,28/10/2026,Awaiting technical lead review,Fatima Suleiman,28/10/2026,Clarify which client environments are affected.
+CRM-015,Remove the deprecated endpoint from the renewal reminder job,Sarah Ibrahim,18/10/2026,Approved,,20/10/2026,Approved. Keep the feature flag off until sign-off.
+CRM-016,Cache lookups in the document vault,Fatima Suleiman,27/10/2026,Awaiting product owner sign-off,Toluwanimi Babtunde,29/10/2026,Approved; please schedule outside peak hours.
+CRM-017,Add input validation to the policy search page,Fatima Suleiman,28/10/2026,Awaiting product owner sign-off,Toluwanimi Babtunde,29/10/2026,Fine from my side.
+CRM-018,Add input validation to the claims upload form,Fatima Suleiman,28/10/2026,Changes requested,Fatima Suleiman,30/10/2026,Clarify which client environments are affected.
 CRM-019,Add CSV export to the policy search page,Sarah Ibrahim,30/10/2026,Not submitted,Sarah Ibrahim,30/10/2026,
 CRM-020,Cache lookups in the claims upload form,Sarah Ibrahim,31/10/2026,Not submitted,Sarah Ibrahim,01/11/2026,
-GOV-001,Upgrade the logging library in the TIN validation,Safiya Isah,07/06/2026,Approved,,12/06/2026,
-GOV-002,Remove the deprecated endpoint from the TIN validation,Safiya Isah,08/06/2026,Approved,,12/06/2026,
-GOV-003,Upgrade the logging library in the tax return form,Safiya Isah,22/06/2026,Awaiting technical lead review,Safiya Isah,24/06/2026,Looks good.
+GOV-001,Upgrade the logging library in the TIN validation,Safiya Isah,07/06/2026,Approved,,12/06/2026,Approved. Keep the feature flag off until sign-off.
+GOV-002,Remove the deprecated endpoint from the TIN validation,Safiya Isah,08/06/2026,Approved,,12/06/2026,Approved. Keep the feature flag off until sign-off.
+GOV-003,Upgrade the logging library in the tax return form,Safiya Isah,22/06/2026,Approved,,26/06/2026,
 GOV-004,Add retry with back-off to the TIN validation,Safiya Isah,10/07/2026,Approved,,14/07/2026,
 GOV-005,Add rate limiting to the tax return form,Stephen Balogun,22/07/2026,Rejected,,24/07/2026,Duplicates work already planned for the next release.
-GOV-006,Add input validation to the tax return form,Stephen Balogun,12/08/2026,Cancelled,,14/08/2026,
-GOV-007,Add input validation to the tax return form,Stephen Balogun,02/09/2026,Approved,,09/09/2026,Looks good.
-GOV-008,Harden session handling in the taxpayer portal login,Stephen Balogun,06/09/2026,Approved,,08/09/2026,Looks good.
-GOV-009,Cache lookups in the TIN validation,Stephen Balogun,11/09/2026,Rejected,,14/09/2026,Conflicts with the client's security policy.
+GOV-006,Add input validation to the tax return form,Stephen Balogun,12/08/2026,Awaiting technical lead review,,13/08/2026,Approved; please schedule outside peak hours.
+GOV-007,Add input validation to the tax return form,Stephen Balogun,02/09/2026,Approved,,09/09/2026,
+GOV-008,Harden session handling in the taxpayer portal login,Stephen Balogun,06/09/2026,Approved,TBC,08/09/2026,Looks good.
+GOV-009,Cache lookups in the TIN validation,Stephen Balogun,11/09/2026,Awaiting technical lead review,,12/09/2026,
 GOV-010,Upgrade the logging library in the payment receipt service,Stephen Balogun,15/09/2026,Approved,,19/09/2026,Approved. Keep the feature flag off until sign-off.
-GOV-011,Improve error messages in the audit trail report,Stephen Balogun,16/09/2026,Cancelled,Stephen Balogun,17/09/2026,
-GOV-012,Add an audit field to the tax return form,Safiya Isah,18/09/2026,Awaiting project manager review,,18/09/2026,The benefit does not justify the risk this quarter.
-GOV-013,Upgrade the logging library in the TIN validation,Stephen Balogun,27/10/2026,Awaiting technical lead review,TBC,01/11/2026,Fine from my side.
-GOV-014,Improve error messages in the tax return form,Safiya Isah,29/10/2026,Awaiting technical lead review,Hope Akinwale,29/10/2026,
-GOV-015,Move the taxpayer portal login to the new database cluster,Safiya Isah,29/10/2026,Awaiting project manager review,,29/10/2026,
-GOV-016,Add an audit field to the tax return form,Safiya Isah,29/10/2026,Awaiting project manager review,TBC,29/10/2026,
+GOV-011,Improve error messages in the audit trail report,Stephen Balogun,16/09/2026,Cancelled,,17/09/2026,
+GOV-012,Add an audit field to the tax return form,Safiya Isah,18/09/2026,Rejected,,18/09/2026,The benefit does not justify the risk this quarter.
+GOV-013,Upgrade the logging library in the TIN validation,Stephen Balogun,27/10/2026,Awaiting technical lead review,Stephen Balogun,27/10/2026,Fine from my side.
+GOV-014,Improve error messages in the tax return form,Safiya Isah,29/10/2026,Awaiting technical lead review,TBC,29/10/2026,Looks good.
+GOV-015,Move the taxpayer portal login to the new database cluster,Safiya Isah,29/10/2026,Awaiting technical lead review,Hope Akinwale,29/10/2026,
+GOV-016,Add an audit field to the tax return form,Safiya Isah,29/10/2026,Awaiting project manager review,Safiya Isah,29/10/2026,
 GOV-017,Add an audit field to the taxpayer portal login,Safiya Isah,30/10/2026,Not submitted,Safiya Isah,30/10/2026,
 GOV-018,Add an audit field to the assessment calculator,Safiya Isah,30/10/2026,Awaiting project manager review,Abdullahi Yusuf,31/10/2026,
-GOV-019,Improve error messages in the audit trail report,Stephen Balogun,31/10/2026,Awaiting technical lead review,Hope Akinwale,01/11/2026,
+GOV-019,Improve error messages in the audit trail report,Stephen Balogun,31/10/2026,Awaiting technical lead review,Hope Akinwale,01/11/2026,Clarify which client environments are affected.
 GOV-020,Harden session handling in the taxpayer portal login,Stephen Balogun,01/11/2026,Not submitted,Stephen Balogun,01/11/2026,
-HRM-001,Add input validation to the staff directory sync,Nonso Anyanwu,09/06/2026,Awaiting project manager review,,10/06/2026,
+HRM-001,Add input validation to the staff directory sync,Nonso Anyanwu,09/06/2026,Approved,,11/06/2026,Fine from my side.
 HRM-002,Harden session handling in the payslip viewer,Nonso Anyanwu,11/06/2026,Rejected,,13/06/2026,
-HRM-003,Add retry with back-off to the staff directory sync,Similoluwa Kolade,25/06/2026,Approved,,27/06/2026,
-HRM-004,Add CSV export to the attendance module,Nonso Anyanwu,06/07/2026,Awaiting technical lead review,Nonso Anyanwu,07/07/2026,
-HRM-005,Harden session handling in the expense claim form,Similoluwa Kolade,15/07/2026,Awaiting technical lead review,,16/07/2026,
+HRM-003,Add retry with back-off to the staff directory sync,Similoluwa Kolade,25/06/2026,Approved,,27/06/2026,Fine from my side.
+HRM-004,Add CSV export to the attendance module,Nonso Anyanwu,06/07/2026,Approved,Nonso Anyanwu,10/07/2026,
+HRM-005,Harden session handling in the expense claim form,Similoluwa Kolade,15/07/2026,Awaiting technical lead review,,16/07/2026,Looks good.
 HRM-006,Remove the deprecated endpoint from the staff directory sync,Nonso Anyanwu,18/07/2026,Approved,,21/07/2026,Approved; please schedule outside peak hours.
-HRM-007,Add input validation to the leave request screen,Similoluwa Kolade,23/07/2026,Approved,,27/07/2026,Looks good.
-HRM-008,Upgrade the logging library in the push notification service,Similoluwa Kolade,30/07/2026,Awaiting technical lead review,,30/07/2026,
+HRM-007,Add input validation to the leave request screen,Similoluwa Kolade,23/07/2026,Approved,Similoluwa Kolade,27/07/2026,Looks good.
+HRM-008,Upgrade the logging library in the push notification service,Similoluwa Kolade,30/07/2026,Approved,,01/08/2026,Approved; please schedule outside peak hours.
 HRM-009,Add input validation to the payslip viewer,Similoluwa Kolade,01/08/2026,Approved,,04/08/2026,Looks good.
-HRM-010,Add retry with back-off to the attendance module,Nonso Anyanwu,30/08/2026,Approved,Nonso Anyanwu,30/08/2026,
-HRM-011,Add rate limiting to the staff directory sync,Nonso Anyanwu,02/09/2026,Approved,,06/09/2026,Looks good.
-HRM-012,Add CSV export to the push notification service,Nonso Anyanwu,12/09/2026,Approved,,15/09/2026,Approved; please schedule outside peak hours.
+HRM-010,Add retry with back-off to the attendance module,Nonso Anyanwu,30/08/2026,Approved,Nonso Anyanwu,30/08/2026,Approved; please schedule outside peak hours.
+HRM-011,Add rate limiting to the staff directory sync,Nonso Anyanwu,02/09/2026,Approved,TBC,06/09/2026,Looks good.
+HRM-012,Add CSV export to the push notification service,Nonso Anyanwu,12/09/2026,Approved,,15/09/2026,
 HRM-013,Add retry with back-off to the expense claim form,Nonso Anyanwu,17/09/2026,Cancelled,,18/09/2026,
-HRM-014,Add input validation to the leave request screen,Similoluwa Kolade,18/09/2026,Approved,,22/09/2026,Fine from my side.
+HRM-014,Add input validation to the leave request screen,Similoluwa Kolade,18/09/2026,Awaiting technical lead review,,19/09/2026,
 HRM-015,Improve error messages in the onboarding checklist,Nonso Anyanwu,27/09/2026,Cancelled,,29/09/2026,Approved; please schedule outside peak hours.
 HRM-016,Cache lookups in the leave request screen,Nonso Anyanwu,06/10/2026,Approved,TBC,10/10/2026,Approved; please schedule outside peak hours.
 HRM-017,Add an audit field to the leave request screen,Similoluwa Kolade,10/10/2026,Rejected,,11/10/2026,Conflicts with the client's security policy.
-HRM-018,Add rate limiting to the attendance module,Nonso Anyanwu,17/10/2026,Awaiting technical lead review,,17/10/2026,
-HRM-019,Add retry with back-off to the leave request screen,Nonso Anyanwu,28/10/2026,Awaiting technical lead review,Nonso Udeh,29/10/2026,
-HRM-020,Add input validation to the onboarding checklist,Similoluwa Kolade,29/10/2026,Changes requested,TBC,30/10/2026,Attach test evidence for the failure cases.
-LND-001,Add input validation to the loan officer dashboard,Gambo Isah,06/06/2026,Rejected,Gambo Isah,11/06/2026,
-LND-002,Improve error messages in the credit scoring service,Gambo Isah,09/06/2026,Cancelled,,11/06/2026,
+HRM-018,Add rate limiting to the attendance module,Nonso Anyanwu,17/10/2026,Rejected,Nonso Anyanwu,20/10/2026,Out of scope for the current contract; raise it as a change order.
+HRM-019,Add retry with back-off to the leave request screen,Nonso Anyanwu,28/10/2026,Awaiting project manager review,TBC,29/10/2026,
+HRM-020,Add input validation to the onboarding checklist,Similoluwa Kolade,29/10/2026,Awaiting technical lead review,Similoluwa Kolade,29/10/2026,Attach test evidence for the failure cases.
+LND-001,Add input validation to the loan officer dashboard,Gambo Isah,06/06/2026,Rejected,,11/06/2026,
+LND-002,Improve error messages in the credit scoring service,Gambo Isah,09/06/2026,Cancelled,Gambo Isah,11/06/2026,
 LND-003,Add input validation to the loan officer dashboard,Gambo Isah,17/06/2026,Approved,,23/06/2026,
-LND-004,Add CSV export to the KYC verification step,Agnes Adetokunbo,25/06/2026,Approved,,29/06/2026,
+LND-004,Add CSV export to the KYC verification step,Agnes Adetokunbo,25/06/2026,Approved,,29/06/2026,Approved. Keep the feature flag off until sign-off.
 LND-005,Improve error messages in the repayment schedule,Agnes Adetokunbo,02/07/2026,Approved,,04/07/2026,Fine from my side.
-LND-006,Improve error messages in the KYC verification step,Agnes Adetokunbo,12/07/2026,Approved,,15/07/2026,Approved. Keep the feature flag off until sign-off.
-LND-007,Add an audit field to the KYC verification step,Gambo Isah,04/08/2026,Rejected,,05/08/2026,Out of scope for the current contract; raise it as a change order.
+LND-006,Improve error messages in the KYC verification step,Agnes Adetokunbo,12/07/2026,Approved,,15/07/2026,
+LND-007,Add an audit field to the KYC verification step,Gambo Isah,04/08/2026,Rejected,TBC,05/08/2026,Out of scope for the current contract; raise it as a change order.
 LND-008,Add monitoring alerts for the credit scoring service,Gambo Isah,10/08/2026,Approved,,16/08/2026,Approved; please schedule outside peak hours.
-LND-009,Add monitoring alerts for the repayment schedule,Gambo Isah,22/08/2026,Awaiting project manager review,Gambo Isah,23/08/2026,Fine from my side.
+LND-009,Add monitoring alerts for the repayment schedule,Gambo Isah,22/08/2026,Awaiting project manager review,,23/08/2026,Fine from my side.
 LND-010,Harden session handling in the repayment schedule,Agnes Adetokunbo,26/08/2026,Rejected,Agnes Adetokunbo,27/08/2026,Conflicts with the client's security policy.
-LND-011,Add an audit field to the disbursement API,Agnes Adetokunbo,10/09/2026,Approved,,19/09/2026,Add the monitoring you will watch after release.
+LND-011,Add an audit field to the disbursement API,Agnes Adetokunbo,10/09/2026,Awaiting technical lead review,,11/09/2026,Add the monitoring you will watch after release.
 LND-012,Improve error messages in the credit scoring service,Gambo Isah,13/09/2026,Cancelled,,15/09/2026,
-LND-013,Remove the deprecated endpoint from the loan application form,Agnes Adetokunbo,10/10/2026,Approved,,13/10/2026,Approved; please schedule outside peak hours.
+LND-013,Remove the deprecated endpoint from the loan application form,Agnes Adetokunbo,10/10/2026,Approved,,13/10/2026,
 LND-014,Add CSV export to the credit scoring service,Agnes Adetokunbo,11/10/2026,Approved,,16/10/2026,
-LND-015,Add retry with back-off to the KYC verification step,Agnes Adetokunbo,27/10/2026,Changes requested,Agnes Adetokunbo,31/10/2026,Add the monitoring you will watch after release.
+LND-015,Add retry with back-off to the KYC verification step,Agnes Adetokunbo,27/10/2026,Changes requested,Agnes Adetokunbo,31/10/2026,
 LND-016,Upgrade the logging library in the KYC verification step,Gambo Isah,28/10/2026,Changes requested,Gambo Isah,29/10/2026,Attach test evidence for the failure cases.
-LND-017,Upgrade the logging library in the loan application form,Agnes Adetokunbo,28/10/2026,Awaiting project manager review,,29/10/2026,
-LND-018,Harden session handling in the disbursement API,Agnes Adetokunbo,28/10/2026,Awaiting technical lead review,Agnes Adetokunbo,30/10/2026,
+LND-017,Upgrade the logging library in the loan application form,Agnes Adetokunbo,28/10/2026,Awaiting project manager review,Agnes Adetokunbo,29/10/2026,
+LND-018,Harden session handling in the disbursement API,Agnes Adetokunbo,28/10/2026,Awaiting technical lead review,Simon Ogunleye,30/10/2026,
 LND-019,Add CSV export to the BVN lookup integration,Ozioma Nwachukwu,31/10/2026,Changes requested,Ozioma Nwachukwu,01/11/2026,Add the rollback steps and who will run them.
 LND-020,Move the credit scoring service to the new database cluster,Gambo Isah,31/10/2026,Not submitted,Gambo Isah,01/11/2026,
 PAY-001,Move the settlement report to the new database cluster,Chukwudi Okafor,13/06/2026,Approved,,15/06/2026,Approved. Keep the feature flag off until sign-off.
-PAY-002,Move the merchant API to the new database cluster,Chukwudi Okafor,16/06/2026,Awaiting technical lead review,,17/06/2026,
-PAY-003,Remove the deprecated endpoint from the payment status page,Chukwudi Okafor,17/06/2026,Approved,,20/06/2026,Approved. Keep the feature flag off until sign-off.
-PAY-004,Harden session handling in the transfer callback handler,Mojisoluwa Fagunwa,14/07/2026,Approved,,18/07/2026,Fine from my side.
+PAY-002,Move the merchant API to the new database cluster,Chukwudi Okafor,16/06/2026,Approved,,20/06/2026,Looks good.
+PAY-003,Remove the deprecated endpoint from the payment status page,Chukwudi Okafor,17/06/2026,Approved,Chukwudi Okafor,20/06/2026,Approved. Keep the feature flag off until sign-off.
+PAY-004,Harden session handling in the transfer callback handler,Mojisoluwa Fagunwa,14/07/2026,Awaiting technical lead review,,15/07/2026,Fine from my side.
 PAY-005,Cache lookups in the refund workflow,Mojisoluwa Fagunwa,25/07/2026,Awaiting project manager review,,26/07/2026,Duplicates work already planned for the next release.
-PAY-006,Cache lookups in the card tokenisation service,Mojisoluwa Fagunwa,07/08/2026,Rejected,Mojisoluwa Fagunwa,09/08/2026,Conflicts with the client's security policy.
+PAY-006,Cache lookups in the card tokenisation service,Mojisoluwa Fagunwa,07/08/2026,Awaiting project manager review,Mojisoluwa Fagunwa,09/08/2026,
 PAY-007,Improve error messages in the merchant API,Mojisoluwa Fagunwa,20/08/2026,Cancelled,,21/08/2026,
-PAY-008,Remove the deprecated endpoint from the card tokenisation service,Chukwudi Okafor,26/08/2026,Awaiting technical lead review,,27/08/2026,Fine from my side.
-PAY-009,Move the refund workflow to the new database cluster,Chukwudi Okafor,07/09/2026,Approved,,09/09/2026,Fine from my side.
-PAY-010,Add retry with back-off to the merchant API,Chukwudi Okafor,10/09/2026,Approved,,13/09/2026,Approved. Keep the feature flag off until sign-off.
-PAY-011,Add CSV export to the card tokenisation service,Chukwudi Okafor,14/10/2026,Rejected,,21/10/2026,The benefit does not justify the risk this quarter.
-PAY-012,Remove the deprecated endpoint from the settlement report,Mojisoluwa Fagunwa,19/10/2026,Rejected,,22/10/2026,
-PAY-013,Harden session handling in the payment status page,Mojisoluwa Fagunwa,22/10/2026,Rejected,,25/10/2026,The benefit does not justify the risk this quarter.
+PAY-008,Remove the deprecated endpoint from the card tokenisation service,Chukwudi Okafor,26/08/2026,Approved,,31/08/2026,
+PAY-009,Move the refund workflow to the new database cluster,Chukwudi Okafor,07/09/2026,Approved,,09/09/2026,
+PAY-010,Add retry with back-off to the merchant API,Chukwudi Okafor,10/09/2026,Approved,,13/09/2026,
+PAY-011,Add CSV export to the card tokenisation service,Chukwudi Okafor,14/10/2026,Rejected,,21/10/2026,
+PAY-012,Remove the deprecated endpoint from the settlement report,Mojisoluwa Fagunwa,19/10/2026,Rejected,Mojisoluwa Fagunwa,22/10/2026,Out of scope for the current contract; raise it as a change order.
+PAY-013,Harden session handling in the payment status page,Mojisoluwa Fagunwa,22/10/2026,Awaiting technical lead review,,23/10/2026,The benefit does not justify the risk this quarter.
 PAY-014,Add CSV export to the settlement report,Mojisoluwa Fagunwa,27/10/2026,Changes requested,Mojisoluwa Fagunwa,31/10/2026,State the expected downtime and the change window.
-PAY-015,Harden session handling in the payment status page,Chukwudi Okafor,28/10/2026,Changes requested,Chukwudi Okafor,01/11/2026,Add the monitoring you will watch after release.
-PAY-016,Add monitoring alerts for the settlement report,Chukwudi Okafor,28/10/2026,Awaiting project manager review,Chukwudi Okafor,29/10/2026,
-PAY-017,Improve error messages in the refund workflow,Chukwudi Okafor,29/10/2026,Changes requested,Chukwudi Okafor,30/10/2026,Confirm the data retention period with the client.
+PAY-015,Harden session handling in the payment status page,Chukwudi Okafor,28/10/2026,Changes requested,Chukwudi Okafor,01/11/2026,
+PAY-016,Add monitoring alerts for the settlement report,Chukwudi Okafor,28/10/2026,Awaiting project manager review,,29/10/2026,
+PAY-017,Improve error messages in the refund workflow,Chukwudi Okafor,29/10/2026,Awaiting technical lead review,Chukwudi Okafor,29/10/2026,
 PAY-018,Add monitoring alerts for the fraud rules engine,Chukwudi Okafor,31/10/2026,Changes requested,Chukwudi Okafor,31/10/2026,Add the rollback steps and who will run them.
-PAY-019,Cache lookups in the fraud rules engine,Chukwudi Okafor,31/10/2026,Awaiting project manager review,Chukwudi Okafor,01/11/2026,Add the rollback steps and who will run them.
-PAY-020,Harden session handling in the fraud rules engine,Mojisoluwa Fagunwa,01/11/2026,Awaiting product owner sign-off,Hauwa Buhari,02/11/2026,Approved; please schedule outside peak hours.
-TEL-001,Add input validation to the invoice generator,Modupe Salami,09/06/2026,Cancelled,TBC,10/06/2026,
+PAY-019,Cache lookups in the fraud rules engine,Chukwudi Okafor,31/10/2026,Changes requested,Chukwudi Okafor,01/11/2026,Add the rollback steps and who will run them.
+PAY-020,Harden session handling in the fraud rules engine,Mojisoluwa Fagunwa,01/11/2026,Awaiting technical lead review,Hauwa Buhari,01/11/2026,
+TEL-001,Add input validation to the invoice generator,Modupe Salami,09/06/2026,Awaiting project manager review,,09/06/2026,
 TEL-002,Remove the deprecated endpoint from the USSD menu,Modupe Salami,19/06/2026,Approved,,22/06/2026,Fine from my side.
 TEL-003,Add input validation to the billing reconciliation job,Modupe Salami,23/06/2026,Approved,,30/06/2026,
 TEL-004,Improve error messages in the billing reconciliation job,Modupe Salami,28/06/2026,Approved,,30/06/2026,
 TEL-005,Add input validation to the USSD menu,Somadina Obi,23/07/2026,Approved,,29/07/2026,Looks good.
-TEL-006,Add CSV export to the airtime top-up API,Modupe Salami,31/07/2026,Awaiting technical lead review,,31/07/2026,
+TEL-006,Add CSV export to the airtime top-up API,Modupe Salami,31/07/2026,Approved,TBC,01/08/2026,Fine from my side.
 TEL-007,Remove the deprecated endpoint from the usage alert service,Modupe Salami,14/08/2026,Approved,Modupe Salami,20/08/2026,Looks good.
 TEL-008,Improve error messages in the bundle catalogue,Modupe Salami,15/08/2026,Cancelled,,16/08/2026,
-TEL-009,Add monitoring alerts for the USSD menu,Somadina Obi,27/08/2026,Approved,Somadina Obi,01/09/2026,Approved. Keep the feature flag off until sign-off.
+TEL-009,Add monitoring alerts for the USSD menu,Somadina Obi,27/08/2026,Awaiting project manager review,TBC,27/08/2026,Approved. Keep the feature flag off until sign-off.
 TEL-010,Remove the deprecated endpoint from the usage alert service,Modupe Salami,07/09/2026,Approved,,08/09/2026,Looks good.
 TEL-011,Cache lookups in the airtime top-up API,Modupe Salami,24/09/2026,Awaiting technical lead review,,25/09/2026,
-TEL-012,Add an audit field to the USSD menu,Somadina Obi,02/10/2026,Approved,,10/10/2026,Fine from my side.
-TEL-013,Add an audit field to the USSD menu,Modupe Salami,27/10/2026,Awaiting technical lead review,Modupe Salami,28/10/2026,Add the rollback steps and who will run them.
+TEL-012,Add an audit field to the USSD menu,Somadina Obi,02/10/2026,Awaiting technical lead review,,03/10/2026,Fine from my side.
+TEL-013,Add an audit field to the USSD menu,Modupe Salami,27/10/2026,Changes requested,Modupe Salami,29/10/2026,
 TEL-014,Add retry with back-off to the subscriber lookup,Blessing Adetokunbo,28/10/2026,Changes requested,Blessing Adetokunbo,30/10/2026,Confirm the data retention period with the client.
-TEL-015,Cache lookups in the usage alert service,Somadina Obi,29/10/2026,Awaiting technical lead review,Somadina Obi,29/10/2026,Fine from my side.
-TEL-016,Add input validation to the subscriber lookup,Somadina Obi,29/10/2026,Awaiting technical lead review,Somadina Obi,30/10/2026,Approved; please schedule outside peak hours.
-TEL-017,Move the usage alert service to the new database cluster,Modupe Salami,30/10/2026,Awaiting project manager review,TBC,31/10/2026,Looks good.
-TEL-018,Remove the deprecated endpoint from the USSD menu,Somadina Obi,30/10/2026,Awaiting project manager review,TBC,30/10/2026,Looks good.
+TEL-015,Cache lookups in the usage alert service,Somadina Obi,29/10/2026,Awaiting product owner sign-off,TBC,31/10/2026,Fine from my side.
+TEL-016,Add input validation to the subscriber lookup,Somadina Obi,29/10/2026,Awaiting technical lead review,Okechukwu Chukwu,30/10/2026,
+TEL-017,Move the usage alert service to the new database cluster,Modupe Salami,30/10/2026,Awaiting technical lead review,,31/10/2026,Looks good.
+TEL-018,Remove the deprecated endpoint from the USSD menu,Somadina Obi,30/10/2026,Awaiting project manager review,Somadina Obi,30/10/2026,Looks good.
 TEL-019,Add monitoring alerts for the billing reconciliation job,Somadina Obi,01/11/2026,Not submitted,Somadina Obi,02/11/2026,
-TEL-020,Harden session handling in the USSD menu,Somadina Obi,01/11/2026,Awaiting project manager review,Ololade Oyetoro,02/11/2026,
+TEL-020,Harden session handling in the USSD menu,Somadina Obi,01/11/2026,Awaiting project manager review,TBC,02/11/2026,

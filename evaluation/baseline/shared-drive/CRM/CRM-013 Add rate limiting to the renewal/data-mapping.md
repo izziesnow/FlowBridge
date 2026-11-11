@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 27 September 2026
 
 ## Summary
-Dolore voluptas distinctio culpa voluptatibus. Quam itaque facilis distinctio est qui.
+The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

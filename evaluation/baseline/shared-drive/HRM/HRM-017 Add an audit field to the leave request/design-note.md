@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 10 October 2026
 
 ## Summary
-Porro iste quas iusto ad ab. Modi vero ipsum. Consectetur earum eius culpa eos.
+The client's acceptance criteria are listed in the test plan. Load on the leave request screen is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

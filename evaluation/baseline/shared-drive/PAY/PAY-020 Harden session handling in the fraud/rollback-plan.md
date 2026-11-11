@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 01 November 2026
 
 ## Summary
-Impedit accusamus neque quisquam optio laudantium ducimus. Deserunt rerum veritatis dolores provident maxime. Dolor ea cumque labore aliquam odio.
+The rollback has been rehearsed in the staging environment. Load on the fraud rules engine is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

@@ -6,10 +6,10 @@ Prepared by: Somadina Obi
 Date: 02 November 2026
 
 ## Summary
-Eveniet sequi veniam praesentium officiis quidem quod reprehenderit. Vero sint facere iste.
+The change is limited to the billing reconciliation job and does not alter any shared database tables. The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
-Revised after review: Similique dolor numquam possimus amet repudiandae iste ab perspiciatis.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

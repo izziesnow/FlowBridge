@@ -6,10 +6,10 @@ Prepared by: Sarah Ibrahim
 Date: 09 October 2026
 
 ## Summary
-Alias nihil architecto ullam natus. Reiciendis reiciendis vero nostrum molestiae corrupti.
+This document describes the change, the components it touches and how it will be tested. Existing records are not modified; new fields default to empty for older records. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
-Revised after review: Odio aliquid praesentium nam quidem voluptas aspernatur iusto molestias recusandae reprehenderit veniam.
+Revised after review: added the rollback steps and named who will run them.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

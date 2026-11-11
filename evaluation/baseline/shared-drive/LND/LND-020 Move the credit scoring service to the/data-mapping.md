@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 31 October 2026
 
 ## Summary
-Eligendi soluta esse. Iste provident facere cumque vero eos distinctio.
+The client's acceptance criteria are listed in the test plan. Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

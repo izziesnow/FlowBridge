@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 29 October 2026
 
 ## Summary
-Velit maxime minima aut sed. Exercitationem labore fugiat totam nisi. Pariatur repudiandae quae quia blanditiis.
+This document describes the change, the components it touches and how it will be tested. The client's acceptance criteria are listed in the test plan. Load on the usage alert service is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

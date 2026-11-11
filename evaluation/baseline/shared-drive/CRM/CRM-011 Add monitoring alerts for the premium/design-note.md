@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 25 September 2026
 
 ## Summary
-Sit occaecati unde voluptatem adipisci dolores inventore. Consectetur distinctio similique quod quaerat consequatur perspiciatis. Facilis officiis minus quas deleniti non.
+Load on the premium calculator is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

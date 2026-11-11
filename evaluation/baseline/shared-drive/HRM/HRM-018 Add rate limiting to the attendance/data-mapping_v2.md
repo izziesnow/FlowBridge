@@ -6,10 +6,10 @@ Prepared by: Nonso Anyanwu
 Date: 17 October 2026
 
 ## Summary
-Quod quo maxime reprehenderit nesciunt quasi voluptas. Labore nobis dolore assumenda exercitationem adipisci voluptatem. Aliquid hic fugiat laboriosam harum temporibus.
+Monitoring dashboards will be checked for one hour after release. The rollback has been rehearsed in the staging environment. The change is limited to the attendance module and does not alter any shared database tables.
 
 ## Changes in this version
-Revised after review: Qui facere vitae culpa illum facilis perspiciatis quae minima magni.
+Revised after review: attached test evidence for the failure cases.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

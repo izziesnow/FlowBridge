@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 31 July 2026
 
 ## Summary
-Odit aperiam numquam vitae consequatur.
+Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records. The change is limited to the airtime top-up API and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

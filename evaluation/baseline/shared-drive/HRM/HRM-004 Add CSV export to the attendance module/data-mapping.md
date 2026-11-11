@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 06 July 2026
 
 ## Summary
-Tempore maiores temporibus non repudiandae. In ullam accusamus aperiam nemo vero rerum quae. Vel est aperiam aut explicabo.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Existing records are not modified; new fields default to empty for older records. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

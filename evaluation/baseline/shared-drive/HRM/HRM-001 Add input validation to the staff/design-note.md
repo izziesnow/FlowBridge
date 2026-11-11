@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 09 June 2026
 
 ## Summary
-Quas molestias libero minima aliquid veniam. Nemo cupiditate debitis neque minus.
+The change is limited to the staff directory sync and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release. Load on the staff directory sync is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

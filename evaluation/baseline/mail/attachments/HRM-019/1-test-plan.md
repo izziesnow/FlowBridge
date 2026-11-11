@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 28 October 2026
 
 ## Summary
-Tenetur sunt deleniti et provident. Vero fugiat debitis perferendis dolorum ipsa.
+Load on the leave request screen is expected to stay within current limits. The change is limited to the leave request screen and does not alter any shared database tables. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

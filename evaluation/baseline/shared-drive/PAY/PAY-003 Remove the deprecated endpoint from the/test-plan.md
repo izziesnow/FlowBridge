@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 17 June 2026
 
 ## Summary
-Accusamus inventore odit harum. Aliquid minus necessitatibus impedit quos laboriosam.
+Load on the payment status page is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

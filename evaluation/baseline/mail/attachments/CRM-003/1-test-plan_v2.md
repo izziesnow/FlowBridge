@@ -6,10 +6,10 @@ Prepared by: Fatima Suleiman
 Date: 03 July 2026
 
 ## Summary
-Id deserunt ullam aliquid molestias saepe iste. Laborum perspiciatis accusantium officia dolor.
+The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
-Revised after review: Eveniet commodi veniam nemo rem culpa maxime inventore excepturi nisi.
+Revised after review: added the rollback steps and named who will run them.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

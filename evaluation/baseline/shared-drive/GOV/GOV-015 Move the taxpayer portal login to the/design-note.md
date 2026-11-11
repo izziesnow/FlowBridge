@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 29 October 2026
 
 ## Summary
-Illo maxime velit porro. Quos placeat nisi.
+Existing records are not modified; new fields default to empty for older records. Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the taxpayer portal login and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

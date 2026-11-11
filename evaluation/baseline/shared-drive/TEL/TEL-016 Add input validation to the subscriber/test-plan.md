@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 29 October 2026
 
 ## Summary
-Vero numquam et sapiente cumque consequatur perspiciatis. Ea sequi numquam voluptates.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the subscriber lookup and does not alter any shared database tables. Load on the subscriber lookup is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 22 October 2026
 
 ## Summary
-Ipsam laboriosam voluptatibus recusandae accusantium. Consequuntur alias nobis. Occaecati suscipit provident odio eius.
+Existing records are not modified; new fields default to empty for older records. Load on the payment status page is expected to stay within current limits. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

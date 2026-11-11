@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 10 August 2026
 
 ## Summary
-Vel aperiam odio aut a. Architecto ea molestias. Reiciendis omnis alias sint sed quisquam eligendi quaerat. Voluptate ad perferendis doloremque.
+The rollback has been rehearsed in the staging environment. Load on the credit scoring service is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

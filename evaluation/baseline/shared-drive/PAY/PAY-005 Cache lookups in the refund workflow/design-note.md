@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 25 July 2026
 
 ## Summary
-Rerum culpa exercitationem animi. Voluptatem dolores corrupti veniam officia dolorum deserunt.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Existing records are not modified; new fields default to empty for older records. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

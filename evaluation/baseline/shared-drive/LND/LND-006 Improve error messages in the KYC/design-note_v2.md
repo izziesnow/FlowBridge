@@ -6,10 +6,10 @@ Prepared by: Agnes Adetokunbo
 Date: 12 July 2026
 
 ## Summary
-Qui natus nemo totam id voluptas sed. Deserunt nisi excepturi corporis blanditiis omnis. Quod illum laborum consequuntur.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Et labore iusto aut velit molestias reprehenderit tempora.
+Revised after review: added the rollback steps and named who will run them.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

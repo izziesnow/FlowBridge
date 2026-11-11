@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 24 September 2026
 
 ## Summary
-Consequatur eligendi neque repellat facilis amet. Officia nesciunt aut rem beatae debitis facere.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

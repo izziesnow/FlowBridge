@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 09 June 2026
 
 ## Summary
-Esse explicabo harum. Maiores totam accusamus accusamus occaecati. Possimus optio fuga soluta.
+The rollback has been rehearsed in the staging environment. Load on the invoice generator is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

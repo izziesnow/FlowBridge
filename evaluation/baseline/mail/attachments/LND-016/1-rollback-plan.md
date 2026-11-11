@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 28 October 2026
 
 ## Summary
-Accusamus quia consequatur autem rerum labore similique numquam. Perspiciatis magnam quibusdam amet rem labore nam. Voluptatibus ea at incidunt maxime sed. Inventore qui ad aliquid iure maiores nulla nobis.
+The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan. Load on the KYC verification step is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

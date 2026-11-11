@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 27 October 2026
 
 ## Summary
-Excepturi expedita repellendus doloribus. Aspernatur voluptatum in. Maiores atque corrupti.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. Load on the TIN validation is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

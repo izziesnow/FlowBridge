@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 30 October 2026
 
 ## Summary
-Asperiores incidunt sit quod provident ad porro. Nisi repellat ipsam vero neque.
+This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy. Load on the usage alert service is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

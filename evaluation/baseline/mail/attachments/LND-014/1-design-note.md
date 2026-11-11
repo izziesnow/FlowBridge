@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 11 October 2026
 
 ## Summary
-Sapiente minus perspiciatis mollitia assumenda adipisci. Optio asperiores laboriosam quod autem accusamus.
+This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

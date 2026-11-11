@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 14 October 2026
 
 ## Summary
-Nulla nam aspernatur error minima amet eos at. Rerum deleniti iure.
+The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

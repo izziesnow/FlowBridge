@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 14 July 2026
 
 ## Summary
-Aperiam vitae explicabo numquam. Quidem quas quibusdam perferendis aut.
+The change is limited to the transfer callback handler and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

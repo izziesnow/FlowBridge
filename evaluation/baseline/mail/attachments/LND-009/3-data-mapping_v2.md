@@ -6,10 +6,10 @@ Prepared by: Gambo Isah
 Date: 24 August 2026
 
 ## Summary
-Tenetur similique quisquam. Distinctio repudiandae nobis velit. Occaecati tempora repellendus pariatur praesentium nemo.
+Existing records are not modified; new fields default to empty for older records. This document describes the change, the components it touches and how it will be tested. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
-Revised after review: Incidunt quasi alias natus minima nobis odio.
+Revised after review: clarified which client environments are affected.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

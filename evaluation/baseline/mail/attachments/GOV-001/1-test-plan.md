@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 07 June 2026
 
 ## Summary
-Debitis assumenda dolores ipsam veniam totam ullam mollitia. Quidem consectetur accusantium iure soluta aperiam. Aperiam labore quia voluptatum illum incidunt architecto.
+Existing records are not modified; new fields default to empty for older records. Monitoring dashboards will be checked for one hour after release. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

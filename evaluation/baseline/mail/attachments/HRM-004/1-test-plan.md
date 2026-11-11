@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 06 July 2026
 
 ## Summary
-Vero saepe modi eveniet quis aliquid. Occaecati quae eum temporibus molestiae voluptas beatae. Aperiam quos incidunt ducimus placeat.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. The change is limited to the attendance module and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

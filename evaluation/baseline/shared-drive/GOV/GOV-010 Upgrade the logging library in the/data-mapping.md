@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 15 September 2026
 
 ## Summary
-Itaque dolore quo ut. Illo sapiente aliquam earum vero suscipit enim at.
+Load on the payment receipt service is expected to stay within current limits. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

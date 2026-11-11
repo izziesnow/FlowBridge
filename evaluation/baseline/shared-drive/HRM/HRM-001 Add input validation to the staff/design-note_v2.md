@@ -6,10 +6,10 @@ Prepared by: Nonso Anyanwu
 Date: 10 June 2026
 
 ## Summary
-Eius eaque aperiam iure. Earum vel harum distinctio occaecati beatae. Temporibus ipsum culpa enim praesentium rerum dolor.
+The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment. The change is limited to the staff directory sync and does not alter any shared database tables.
 
 ## Changes in this version
-Revised after review: Accusantium assumenda ullam incidunt nulla voluptates maxime est voluptatibus maiores amet.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

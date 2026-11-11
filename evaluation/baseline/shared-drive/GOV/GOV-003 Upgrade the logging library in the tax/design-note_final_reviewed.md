@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 22 June 2026
 
 ## Summary
-Quidem iste eveniet fugiat accusamus explicabo. Recusandae quos ab impedit aliquid ad. Molestiae molestias amet quo inventore.
+Monitoring dashboards will be checked for one hour after release. The client's acceptance criteria are listed in the test plan. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

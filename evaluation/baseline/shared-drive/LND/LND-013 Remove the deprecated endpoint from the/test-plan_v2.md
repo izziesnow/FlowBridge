@@ -6,10 +6,10 @@ Prepared by: Agnes Adetokunbo
 Date: 12 October 2026
 
 ## Summary
-Sequi magnam eaque corporis dolor quasi. Aut perferendis delectus minima fugit fugit. Quas quaerat quisquam ut tenetur. Dignissimos dolores voluptates natus.
+This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the loan application form and does not alter any shared database tables.
 
 ## Changes in this version
-Revised after review: Perferendis numquam provident fugit voluptate quo in unde adipisci eveniet eligendi.
+Revised after review: attached test evidence for the failure cases.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

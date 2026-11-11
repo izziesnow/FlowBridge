@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 06 October 2026
 
 ## Summary
-Quis deserunt illum. Deleniti nam distinctio omnis ipsum corporis totam magni. Laudantium quis amet quasi beatae placeat.
+Load on the leave request screen is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

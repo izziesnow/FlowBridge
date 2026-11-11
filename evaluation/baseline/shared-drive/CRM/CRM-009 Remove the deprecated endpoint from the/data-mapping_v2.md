@@ -6,10 +6,10 @@ Prepared by: Fatima Suleiman
 Date: 14 September 2026
 
 ## Summary
-Animi id cupiditate eaque praesentium consectetur. Officia impedit quod labore suscipit excepturi alias dolore. Optio velit eveniet quod.
+The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment. The change is limited to the agent dashboard and does not alter any shared database tables.
 
 ## Changes in this version
-Revised after review: Quaerat perferendis excepturi perspiciatis ullam tenetur sed veritatis pariatur molestias distinctio.
+Revised after review: described how existing records will be migrated.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

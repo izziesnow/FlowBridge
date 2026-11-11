@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 04 August 2026
 
 ## Summary
-Vero quas tempora soluta. Eaque expedita mollitia vel sunt odio numquam.
+This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

@@ -6,10 +6,10 @@ Prepared by: Agnes Adetokunbo
 Date: 28 October 2026
 
 ## Summary
-Facere quasi quam atque eum. Corrupti esse aspernatur. Assumenda atque odio eligendi.
+The client's acceptance criteria are listed in the test plan. Existing records are not modified; new fields default to empty for older records. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
-Revised after review: Voluptate harum id repellendus magni dolorem.
+Revised after review: listed the monitoring to watch after release.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

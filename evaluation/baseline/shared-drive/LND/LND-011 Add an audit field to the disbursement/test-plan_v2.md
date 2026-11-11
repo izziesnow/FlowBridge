@@ -6,10 +6,10 @@ Prepared by: Agnes Adetokunbo
 Date: 11 September 2026
 
 ## Summary
-Amet dolores odio nemo nobis hic. Maxime est consequatur labore incidunt.
+Monitoring dashboards will be checked for one hour after release. This document describes the change, the components it touches and how it will be tested. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
-Revised after review: Illum fugiat excepturi excepturi corporis ex.
+Revised after review: stated the change window and expected downtime.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

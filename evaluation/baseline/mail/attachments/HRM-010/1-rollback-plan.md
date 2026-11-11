@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 30 August 2026
 
 ## Summary
-Tenetur quas optio perspiciatis provident. Laborum molestiae quam magnam deleniti hic. Ea esse maxime architecto.
+The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

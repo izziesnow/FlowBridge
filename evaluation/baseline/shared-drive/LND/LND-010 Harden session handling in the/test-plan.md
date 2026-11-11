@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 26 August 2026
 
 ## Summary
-Aliquam iusto deserunt nihil eius accusantium. Error dolor aut neque. Veniam qui alias quas voluptate.
+The change is limited to the repayment schedule and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy. Load on the repayment schedule is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 29 October 2026
 
 ## Summary
-Ea temporibus animi hic vitae repellendus. Hic impedit saepe corporis. Neque deserunt molestias at eaque iste.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the tax return form and does not alter any shared database tables. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

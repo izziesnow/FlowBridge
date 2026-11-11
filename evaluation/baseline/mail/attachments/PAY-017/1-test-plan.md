@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 29 October 2026
 
 ## Summary
-At quasi necessitatibus occaecati aperiam debitis nisi. At excepturi atque commodi aliquam. Autem modi facilis quas id aliquid voluptas. Delectus quasi dolorum eligendi excepturi reprehenderit.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Monitoring dashboards will be checked for one hour after release. The change is limited to the refund workflow and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

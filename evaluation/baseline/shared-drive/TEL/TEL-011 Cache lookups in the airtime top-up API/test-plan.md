@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 24 September 2026
 
 ## Summary
-Rem nulla veritatis provident at. Excepturi sit doloribus mollitia.
+The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

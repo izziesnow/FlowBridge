@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 31 October 2026
 
 ## Summary
-Voluptas possimus expedita ullam doloribus magni alias. Repudiandae error sed pariatur commodi voluptates odio perspiciatis. Esse alias nisi excepturi error impedit voluptates occaecati.
+The rollback has been rehearsed in the staging environment. The change is limited to the claims upload form and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 07 September 2026
 
 ## Summary
-Beatae impedit fuga ex magnam cupiditate quos. Dolore nam quos quibusdam labore fugit.
+Load on the refund workflow is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 19 October 2026
 
 ## Summary
-Sunt facilis facere libero sequi. A molestiae omnis corrupti qui dignissimos quis.
+The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

@@ -12,14 +12,14 @@ Score status and person separately (retrieval accuracy: 2 answers). Baseline tra
 (the log shows an out-of-date status and owner).
 
 **T3.** LND-019: success if version 2 of the design note (`T3-design-note_v2.md`,
-SHA-256 0b15b92dd5ed753c…) is attached and the request is sent back for review. Flowbridge: resubmitted as
+SHA-256 b5a4ed76acbb06c4…) is attached and the request is sent back for review. Flowbridge: resubmitted as
 revision 2, cycle 2 at stage 1. Baseline: a reply to the
 thread with the attachment, addressed to the PM or to Simon Ogunleye.
 
 **T4.** LND-008, final approval by Ayoka Makinwa (cycle 2,
 stage 3). Approved versions:
-   - Rollback plan: version 2 (`rollback-plan_v2.md`, SHA-256 9105eb2211fb6ffe…)
-   - Design note: version 1 (`design-note.md`, SHA-256 09e11a4b64716436…)
+   - Rollback plan: version 2 (`rollback-plan_v2.md`, SHA-256 8eca8469952845a3…)
+   - Design note: version 1 (`design-note.md`, SHA-256 9c0a5bb1971e7057…)
 Score each document separately (retrieval accuracy). Baseline trap: P3 (misleading copies on the drive).
 
 **T5.** LND-003, 6 decisions:

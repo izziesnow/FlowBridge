@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 15 July 2026
 
 ## Summary
-Nostrum saepe veniam sapiente mollitia magnam repudiandae qui.
+The change is limited to the expense claim form and does not alter any shared database tables. This document describes the change, the components it touches and how it will be tested. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

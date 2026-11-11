@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 27 October 2026
 
 ## Summary
-A numquam fuga corporis nemo. Et repellendus omnis et. Placeat eum iure.
+The client's acceptance criteria are listed in the test plan. Configuration is held in the environment, so the change can be switched off without a redeploy. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

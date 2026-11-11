@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 18 October 2026
 
 ## Summary
-Blanditiis vitae temporibus quaerat esse iusto eum. Porro id maiores sed in laborum nisi. Deleniti beatae labore fugit minus libero. Harum alias iure consequuntur dolores.
+The client's acceptance criteria are listed in the test plan. Load on the renewal reminder job is expected to stay within current limits. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

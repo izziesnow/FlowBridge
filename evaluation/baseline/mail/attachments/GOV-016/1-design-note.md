@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 29 October 2026
 
 ## Summary
-Blanditiis tenetur amet autem doloremque numquam. Sint fugit facilis quia quas deserunt.
+The client's acceptance criteria are listed in the test plan. Load on the tax return form is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 29 October 2026
 
 ## Summary
-Delectus amet est pariatur temporibus est beatae. Debitis impedit magnam accusantium magnam. Ea veritatis dicta repellendus qui.
+This document describes the change, the components it touches and how it will be tested. Existing records are not modified; new fields default to empty for older records. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

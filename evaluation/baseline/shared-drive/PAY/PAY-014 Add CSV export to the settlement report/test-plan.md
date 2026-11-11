@@ -6,7 +6,7 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 27 October 2026
 
 ## Summary
-Eum praesentium occaecati ipsam delectus nostrum expedita. Eos tempora libero animi culpa recusandae ex.
+Existing records are not modified; new fields default to empty for older records. The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

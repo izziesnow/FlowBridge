@@ -6,7 +6,7 @@ Prepared by: Ozioma Nwachukwu
 Date: 31 October 2026
 
 ## Summary
-Nulla cupiditate repellendus corporis neque. Dignissimos architecto sapiente quis. Aliquid quam laborum vero saepe laborum aut in.
+Monitoring dashboards will be checked for one hour after release. This document describes the change, the components it touches and how it will be tested. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

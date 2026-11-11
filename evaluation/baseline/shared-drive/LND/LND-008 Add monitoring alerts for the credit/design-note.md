@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 10 August 2026
 
 ## Summary
-Necessitatibus saepe quos et.
+Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

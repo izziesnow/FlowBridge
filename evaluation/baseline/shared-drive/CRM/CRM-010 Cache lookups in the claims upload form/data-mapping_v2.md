@@ -6,10 +6,10 @@ Prepared by: Sarah Ibrahim
 Date: 22 September 2026
 
 ## Summary
-Facilis maiores quasi esse neque. Sint quas officia magni minus similique. Nulla sequi voluptate nisi laudantium optio facere.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Load on the claims upload form is expected to stay within current limits. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
-Revised after review: Officia consequatur laboriosam facilis saepe.
+Revised after review: attached test evidence for the failure cases.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

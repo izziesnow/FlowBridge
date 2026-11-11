@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 16 June 2026
 
 ## Summary
-Exercitationem perspiciatis ipsam aliquid molestias explicabo doloribus.
+The client's acceptance criteria are listed in the test plan. Configuration is held in the environment, so the change can be switched off without a redeploy. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

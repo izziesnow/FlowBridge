@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 27 October 2026
 
 ## Summary
-Ut vero temporibus voluptas officiis voluptas aliquid at. Eius ab nulla aliquam. Architecto praesentium molestias molestias maxime.
+This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

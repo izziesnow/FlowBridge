@@ -6,10 +6,10 @@ Prepared by: Gambo Isah
 Date: 10 June 2026
 
 ## Summary
-Mollitia magnam libero excepturi ea perferendis consectetur.
+The change is limited to the credit scoring service and does not alter any shared database tables. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Laborum rerum autem cumque optio vitae praesentium enim delectus optio quos.
+Revised after review: described how existing records will be migrated.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

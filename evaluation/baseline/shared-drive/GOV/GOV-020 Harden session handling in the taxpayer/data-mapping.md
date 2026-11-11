@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 01 November 2026
 
 ## Summary
-Soluta itaque ad. Molestiae reprehenderit ullam repudiandae harum perspiciatis.
+Monitoring dashboards will be checked for one hour after release. The change is limited to the taxpayer portal login and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

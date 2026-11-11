@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 10 September 2026
 
 ## Summary
-Ducimus repellendus consequatur incidunt consequatur soluta. Voluptatum mollitia molestias ex.
+The rollback has been rehearsed in the staging environment. Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the merchant API and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

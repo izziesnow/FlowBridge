@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 27 October 2026
 
 ## Summary
-Doloribus officiis debitis eligendi accusamus accusamus aliquid laborum. Eos ut voluptate harum laborum.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

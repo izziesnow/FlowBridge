@@ -12,14 +12,14 @@ Score status and person separately (retrieval accuracy: 2 answers). Baseline tra
 (the log shows an out-of-date status and owner).
 
 **T3.** TEL-014: success if version 2 of the test plan (`T3-test-plan_v2.md`,
-SHA-256 e77d88a856935dcc…) is attached and the request is sent back for review. Flowbridge: resubmitted as
+SHA-256 d604f924efa1ea78…) is attached and the request is sent back for review. Flowbridge: resubmitted as
 revision 2, cycle 2 at stage 1. Baseline: a reply to the
 thread with the attachment, addressed to the PM or to Okechukwu Chukwu.
 
 **T4.** TEL-005, final approval by Hauwa Sa’idu (cycle 2,
 stage 3). Approved versions:
-   - Design note: version 2 (`design-note_v2.md`, SHA-256 057da14068f1c362…)
-   - Rollback plan: version 1 (`rollback-plan.md`, SHA-256 6638eeadce765f1a…)
+   - Design note: version 2 (`design-note_v2.md`, SHA-256 f4b999b6c24b952d…)
+   - Rollback plan: version 1 (`rollback-plan.md`, SHA-256 4e11c289183ccc4a…)
 Score each document separately (retrieval accuracy). Baseline trap: P3 (misleading copies on the drive).
 
 **T5.** TEL-003, 6 decisions:

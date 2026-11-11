@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 26 September 2026
 
 ## Summary
-Ratione velit debitis eaque molestiae.
+Load on the agent dashboard is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

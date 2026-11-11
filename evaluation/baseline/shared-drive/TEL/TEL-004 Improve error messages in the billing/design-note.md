@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 28 June 2026
 
 ## Summary
-Dignissimos quibusdam vitae doloremque numquam fugiat labore.
+Monitoring dashboards will be checked for one hour after release. The client's acceptance criteria are listed in the test plan. The change is limited to the billing reconciliation job and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

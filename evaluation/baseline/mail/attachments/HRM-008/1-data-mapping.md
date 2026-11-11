@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 30 July 2026
 
 ## Summary
-Asperiores inventore architecto repudiandae officiis. Aliquid totam incidunt odio incidunt.
+The change is limited to the push notification service and does not alter any shared database tables. Existing records are not modified; new fields default to empty for older records. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

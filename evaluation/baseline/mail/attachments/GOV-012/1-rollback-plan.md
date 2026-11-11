@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 18 September 2026
 
 ## Summary
-Culpa dicta dolor fuga adipisci alias minima magnam. Possimus possimus atque in quae sequi tempore.
+Load on the tax return form is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

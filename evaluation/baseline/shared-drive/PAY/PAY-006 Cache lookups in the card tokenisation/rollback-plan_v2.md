@@ -6,10 +6,10 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 08 August 2026
 
 ## Summary
-Ut commodi aperiam. Harum totam laborum similique quod.
+Load on the card tokenisation service is expected to stay within current limits. The client's acceptance criteria are listed in the test plan. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
-Revised after review: Eos dolore adipisci amet nesciunt suscipit sequi rerum libero voluptatibus explicabo laborum.
+Revised after review: confirmed the data retention period with the client.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

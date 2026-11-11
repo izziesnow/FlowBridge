@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 31 October 2026
 
 ## Summary
-Quam in nisi blanditiis. Atque ut ad iusto eveniet cupiditate. Repellat tempora dicta impedit quam iusto.
+This document describes the change, the components it touches and how it will be tested. Load on the fraud rules engine is expected to stay within current limits. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

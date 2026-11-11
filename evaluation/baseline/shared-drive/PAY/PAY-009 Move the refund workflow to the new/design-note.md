@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 07 September 2026
 
 ## Summary
-Dolorum eius aperiam quidem reprehenderit maxime aspernatur. Aperiam nulla ab praesentium dolore laudantium pariatur. At consequatur provident reprehenderit. Fuga repellendus totam dolore.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

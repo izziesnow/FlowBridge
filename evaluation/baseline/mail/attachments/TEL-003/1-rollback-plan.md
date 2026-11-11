@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 23 June 2026
 
 ## Summary
-Libero consequuntur id ipsa in. Delectus quis fuga alias atque omnis. Quasi assumenda eveniet laborum fugiat.
+Existing records are not modified; new fields default to empty for older records. This document describes the change, the components it touches and how it will be tested. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 23 July 2026
 
 ## Summary
-Adipisci quibusdam hic molestias iure quos. Maxime iusto accusantium facere.
+The client's acceptance criteria are listed in the test plan. Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

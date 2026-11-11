@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 25 June 2026
 
 ## Summary
-Voluptas sapiente laboriosam aperiam. Temporibus fuga deserunt sequi corporis. At iste molestias.
+Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
 First issue.

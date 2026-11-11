@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 12 July 2026
 
 ## Summary
-Officia labore fugiat ratione repudiandae. Sequi consequuntur eveniet alias aliquid. Eos non voluptatum error voluptatibus soluta doloribus.
+Configuration is held in the environment, so the change can be switched off without a redeploy. Monitoring dashboards will be checked for one hour after release. The change is limited to the KYC verification step and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

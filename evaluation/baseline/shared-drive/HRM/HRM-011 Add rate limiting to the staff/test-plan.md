@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 02 September 2026
 
 ## Summary
-Amet quisquam itaque adipisci minus labore laudantium magni. Possimus explicabo nesciunt adipisci voluptate similique.
+The client's acceptance criteria are listed in the test plan. Configuration is held in the environment, so the change can be switched off without a redeploy. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

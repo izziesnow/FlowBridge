@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 28 October 2026
 
 ## Summary
-Ipsum exercitationem sint fuga facilis itaque cupiditate perspiciatis. Inventore itaque assumenda ipsam officia libero. Architecto consectetur fuga.
+The change is limited to the settlement report and does not alter any shared database tables. Monitoring dashboards will be checked for one hour after release. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

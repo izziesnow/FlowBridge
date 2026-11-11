@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 28 October 2026
 
 ## Summary
-Cupiditate cum dicta quidem. Eius officia cumque at exercitationem quibusdam. Voluptatem necessitatibus maxime doloribus. Sit corrupti reiciendis cupiditate mollitia consequuntur repellendus.
+This document describes the change, the components it touches and how it will be tested. The change is limited to the policy search page and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 09 June 2026
 
 ## Summary
-Nemo dolorum tenetur quaerat libero beatae. Quod maxime ratione. Pariatur adipisci quidem repellat cumque accusamus.
+Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

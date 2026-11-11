@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 01 August 2026
 
 ## Summary
-Aperiam ipsum quis fugit minus ullam corporis. Possimus id aspernatur sint voluptatibus.
+Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

@@ -6,10 +6,10 @@ Prepared by: Gambo Isah
 Date: 21 June 2026
 
 ## Summary
-Ipsum dicta alias aliquam sint nostrum repudiandae. Ullam fuga esse minus molestiae alias asperiores. Aut consequatur dicta adipisci velit dignissimos inventore.
+The change is limited to the loan officer dashboard and does not alter any shared database tables. Load on the loan officer dashboard is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
-Revised after review: Ea beatae doloremque eveniet delectus.
+Revised after review: confirmed the data retention period with the client.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

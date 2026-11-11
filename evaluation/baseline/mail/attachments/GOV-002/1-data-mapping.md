@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 08 June 2026
 
 ## Summary
-Alias non minima enim qui. Dignissimos ut quas ipsam facere. Est eaque beatae non a dicta nisi.
+The change is limited to the TIN validation and does not alter any shared database tables. This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Similoluwa Kolade
 Date: 25 June 2026
 
 ## Summary
-Fugiat nulla animi eos excepturi vero libero magnam. Atque possimus dolor eveniet inventore reiciendis provident.
+Existing records are not modified; new fields default to empty for older records. Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

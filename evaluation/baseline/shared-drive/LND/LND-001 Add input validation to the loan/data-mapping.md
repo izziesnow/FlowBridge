@@ -6,7 +6,7 @@ Prepared by: Gambo Isah
 Date: 06 June 2026
 
 ## Summary
-Nostrum asperiores fugiat omnis quis architecto. Molestias ratione necessitatibus perferendis voluptatibus. Nulla nisi repellat.
+The client's acceptance criteria are listed in the test plan. Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

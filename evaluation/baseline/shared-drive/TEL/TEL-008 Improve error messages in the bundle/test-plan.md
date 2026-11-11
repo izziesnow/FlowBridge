@@ -6,7 +6,7 @@ Prepared by: Modupe Salami
 Date: 15 August 2026
 
 ## Summary
-Repellendus veritatis nesciunt perspiciatis libero ratione aut minus.
+The rollback has been rehearsed in the staging environment. Monitoring dashboards will be checked for one hour after release. The change is limited to the bundle catalogue and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

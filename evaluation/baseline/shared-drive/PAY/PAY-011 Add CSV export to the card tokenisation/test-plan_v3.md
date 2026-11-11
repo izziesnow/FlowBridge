@@ -6,10 +6,10 @@ Prepared by: Chukwudi Okafor
 Date: 19 October 2026
 
 ## Summary
-Ex mollitia accusamus nemo quod. Enim laudantium doloribus aperiam in. Eos sed dolorem laborum.
+This document describes the change, the components it touches and how it will be tested. The change is limited to the card tokenisation service and does not alter any shared database tables. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
-Revised after review: Expedita ea in molestiae dolores ab laudantium.
+Revised after review: described how existing records will be migrated.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

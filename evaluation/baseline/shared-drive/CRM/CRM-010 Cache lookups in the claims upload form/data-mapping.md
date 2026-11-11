@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 21 September 2026
 
 ## Summary
-Non cupiditate est necessitatibus quae. Nam autem earum in delectus quasi voluptates voluptates. Omnis exercitationem expedita non ducimus sunt saepe.
+Load on the claims upload form is expected to stay within current limits. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

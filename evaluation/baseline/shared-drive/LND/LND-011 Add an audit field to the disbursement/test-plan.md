@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 10 September 2026
 
 ## Summary
-Veniam inventore quia sequi dolores fugiat. Enim facilis inventore corrupti illum. Quas omnis itaque autem amet autem.
+This document describes the change, the components it touches and how it will be tested. The change is limited to the disbursement API and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

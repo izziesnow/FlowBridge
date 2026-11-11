@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 08 July 2026
 
 ## Summary
-Voluptatum repellendus enim debitis maxime ipsam minima. Reiciendis repellendus sed doloremque veritatis soluta officia. Molestias rerum sed delectus ad sed.
+The change is limited to the agent dashboard and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

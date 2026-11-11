@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 30 October 2026
 
 ## Summary
-Illo esse pariatur odit. Quam placeat necessitatibus distinctio.
+Monitoring dashboards will be checked for one hour after release. Configuration is held in the environment, so the change can be switched off without a redeploy. The change is limited to the USSD menu and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

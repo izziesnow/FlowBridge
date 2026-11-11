@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 27 October 2026
 
 ## Summary
-Mollitia itaque repellat reiciendis. Id ab deserunt ea reiciendis minima. Assumenda cumque tenetur dolor sapiente rem. Blanditiis ipsum pariatur explicabo sunt vero iure.
+The client's acceptance criteria are listed in the test plan. The rollback has been rehearsed in the staging environment. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

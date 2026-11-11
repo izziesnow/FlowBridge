@@ -6,10 +6,10 @@ Prepared by: Sarah Ibrahim
 Date: 25 June 2026
 
 ## Summary
-A optio nemo unde. Porro vel molestias labore consectetur nisi possimus. Assumenda pariatur vel quos totam.
+This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
-Revised after review: Nostrum dicta blanditiis aliquid molestias eaque.
+Revised after review: added the rollback steps and named who will run them.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

@@ -6,10 +6,10 @@ Prepared by: Similoluwa Kolade
 Date: 19 September 2026
 
 ## Summary
-Ipsum debitis cumque sed maxime minima. Aliquid quidem corrupti quaerat ducimus. Maxime minima dolore.
+Load on the leave request screen is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
-Revised after review: Esse accusantium exercitationem voluptas occaecati dolore accusantium sapiente alias architecto reprehenderit eveniet.
+Revised after review: described how existing records will be migrated.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

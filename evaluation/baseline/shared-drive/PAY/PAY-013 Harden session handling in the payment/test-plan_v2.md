@@ -6,10 +6,10 @@ Prepared by: Mojisoluwa Fagunwa
 Date: 23 October 2026
 
 ## Summary
-Libero asperiores aut iste.
+Load on the payment status page is expected to stay within current limits. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
-Revised after review: Deserunt laborum enim eum ad odit.
+Revised after review: attached test evidence for the failure cases.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

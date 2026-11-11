@@ -10,7 +10,7 @@ python manage.py generate_evaluation_data --seed 2026 --load --flush
 ```
 
 The same seed always produces the same scenario, files and ground truth.
-Ground-truth fingerprint (SHA-256 of `ground_truth/ground_truth.json`): `7c2c92f426ee0dbbc7756d7685433a01afac83025a6433e56c88e9a3981359eb`
+Ground-truth fingerprint (SHA-256 of `ground_truth/ground_truth.json`): `3e2ea0318212674a41b45eb785d6b680c9fc5845c552921cc00a7bc78d57f552`
 
 | Parameter | Value |
 |---|---|
@@ -20,7 +20,8 @@ Ground-truth fingerprint (SHA-256 of `ground_truth/ground_truth.json`): `7c2c92f
 | Staff | 40 coded synthetic users (6 PMs, 6 technical leads, 6 product owners, 18 requesters, 4 QA viewers) plus one administrator |
 | Requests | 120 software change requests raised over about five months |
 | Approval chain | Project manager review → technical lead review → product owner sign-off (sequential) |
-| Names | Faker locales yo_NG, ig_NG, ha_NG, en_NG, seeded; text from templates and Faker en_GB |
+| Names | Faker locales yo_NG, ig_NG, ha_NG, en_NG, seeded |
+| Text | Request, document, comment and email text from fixed English templates, chosen with the same seed |
 
 ## Outcome mix
 

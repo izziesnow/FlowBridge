@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 07 June 2026
 
 ## Summary
-Quis omnis itaque impedit. Repudiandae deleniti reiciendis similique.
+The change is limited to the TIN validation and does not alter any shared database tables. Configuration is held in the environment, so the change can be switched off without a redeploy. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

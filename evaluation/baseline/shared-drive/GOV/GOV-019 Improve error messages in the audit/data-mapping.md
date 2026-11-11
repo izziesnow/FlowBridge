@@ -6,7 +6,7 @@ Prepared by: Stephen Balogun
 Date: 31 October 2026
 
 ## Summary
-Voluptatibus illo odio repudiandae fugiat. Quasi temporibus consectetur cupiditate.
+Load on the audit trail report is expected to stay within current limits. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Fatima Suleiman
 Date: 28 October 2026
 
 ## Summary
-Quia nihil officiis dolores. Soluta velit nisi nemo voluptatibus debitis. Ab adipisci ullam cupiditate itaque atque optio.
+Monitoring dashboards will be checked for one hour after release. The rollback has been rehearsed in the staging environment. The change is limited to the claims upload form and does not alter any shared database tables.
 
 ## Changes in this version
 First issue.

@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 26 August 2026
 
 ## Summary
-Hic ratione corporis beatae culpa. Quo quod similique voluptas. Vitae minima sint assumenda maxime consequatur doloribus.
+The change is limited to the card tokenisation service and does not alter any shared database tables. Load on the card tokenisation service is expected to stay within current limits. Configuration is held in the environment, so the change can be switched off without a redeploy.
 
 ## Changes in this version
 First issue.

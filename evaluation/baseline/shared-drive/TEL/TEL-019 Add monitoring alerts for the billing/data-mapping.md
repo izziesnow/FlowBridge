@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 01 November 2026
 
 ## Summary
-Ipsam unde quia expedita. Voluptas amet ipsam earum modi quibusdam est. Modi accusamus molestias excepturi commodi quisquam debitis perspiciatis.
+This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan.
 
 ## Changes in this version
 First issue.

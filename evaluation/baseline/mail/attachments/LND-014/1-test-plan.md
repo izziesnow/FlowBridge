@@ -6,7 +6,7 @@ Prepared by: Agnes Adetokunbo
 Date: 11 October 2026
 
 ## Summary
-Est iure officia explicabo inventore maiores.
+Load on the credit scoring service is expected to stay within current limits. Monitoring dashboards will be checked for one hour after release. Existing records are not modified; new fields default to empty for older records.
 
 ## Changes in this version
 First issue.

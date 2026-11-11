@@ -1,53 +1,43 @@
 ZTL CRM change requests (chat export)
 Fictional organisation; synthetic messages.
 
-[13/06/2026, 19:04] Joshua Obi: For CRM-001: describe how existing records will be migrated.
 [15/06/2026, 16:45] Musa Ali: CRM-001: Which release window are you targeting?
 [15/06/2026, 17:40] Fatima Suleiman: CRM-001: The Thursday evening window.
-[17/06/2026, 05:39] Joshua Obi: CRM-001 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[17/06/2026, 10:19] Toluwanimi Babtunde: CRM-001 approved from my side. Good to go.
-[26/06/2026, 12:37] Musa Ali: CRM-002 approved from my side. Over to Joshua Obi for technical lead review.
 [26/06/2026, 22:33] Joshua Obi: CRM-002 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[06/07/2026, 22:25] Toluwanimi Babtunde: CRM-003 approved from my side. Approved; please schedule outside peak hours. Good to go.
-[08/07/2026, 21:05] Musa Ali: CRM-004 approved from my side. Over to Joshua Obi for technical lead review.
-[12/07/2026, 11:14] Musa Ali: CRM-005 approved from my side. Over to Joshua Obi for technical lead review.
-[13/07/2026, 02:19] Joshua Obi: CRM-005 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[13/07/2026, 13:01] Toluwanimi Babtunde: CRM-005 approved from my side. Good to go.
+[06/07/2026, 22:25] Toluwanimi Babtunde: CRM-003 approved from my side. Good to go.
+[08/07/2026, 21:05] Musa Ali: CRM-004 approved from my side. Approved. Keep the feature flag off until sign-off. Passing it along.
+[12/07/2026, 11:14] Musa Ali: CRM-005 approved from my side. Passing it along.
 [28/08/2026, 23:03] Joshua Obi: CRM-006: Has this been tested against the staging data set?
 [29/08/2026, 00:08] Sarah Ibrahim: CRM-006: Yes, the staging run passed last night.
+[29/08/2026, 04:45] Musa Ali: CRM-006 approved from my side. Passing it along.
+[29/08/2026, 22:35] Joshua Obi: CRM-006 approved from my side. Passing it along.
 [01/09/2026, 23:31] Musa Ali: CRM-006: Is the rollback automated?
 [02/09/2026, 00:21] Sarah Ibrahim: CRM-006: Partly; the database step is manual and documented.
 [03/09/2026, 03:14] Toluwanimi Babtunde: CRM-007: Does this need a client notice?
 [03/09/2026, 03:34] Sarah Ibrahim: CRM-007: No, there is no visible change for end users.
-[04/09/2026, 12:28] Joshua Obi: CRM-006 approved from my side. Passing it along.
+[03/09/2026, 05:11] Musa Ali: CRM-007 approved from my side. Approved. Keep the feature flag off until sign-off. Over to Joshua Obi for technical lead review.
 [04/09/2026, 18:37] Toluwanimi Babtunde: CRM-006 approved from my side. Good to go.
-[06/09/2026, 13:04] Toluwanimi Babtunde: CRM-007 approved from my side. Approved. Keep the feature flag off until sign-off. Good to go.
-[09/09/2026, 13:32] Joshua Obi: CRM-008 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[10/09/2026, 08:46] Toluwanimi Babtunde: For CRM-008: describe how existing records will be migrated.
+[06/09/2026, 03:58] Joshua Obi: CRM-007 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
+[08/09/2026, 21:46] Musa Ali: CRM-008 approved from my side. Approved. Keep the feature flag off until sign-off. Passing it along.
 [10/09/2026, 22:49] Joshua Obi: CRM-008: Which release window are you targeting?
 [11/09/2026, 00:15] Sarah Ibrahim: CRM-008: The Thursday evening window.
-[11/09/2026, 06:47] Musa Ali: CRM-009 approved from my side. Fine from my side. Passing it along.
-[11/09/2026, 06:52] Musa Ali: CRM-008 approved from my side. Over to Joshua Obi for technical lead review.
-[12/09/2026, 03:40] Joshua Obi: CRM-009 approved from my side. Approved. Keep the feature flag off until sign-off. Passing it along.
+[11/09/2026, 06:52] Musa Ali: CRM-008 approved from my side. Passing it along.
+[13/09/2026, 00:11] Toluwanimi Babtunde: For CRM-009: clarify which client environments are affected.
 [15/09/2026, 12:36] Musa Ali: CRM-009 approved from my side. Passing it along.
-[23/09/2026, 18:45] Joshua Obi: CRM-010 approved from my side. Passing it along.
-[24/09/2026, 01:34] Toluwanimi Babtunde: CRM-010 approved from my side. Good to go.
+[17/09/2026, 04:55] Joshua Obi: CRM-009 approved from my side. Passing it along.
+[22/09/2026, 20:59] Musa Ali: CRM-010 approved from my side. Fine from my side. Passing it along.
 [26/09/2026, 14:31] Musa Ali: CRM-011: Which release window are you targeting?
 [26/09/2026, 15:50] Sarah Ibrahim: CRM-011: The Thursday evening window.
 [27/09/2026, 11:55] Musa Ali: CRM-012: Does this need a client notice?
 [27/09/2026, 13:14] Sarah Ibrahim: CRM-012: No, there is no visible change for end users.
 [28/09/2026, 12:05] Toluwanimi Babtunde: CRM-013: Does this need a client notice?
 [28/09/2026, 13:11] Fatima Suleiman: CRM-013: No, there is no visible change for end users.
-[29/09/2026, 13:03] Joshua Obi: CRM-011 approved from my side. Passing it along.
-[29/09/2026, 20:02] Musa Ali: CRM-012 approved from my side. Over to Joshua Obi for technical lead review.
-[30/09/2026, 04:50] Joshua Obi: CRM-012 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[30/09/2026, 23:07] Toluwanimi Babtunde: CRM-012 approved from my side. Good to go.
+[28/09/2026, 13:45] Musa Ali: CRM-013 approved from my side. Fine from my side. Over to Joshua Obi for technical lead review.
+[28/09/2026, 19:19] Joshua Obi: CRM-013 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
+[29/09/2026, 13:03] Joshua Obi: CRM-011 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
 [09/10/2026, 18:43] Toluwanimi Babtunde: CRM-014: Is the rollback automated?
 [09/10/2026, 19:31] Sarah Ibrahim: CRM-014: Partly; the database step is manual and documented.
-[10/10/2026, 04:26] Joshua Obi: CRM-014 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
-[20/10/2026, 16:17] Toluwanimi Babtunde: CRM-015 approved from my side. Good to go.
 [28/10/2026, 17:16] Musa Ali: CRM-017: Is the rollback automated?
 [28/10/2026, 18:10] Fatima Suleiman: CRM-017: Partly; the database step is manual and documented.
-[29/10/2026, 10:43] Joshua Obi: CRM-017 approved from my side. Over to Toluwanimi Babtunde for product owner sign-off.
 [29/10/2026, 10:43] Fatima Suleiman: @Toluwanimi Babtunde gentle reminder on CRM-017 🙏
 [29/10/2026, 12:48] Fatima Suleiman: @Toluwanimi Babtunde gentle reminder on CRM-016 🙏

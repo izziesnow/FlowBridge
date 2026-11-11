@@ -6,7 +6,7 @@ Prepared by: Sarah Ibrahim
 Date: 27 August 2026
 
 ## Summary
-Saepe mollitia officiis vero. Reprehenderit exercitationem maxime quia animi saepe occaecati. Iusto voluptas perspiciatis similique unde. Provident facere ratione natus eius similique.
+The client's acceptance criteria are listed in the test plan. Load on the claims upload form is expected to stay within current limits. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

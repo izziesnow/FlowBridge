@@ -6,7 +6,7 @@ Prepared by: Chukwudi Okafor
 Date: 31 October 2026
 
 ## Summary
-Illo inventore magni facilis quasi animi fugit. Maiores expedita illo rem beatae aliquid. Dicta nobis nemo.
+The rollback has been rehearsed in the staging environment. Load on the fraud rules engine is expected to stay within current limits. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

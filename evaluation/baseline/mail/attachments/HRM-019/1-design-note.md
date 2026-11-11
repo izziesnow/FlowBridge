@@ -6,7 +6,7 @@ Prepared by: Nonso Anyanwu
 Date: 28 October 2026
 
 ## Summary
-Eius eveniet eligendi labore deleniti odio itaque. In pariatur placeat deleniti vitae.
+The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan. Monitoring dashboards will be checked for one hour after release.
 
 ## Changes in this version
 First issue.

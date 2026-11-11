@@ -6,7 +6,7 @@ Prepared by: Safiya Isah
 Date: 22 June 2026
 
 ## Summary
-Totam veritatis ducimus dignissimos animi. Debitis provident vel vero molestiae. Perspiciatis modi odio amet.
+The rollback has been rehearsed in the staging environment. Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested.
 
 ## Changes in this version
 First issue.

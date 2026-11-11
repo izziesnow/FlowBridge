@@ -6,10 +6,10 @@ Prepared by: Nonso Anyanwu
 Date: 06 September 2026
 
 ## Summary
-Eum blanditiis eveniet dignissimos odio. Deleniti illo quo ratione voluptates laboriosam esse.
+Configuration is held in the environment, so the change can be switched off without a redeploy. This document describes the change, the components it touches and how it will be tested. The rollback has been rehearsed in the staging environment.
 
 ## Changes in this version
-Revised after review: Tempora debitis nostrum qui voluptatum deleniti ipsum veritatis sit eligendi quisquam voluptates.
+Revised after review: confirmed the data retention period with the client.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

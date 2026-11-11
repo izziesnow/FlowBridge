@@ -6,10 +6,10 @@ Prepared by: Fatima Suleiman
 Date: 11 July 2026
 
 ## Summary
-Incidunt commodi impedit. Dolores in dolor commodi molestiae optio.
+The rollback has been rehearsed in the staging environment. The change is limited to the agent dashboard and does not alter any shared database tables. Load on the agent dashboard is expected to stay within current limits.
 
 ## Changes in this version
-Revised after review: Deserunt animi voluptatum cum commodi alias minima nisi voluptate.
+Revised after review: clarified which client environments are affected.
 
 ---
 Synthetic document for the fictional organisation Zenkora Technologies Limited (ZTL).

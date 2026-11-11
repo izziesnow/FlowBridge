@@ -6,7 +6,7 @@ Prepared by: Somadina Obi
 Date: 23 July 2026
 
 ## Summary
-Inventore ipsum magnam culpa ex quibusdam. Provident praesentium ex unde.
+The rollback has been rehearsed in the staging environment. The client's acceptance criteria are listed in the test plan. Load on the USSD menu is expected to stay within current limits.
 
 ## Changes in this version
 First issue.
