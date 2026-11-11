@@ -78,7 +78,7 @@ See `docs/operations.md`, "Restore test record". In summary:
 ## Evaluation dataset checks (Section 3.1.3)
 
 `apps/evaluation/tests` confirms that:
-- the same seed gives the same scenario, and two full runs give byte-identical files;
+- the same seed gives the same scenario (and a manual comparison found two full runs byte-identical);
 - the outcome mix and each problem pattern match the specification exactly;
 - sets A and B are matched task for task;
 - the loaded system data agree with the scenario for every request, cycle, decision and reviewed document version;
