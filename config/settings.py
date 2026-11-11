@@ -110,6 +110,10 @@ if DATABASE_URL:
         "PORT": str(_url.port or 5432),
         "OPTIONS": dict(parse_qsl(_url.query)),
     })
+    # A pooled address (Neon's "-pooler" host, PgBouncer in transaction mode) cannot keep the
+    # server-side cursors Django uses for .iterator(), so they are switched off there.
+    if "-pooler" in (_url.hostname or ""):
+        DATABASES["default"]["DISABLE_SERVER_SIDE_CURSORS"] = True
 
 AUTH_USER_MODEL = "accounts.User"
 
