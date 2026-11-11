@@ -69,6 +69,10 @@ The stack runs:
 
 See [docs/operations.md](docs/operations.md) for backups, restores, the integrity check and the restore test record.
 
+### Hosted test copy
+
+To give supervisors and other testers a link they can open from anywhere, deploy a free test copy on Render with a free Neon database. [`render.yaml`](render.yaml) describes the service, and [docs/hosting.md](docs/hosting.md) gives the steps and the differences from the Docker Compose stack.
+
 ### Development server
 
 You need Python 3.13 and a running PostgreSQL 16 server.

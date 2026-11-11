@@ -1,6 +1,7 @@
 Django>=5.2,<5.3
 psycopg[binary]>=3.2,<4
 gunicorn>=23,<28
+whitenoise>=6.8,<7
 # Used by the evaluation dataset generator (python manage.py generate_evaluation_data)
 Faker>=30
 openpyxl>=3.1

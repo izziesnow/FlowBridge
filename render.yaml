@@ -1,0 +1,32 @@
+# Render Blueprint for a hosted test copy of Flowbridge (free plan).
+#
+# The database is a free Neon PostgreSQL database, created separately: Render's own free
+# database is deleted after 30 days. Paste its connection string into DATABASE_URL when
+# Render asks for it. Step-by-step instructions: docs/hosting.md.
+services:
+  - type: web
+    name: flowbridge
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerCommand: sh deploy/render-start.sh
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: HOSTED_PASSWORD
+        sync: false
+      - key: HOSTED_DATASET
+        value: demo
+      - key: DJANGO_DEBUG
+        value: "0"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DOCUMENT_STORAGE
+        value: database
+      - key: SECURITY_HEADERS_IN_APP
+        value: "1"
+      - key: WEB_CONCURRENCY
+        value: "2"

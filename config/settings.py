@@ -5,6 +5,7 @@ so the same code runs on a laptop, in Docker Compose and in CI.
 """
 import os
 from pathlib import Path
+from urllib.parse import parse_qsl, unquote, urlparse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,6 +26,13 @@ if not SECRET_KEY:
 ALLOWED_HOSTS = [h.strip() for h in env("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",") if h.strip()]
 CSRF_TRUSTED_ORIGINS = [o.strip() for o in env("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",") if o.strip()]
 
+# Render sets RENDER_EXTERNAL_HOSTNAME to the service's public host name (for example
+# flowbridge.onrender.com), so a hosted test copy needs no host settings of its own.
+RENDER_EXTERNAL_HOSTNAME = env("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -42,7 +50,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "config.middleware.HealthCheckMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "config.middleware.SecurityHeadersMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -80,8 +91,25 @@ DATABASES = {
         "HOST": env("POSTGRES_HOST", "localhost"),
         "PORT": env("POSTGRES_PORT", "5432"),
         "CONN_MAX_AGE": 60,
+        # A hosted database may close idle connections (Neon suspends after five minutes idle).
+        "CONN_HEALTH_CHECKS": True,
     }
 }
+
+# Hosted databases (Neon, Render and others) give a single connection URL instead, such as
+# postgresql://user:password@host/dbname?sslmode=require. Its query options, such as
+# sslmode, are passed to the PostgreSQL driver.
+DATABASE_URL = env("DATABASE_URL")
+if DATABASE_URL:
+    _url = urlparse(DATABASE_URL)
+    DATABASES["default"].update({
+        "NAME": unquote(_url.path.lstrip("/")),
+        "USER": unquote(_url.username or ""),
+        "PASSWORD": unquote(_url.password or ""),
+        "HOST": _url.hostname or "",
+        "PORT": str(_url.port or 5432),
+        "OPTIONS": dict(parse_qsl(_url.query)),
+    })
 
 AUTH_USER_MODEL = "accounts.User"
 
@@ -105,10 +133,19 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# Nginx serves static files in the Docker Compose stack. Where there is no Nginx, WhiteNoise
+# serves the same collected files from the application, compressed.
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+}
+
 # Uploaded documents live in private storage outside the web root.
 # There is deliberately no MEDIA_URL: files are only served by a permission-checked view.
 PRIVATE_MEDIA_ROOT = Path(env("PRIVATE_MEDIA_ROOT", str(BASE_DIR / "private_media"))).resolve()
 DOCUMENT_MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+# "filesystem" (the default) or "database", for hosts whose local disk is wiped on restart.
+DOCUMENT_STORAGE = env("DOCUMENT_STORAGE", "filesystem")
 DOCUMENT_ALLOWED_EXTENSIONS = [
     "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt", "md", "csv", "png", "jpg", "jpeg",
 ]
@@ -126,7 +163,7 @@ EMAIL_TIMEOUT = 10
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", "Flowbridge <no-reply@ztl.example>")
 EMAIL_NOTIFICATIONS_ENABLED = env_bool("EMAIL_NOTIFICATIONS_ENABLED", True)
 EMAIL_MAX_ATTEMPTS = 3
-SITE_URL = env("SITE_URL", "http://localhost:8000")
+SITE_URL = env("SITE_URL", f"https://{RENDER_EXTERNAL_HOSTNAME}" if RENDER_EXTERNAL_HOSTNAME else "http://localhost:8000")
 
 # Overdue stages: an approver is reminded at most once per interval (send_reminders command).
 REMINDER_INTERVAL_HOURS = int(env("REMINDER_INTERVAL_HOURS", "24"))
@@ -138,6 +175,10 @@ SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_HTTPONLY = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+SECURE_REFERRER_POLICY = "same-origin"
+# Nginx adds the Content-Security-Policy and Permissions-Policy headers in the Docker Compose stack.
+# Where the app runs without Nginx, the application adds them instead (config/middleware.py).
+SECURITY_HEADERS_IN_APP = env_bool("SECURITY_HEADERS_IN_APP", False)
 SESSION_COOKIE_AGE = 60 * 60 * 8
 if not DEBUG:
     SESSION_COOKIE_SECURE = True

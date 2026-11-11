@@ -373,3 +373,19 @@ class Decision(ImmutableModel):
 
     def __str__(self):
         return f"{self.get_outcome_display()} by {self.actor} on {self.task}"
+
+
+class StoredFile(models.Model):
+    """Contents of an uploaded document when DOCUMENT_STORAGE is "database" (see storage.py).
+
+    Used on hosts whose local disk is wiped on restart. The DocumentVersion row, which is
+    immutable, still holds the file's name, size and SHA-256 checksum.
+    """
+
+    name = models.CharField(max_length=255, unique=True)
+    content = models.BinaryField()
+    size = models.PositiveBigIntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

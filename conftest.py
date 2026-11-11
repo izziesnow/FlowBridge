@@ -12,6 +12,7 @@ PASSWORD = "test-pass-2026!"
 @pytest.fixture(autouse=True)
 def private_media(settings, tmp_path):
     settings.PRIVATE_MEDIA_ROOT = tmp_path / "private_media"
+    settings.DOCUMENT_STORAGE = "filesystem"  # the hosting tests switch to "database" themselves
     return settings.PRIVATE_MEDIA_ROOT
 
 

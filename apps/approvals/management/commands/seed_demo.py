@@ -56,8 +56,9 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--flush", action="store_true", help="Delete all data before loading the demo.")
+        parser.add_argument("--password", default=PASSWORD, help="Password for every demo account.")
 
-    def handle(self, *args, flush=False, **options):
+    def handle(self, *args, flush=False, password=PASSWORD, **options):
         User = get_user_model()
         if flush:
             # TRUNCATE (used by flush) does not fire the row-level immutability triggers.
@@ -66,21 +67,21 @@ class Command(BaseCommand):
             raise CommandError("Demo data already loaded. Run with --flush to reload from scratch.")
 
         with transaction.atomic():
-            self._load(User)
+            self._load(User, password)
 
         self.stdout.write(self.style.SUCCESS(
             f"Demo data loaded for the fictional organisation ZTL. Sign in as admin@{DOMAIN} "
-            f"(or any user, e.g. aisha.bello@{DOMAIN}) with password '{PASSWORD}'."
+            f"(or any user, e.g. aisha.bello@{DOMAIN}) with password '{password}'."
         ))
 
-    def _load(self, User):
+    def _load(self, User, password):
         u = {}
         for key, name, title, is_admin in PEOPLE:
             email = f"{key}@{DOMAIN}"
             if is_admin:
-                u[key] = User.objects.create_superuser(email, PASSWORD, full_name=name, job_title=title)
+                u[key] = User.objects.create_superuser(email, password, full_name=name, job_title=title)
             else:
-                u[key] = User.objects.create_user(email, PASSWORD, full_name=name, job_title=title)
+                u[key] = User.objects.create_user(email, password, full_name=name, job_title=title)
         admin = u["admin"]
 
         pay = Project.objects.create(
