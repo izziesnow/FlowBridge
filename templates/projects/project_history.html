@@ -16,7 +16,7 @@
           <td class="text-nowrap">{{ e.created_at|date:"j M Y, H:i:s" }}</td>
           <td>{{ e.actor|default:"System" }}</td>
           <td class="fb-mono">{{ e.action }}</td>
-          <td>{% if e.request %}<a href="{{ e.request.get_absolute_url }}">{{ e.request.reference }}</a>{% endif %}</td>
+          <td class="text-nowrap">{% if e.request %}<a href="{{ e.request.get_absolute_url }}">{{ e.request.reference }}</a>{% endif %}</td>
           <td>{{ e.summary }}</td>
         </tr>
       {% empty %}

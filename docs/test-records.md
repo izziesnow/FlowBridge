@@ -17,9 +17,12 @@ Locust 2.x · 2 vCPUs.
 - permissions on pages, downloads and exports;
 - immutability (model guard and database trigger) and simultaneous decisions;
 - notifications, email retries, reminders, reassignment, dashboards and exports;
-- the integrity check and the evaluation-data generator.
+- the integrity check and the evaluation-data generator;
+- the hosted copies: documents stored in the database, the health check, in-app security headers, one-off data
+  loading, participant downloads and the administrator-only reset.
 
-The count and coverage for each commit are in its CI run.
+On 11 November 2026, 112 tests passed, with 91 percent line coverage overall (workflow service 92 percent,
+workflow models 93 percent). The count and coverage for each commit are in its CI run.
 
 ## End-to-end tests (Playwright)
 
