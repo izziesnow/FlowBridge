@@ -29,8 +29,15 @@
     <section class="card border-primary mb-4" aria-labelledby="decide-h">
       <div class="card-header"><h2 id="decide-h" class="h6 mb-0">Your decision · stage {{ active_task.position }}: {{ active_task.name }}</h2></div>
       <div class="card-body">
-        <p class="small text-muted">You are reviewing revision {{ req.current_revision.number }} and the document versions listed under it below.</p>
-        <form method="post" action="{% url 'approvals:request_decide' project.code req.number %}">
+        <p class="small mb-1">You are reviewing <strong>revision {{ req.current_revision.number }}</strong> with these documents:</p>
+        <ul class="small">
+          {% for rd in req.current_revision.revision_documents.all %}
+            <li><a href="{% url 'approvals:document_download' rd.document_version.id %}">{{ rd.document_version.document.name }} v{{ rd.document_version.number }}</a></li>
+          {% empty %}<li class="text-muted">No documents.</li>{% endfor %}
+        </ul>
+        <form method="post" action="{% url 'approvals:request_decide' project.code req.number %}"
+              data-confirm-reject="Reject {{ req.reference }}? This ends the request and cannot be undone."
+              data-confirm-request_changes="Request changes? This ends the current review cycle and returns {{ req.reference }} to {{ req.requester }}.">
           {% csrf_token %}
           {% with field=decision_form.outcome %}{% include "_field.html" %}{% endwith %}
           {% with field=decision_form.reason %}{% include "_field.html" %}{% endwith %}
@@ -68,17 +75,46 @@
           <p class="text-muted mb-0">No documents attached.</p>
         {% endfor %}
         {% if can_edit %}
-        <form method="post" enctype="multipart/form-data" action="{% url 'approvals:document_upload' project.code req.number %}" class="border-top pt-3 mt-2">
+        <form method="post" enctype="multipart/form-data" action="{% url 'approvals:document_upload' project.code req.number %}" class="border-top pt-3 mt-2" data-upload-form>
           {% csrf_token %}
+          <h3 class="h6">Upload a document or a new version</h3>
           <div class="row g-2">
-            <div class="col-md-5">{% with field=upload_form.name %}{% include "_field.html" %}{% endwith %}</div>
-            <div class="col-md-7">{% with field=upload_form.file %}{% include "_field.html" %}{% endwith %}</div>
+            <div class="col-md-6">{% with field=upload_form.file %}{% include "_field.html" %}{% endwith %}</div>
+            {% if upload_form.target.is_hidden %}{{ upload_form.target }}
+            {% else %}<div class="col-md-6">{% with field=upload_form.target %}{% include "_field.html" %}{% endwith %}</div>{% endif %}
+            <div class="col-md-6" data-name-row>{% with field=upload_form.name %}{% include "_field.html" %}{% endwith %}</div>
           </div>
+          <p class="form-text">Earlier versions are always kept. Reviewers see exactly the versions frozen when you submit.</p>
           <button type="submit" class="btn btn-sm btn-outline-primary">Upload</button>
         </form>
         {% endif %}
       </div>
     </section>
+
+    {% if decision_record %}
+    <section class="card mb-4" aria-labelledby="record-h">
+      <div class="card-header"><h2 id="record-h" class="h6 mb-0">Decision record ({{ decision_record|length }})</h2></div>
+      <div class="table-responsive" tabindex="0">
+        <table class="table table-sm mb-0 align-middle">
+          <caption class="visually-hidden">Every decision on {{ req.reference }} in the order it was made</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">When</th><th scope="col">Cycle · revision</th><th scope="col">Stage</th><th scope="col">Approver</th><th scope="col">Decision</th><th scope="col">Reason</th></tr></thead>
+          <tbody>
+          {% for row in decision_record %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td class="text-nowrap">{{ row.decision.created_at|date:"j M Y, H:i" }}</td>
+              <td>{{ row.cycle.number }} · r{{ row.cycle.revision.number }}</td>
+              <td>{{ row.task.position }}. {{ row.task.name }}</td>
+              <td>{{ row.decision.actor }}</td>
+              <td><span class="badge {{ row.decision.outcome|badge_class }}">{{ row.decision.get_outcome_display }}</span></td>
+              <td>{{ row.decision.reason|default:"—" }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% endif %}
 
     <section aria-labelledby="cycles-h">
       <h2 id="cycles-h" class="h5 mb-3">Review cycles</h2>
@@ -90,6 +126,10 @@
         </div>
         <div class="card-body">
           <p class="small text-muted mb-2">Revision {{ cycle.revision.number }} frozen {{ cycle.revision.created_at|date:"j M Y, H:i" }} · title: “{{ cycle.revision.title }}”</p>
+          {% if cycle.changes %}
+            <p class="small mb-2"><span class="badge text-bg-info">Changed since revision {{ cycle.revision.number|add:"-1" }}</span>
+              {% for name, old, new in cycle.changes %}{{ name }} {% if old %}v{{ old }} → {% endif %}v{{ new }}{% if not old %} (new){% endif %}{% if not forloop.last %}; {% endif %}{% endfor %}</p>
+          {% endif %}
           <p class="small mb-1 fw-semibold">Evidence reviewed in this cycle</p>
           <ul class="small">
             {% for rd in cycle.revision.revision_documents.all %}
@@ -160,7 +200,7 @@
             <button type="submit" class="btn btn-primary w-100">Resubmit (restarts at stage 1)</button></form>
         {% endif %}
         {% if can_withdraw %}
-          <form method="post" action="{% url 'approvals:request_withdraw' project.code req.number %}">{% csrf_token %}
+          <form method="post" action="{% url 'approvals:request_withdraw' project.code req.number %}" data-confirm="Withdraw {{ req.reference }}? A withdrawn request cannot be reopened.">{% csrf_token %}
             {% with field=reason_form.reason %}{% include "_field.html" %}{% endwith %}
             <button type="submit" class="btn btn-outline-danger w-100">Withdraw request</button></form>
         {% endif %}

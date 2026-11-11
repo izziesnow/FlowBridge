@@ -6,7 +6,7 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 
 > **Fictional setting.** The system is demonstrated at **Zenkora Technologies Limited (ZTL)**, a fictional Lagos-based IT services firm created for this project. ZTL is not a real company, and every user, project, request and document in the demo data is synthetic.
 
-## What it does (increments 1 to 3)
+## What it does
 
 - **Accounts.** Email sign-in with administrator-managed accounts. Passwords are stored as salted hashes.
 - **Projects and roles.** Each person holds one role per project: project manager, requester, approver or viewer. Non-members get a 404 for every project page, request and document.
@@ -22,6 +22,7 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 - **Dashboards and filters.** Each project has a dashboard showing open and overdue work, median time to decision, first-time approval rate, review cycles per request, what is waiting with each approver and decision time by stage. It shares one set of filters (text or reference, status, requester, current approver, date raised, overdue) with the project request list and a cross-project Requests page.
 - **History export.** Project managers and administrators can download three CSV files: the request register, the decision history and the full audit log. The register and history follow the filters on screen. The decision history lists, for every decision, the exact document versions reviewed and their SHA-256 checksums. Every export is itself audited, and cells that a spreadsheet would run as formulas are neutralised.
 - **Optional email and mentions.** Users can switch on email copies of their notifications. Emails go out only after the action commits, and failures are retried. Writing @name in a comment notifies that project member, where name is the part of their email before the @.
+- **Usability and accessibility.** Uploading `design-note_v2.md` to a request that already has `design-note` adds version 2 instead of a confusingly named second document. A request can be created with its document and submitted in one step. Every request has a decision record and shows what changed between revisions. Irreversible actions ask for confirmation. Core pages pass an automated WCAG 2.2 AA scan.
 - **Stage reassignment.** The project manager can move an active or waiting stage of the open cycle to another approver, with a reason. An active stage gets a fresh due time. The published workflow does not change, and each move is kept as an immutable record and an audit event.
 
 ### Request states
@@ -101,24 +102,47 @@ All demo accounts use the password `ztl-demo-2026`. The `.example` domain is res
 | ngozi.obi@ztl.example | Viewer, PAY |
 | bola.adekunle@ztl.example | Project manager, HRM only (cannot see PAY) |
 
+For the evaluation dataset instead, run `python manage.py generate_evaluation_data --load --flush`. Its accounts are listed in `evaluation/accounts.csv`, and all use the password `ztl-eval-2026`.
+
 Project **PAY** holds six requests covering each state. PAY-003 went through two review cycles with comments in each. PAY-002 is overdue at stage 2, and its stage 3 has been reassigned. Run `python manage.py send_reminders` to see the reminder job flag PAY-002. Run `python manage.py seed_demo --flush` to reset everything.
 
 ## Tests
 
 ```bash
-pytest                       # needs PostgreSQL: the triggers and row locks are tested for real
-pytest --cov                 # with coverage
+pytest                                   # unit and integration tests; needs PostgreSQL
+pytest --cov                             # the same, with coverage
+pytest e2e --browser-channel chrome      # browser journeys and the WCAG 2.2 AA scan (or install Playwright's Chromium)
+locust -f loadtest/locustfile.py ...     # load test; see the file for the full command
 ```
 
-The suite covers every workflow transition and guard and the permission checks on pages, downloads and exports. It also covers:
-- immutability (model guard and database trigger);
-- simultaneous decisions and document checksums;
-- comments, mentions, notifications, email delivery and retries;
-- reminders, reassignment, dashboards, filters and exports;
-- the integrity check and the demo seed. CI runs three things on every push:
-- the test suite, against a PostgreSQL 16 service container;
-- Django's deployment security checks;
-- a full Docker Compose smoke test that checks HTTPS and the security headers, then backs up, wipes, restores and verifies the demo data.
+The unit and integration tests cover:
+- every workflow transition and guard;
+- permissions on pages, downloads and exports;
+- immutability (model guard and database trigger) and simultaneous decisions;
+- notifications, email delivery, reminders, reassignment, dashboards and exports;
+- the integrity check and the evaluation-data generator.
+
+CI runs four kinds of check on every push:
+- **Unit and integration tests**, against PostgreSQL 16.
+- **Deployment security checks.**
+- **Browser tests**, with the accessibility scan, in Chromium.
+- **A full Docker Compose run**, which:
+  - checks HTTPS and the security headers;
+  - backs up, wipes, restores and verifies the demo data;
+  - loads the evaluation dataset and runs the 20-user load test.
+
+Results gathered for the write-up are in [docs/test-records.md](docs/test-records.md).
+
+## Evaluation materials
+
+`evaluation/` holds everything for the user acceptance test (Section 3.1.4). It is generated from a fixed seed by
+`python manage.py generate_evaluation_data --load --flush`, which:
+- loads 120 synthetic change requests across six projects into Flowbridge;
+- writes the matching manual baseline (email, chat exports, a spreadsheet change log and a shared drive), with the four problem patterns injected at documented rates;
+- writes the scoring ground truth, matched scenario sets A and B, and the generation specification.
+
+See [evaluation/GENERATION-SPEC.md](evaluation/GENERATION-SPEC.md) and [evaluation/protocol/](evaluation/protocol/).
+`evaluation/ground_truth/` holds the answer keys. Keep it away from participants.
 
 ## Project layout
 
@@ -134,6 +158,11 @@ apps/core_immutable.py   immutable model base and PostgreSQL trigger SQL
 docker/            Gunicorn entrypoint and the Nginx image (HTTPS, headers, static files)
 scripts/           backup.sh and restore.sh
 docs/operations.md running, backing up, restoring and verifying
+docs/test-records.md accessibility, load, restore and dataset results
+apps/evaluation/   the seeded evaluation-dataset generator
+evaluation/        generated datasets, scenario sets, ground truth and the session protocol
+e2e/               Playwright browser and accessibility tests
+loadtest/          Locust load test and results checker
 templates/, static/      Bootstrap 5 interface
 ```
 
@@ -142,4 +171,4 @@ templates/, static/      Bootstrap 5 interface
 1. **Increment 1 (done):** accounts, projects, membership, sequential workflows, revisions, documents, decisions, audit.
 2. **Increment 2 (done):** request comments and project discussion, in-app notifications, overdue flags with a reminder command, audited stage reassignment by the project manager.
 3. **Increment 3 (done):** dashboards and filters, history export, optional email, Nginx and Gunicorn in Compose, backup and restore.
-4. **Increment 4:** synthetic evaluation datasets and the manual baseline, usability fixes, frozen evaluation build.
+4. **Increment 4 (done):** synthetic evaluation datasets and the manual baseline, browser, accessibility and load tests, usability fixes, frozen evaluation build (tag `v1.0.0-eval`).

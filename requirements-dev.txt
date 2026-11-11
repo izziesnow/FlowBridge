@@ -2,4 +2,8 @@
 pytest>=8.3
 pytest-django>=4.9
 pytest-cov>=5.0
-Faker>=30
+# Browser, accessibility and load tests
+playwright>=1.45
+pytest-playwright>=0.5
+axe-playwright-python>=0.1.4
+locust>=2.20

@@ -1,0 +1,2 @@
+participant,order,condition,set,task,start_time,end_time,seconds,completed_unassisted,help_given,answers_requested,answers_correct,reason_recovered,answer_given,scorer,notes
+P01,1,Baseline,A,T2,10:04:12,10:06:40,148,1,0,2,1,,Awaiting PM review; Nasiru Lawal,S1,Trusted the change log

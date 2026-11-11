@@ -1,0 +1,42 @@
+ZTL HRM change requests (chat export)
+Fictional organisation; synthetic messages.
+
+[10/06/2026, 23:22] Niyilolawa Ogulana: HRM-001 approved from my side. Over to Nonso Udeh for technical lead review.
+[12/06/2026, 04:38] Niyilolawa Ogulana: HRM-002 approved from my side. Over to Nonso Udeh for technical lead review.
+[13/06/2026, 11:45] Ismail Abubakar: For HRM-002: out of scope for the current contract; raise it as a change order.
+[07/07/2026, 10:31] Niyilolawa Ogulana: HRM-004 approved from my side. Passing it along.
+[10/07/2026, 03:15] Ismail Abubakar: HRM-004 approved from my side. Good to go.
+[16/07/2026, 13:18] Nonso Udeh: HRM-005: Has this been tested against the staging data set?
+[16/07/2026, 13:49] Similoluwa Kolade: HRM-005: Yes, the staging run passed last night.
+[16/07/2026, 13:53] Niyilolawa Ogulana: HRM-005 approved from my side. Over to Nonso Udeh for technical lead review.
+[19/07/2026, 10:54] Nonso Udeh: HRM-006: Has this been tested against the staging data set?
+[19/07/2026, 11:56] Nonso Anyanwu: HRM-006: Yes, the staging run passed last night.
+[20/07/2026, 00:49] Niyilolawa Ogulana: HRM-006 approved from my side. Approved. Keep the feature flag off until sign-off. Over to Nonso Udeh for technical lead review.
+[31/07/2026, 00:16] Niyilolawa Ogulana: HRM-008: Has this been tested against the staging data set?
+[31/07/2026, 00:32] Similoluwa Kolade: HRM-008: Yes, the staging run passed last night.
+[31/07/2026, 09:32] Niyilolawa Ogulana: HRM-008 approved from my side. Over to Nonso Udeh for technical lead review.
+[01/08/2026, 07:56] Ismail Abubakar: HRM-008 approved from my side. Good to go.
+[02/08/2026, 02:40] Nonso Udeh: HRM-009: Which release window are you targeting?
+[02/08/2026, 02:50] Similoluwa Kolade: HRM-009: The Thursday evening window.
+[02/08/2026, 08:37] Niyilolawa Ogulana: HRM-009 approved from my side. Looks good. Over to Nonso Udeh for technical lead review.
+[04/08/2026, 08:24] Nonso Udeh: HRM-009 approved from my side. Over to Ismail Abubakar for product owner sign-off.
+[30/08/2026, 06:04] Niyilolawa Ogulana: HRM-010: Which release window are you targeting?
+[30/08/2026, 06:33] Nonso Anyanwu: HRM-010: The Thursday evening window.
+[30/08/2026, 12:25] Niyilolawa Ogulana: HRM-010 approved from my side. Passing it along.
+[30/08/2026, 21:31] Nonso Udeh: HRM-010 approved from my side. Passing it along.
+[06/09/2026, 01:55] Niyilolawa Ogulana: HRM-011: Has this been tested against the staging data set?
+[06/09/2026, 02:40] Nonso Anyanwu: HRM-011: Yes, the staging run passed last night.
+[06/09/2026, 09:47] Niyilolawa Ogulana: HRM-011 approved from my side. Over to Nonso Udeh for technical lead review.
+[13/09/2026, 11:28] Ismail Abubakar: HRM-012: Does this need a client notice?
+[13/09/2026, 11:54] Nonso Anyanwu: HRM-012: No, there is no visible change for end users.
+[19/09/2026, 08:08] Niyilolawa Ogulana: HRM-014: Has this been tested against the staging data set?
+[19/09/2026, 08:29] Similoluwa Kolade: HRM-014: Yes, the staging run passed last night.
+[07/10/2026, 00:43] Ismail Abubakar: HRM-016: Which release window are you targeting?
+[07/10/2026, 01:07] Nonso Anyanwu: HRM-016: The Thursday evening window.
+[07/10/2026, 03:27] Niyilolawa Ogulana: HRM-016 approved from my side. Approved; please schedule outside peak hours. Passing it along.
+[11/10/2026, 14:16] Niyilolawa Ogulana: HRM-017: Which release window are you targeting?
+[11/10/2026, 15:42] Similoluwa Kolade: HRM-017: The Thursday evening window.
+[17/10/2026, 23:12] Niyilolawa Ogulana: HRM-018: Has this been tested against the staging data set?
+[18/10/2026, 00:30] Nonso Anyanwu: HRM-018: Yes, the staging run passed last night.
+[19/10/2026, 19:55] Nonso Udeh: HRM-018 approved from my side. Over to Ismail Abubakar for product owner sign-off.
+[29/10/2026, 17:25] Nonso Anyanwu: @Nonso Udeh gentle reminder on HRM-019 🙏

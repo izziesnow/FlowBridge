@@ -1,0 +1,34 @@
+ZTL LND change requests (chat export)
+Fictional organisation; synthetic messages.
+
+[11/06/2026, 06:49] Nasiru Lawal: LND-002: Has this been tested against the staging data set?
+[11/06/2026, 07:45] Gambo Isah: LND-002: Yes, the staging run passed last night.
+[11/06/2026, 13:23] Simon Ogunleye: For LND-001: out of scope for the current contract; raise it as a change order.
+[18/06/2026, 08:27] Nasiru Lawal: LND-003 approved from my side. Over to Simon Ogunleye for technical lead review.
+[26/06/2026, 04:43] Simon Ogunleye: LND-004: Does this need a client notice?
+[26/06/2026, 05:28] Agnes Adetokunbo: LND-004: No, there is no visible change for end users.
+[26/06/2026, 14:38] Simon Ogunleye: LND-004 approved from my side. Over to Ayoka Makinwa for product owner sign-off.
+[03/07/2026, 17:12] Simon Ogunleye: LND-005 approved from my side. Over to Ayoka Makinwa for product owner sign-off.
+[12/08/2026, 02:38] Nasiru Lawal: LND-008: Does this need a client notice?
+[12/08/2026, 03:31] Gambo Isah: LND-008: No, there is no visible change for end users.
+[16/08/2026, 17:23] Simon Ogunleye: LND-008 approved from my side. Approved; please schedule outside peak hours. Over to Ayoka Makinwa for product owner sign-off.
+[16/08/2026, 20:14] Ayoka Makinwa: LND-008 approved from my side. Approved; please schedule outside peak hours. Good to go.
+[24/08/2026, 23:24] Simon Ogunleye: LND-009 approved from my side. Passing it along.
+[13/09/2026, 01:50] Nasiru Lawal: LND-011 approved from my side. Over to Simon Ogunleye for technical lead review.
+[18/09/2026, 03:23] Ayoka Makinwa: LND-011: Does this need a client notice?
+[18/09/2026, 04:48] Agnes Adetokunbo: LND-011: No, there is no visible change for end users.
+[19/09/2026, 14:30] Ayoka Makinwa: LND-011 approved from my side. Good to go.
+[12/10/2026, 19:38] Nasiru Lawal: LND-013: Has this been tested against the staging data set?
+[12/10/2026, 20:18] Agnes Adetokunbo: LND-013: Yes, the staging run passed last night.
+[13/10/2026, 01:00] Nasiru Lawal: LND-013 approved from my side. Over to Simon Ogunleye for technical lead review.
+[13/10/2026, 01:54] Simon Ogunleye: LND-014: Is the rollback automated?
+[13/10/2026, 02:06] Agnes Adetokunbo: LND-014: Partly; the database step is manual and documented.
+[13/10/2026, 07:13] Nasiru Lawal: LND-014 approved from my side. Over to Simon Ogunleye for technical lead review.
+[13/10/2026, 18:46] Ayoka Makinwa: LND-013 approved from my side. Approved; please schedule outside peak hours. Good to go.
+[16/10/2026, 09:40] Ayoka Makinwa: LND-014 approved from my side. Good to go.
+[29/10/2026, 17:54] Nasiru Lawal: LND-018: Which release window are you targeting?
+[29/10/2026, 18:49] Agnes Adetokunbo: LND-018: The Thursday evening window.
+[30/10/2026, 08:33] Agnes Adetokunbo: Who has LND-017 now? Not sure it's moved.
+[30/10/2026, 08:33] Nasiru Lawal: I think Nasiru Lawal still has it.
+[30/10/2026, 09:07] Agnes Adetokunbo: Who has LND-018 now? Not sure it's moved.
+[30/10/2026, 09:07] Nasiru Lawal: I think Nasiru Lawal still has it.

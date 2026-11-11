@@ -1,0 +1,36 @@
+ZTL PAY change requests (chat export)
+Fictional organisation; synthetic messages.
+
+[15/06/2026, 08:11] Nnamdi Madu: PAY-001 approved from my side. Approved. Keep the feature flag off until sign-off. Passing it along.
+[18/06/2026, 06:56] Hauwa Buhari: PAY-003: Which release window are you targeting?
+[18/06/2026, 08:14] Chukwudi Okafor: PAY-003: The Thursday evening window.
+[20/06/2026, 12:04] Nnamdi Madu: PAY-003 approved from my side. Approved. Keep the feature flag off until sign-off. Over to Hauwa Buhari for product owner sign-off.
+[15/07/2026, 18:37] Nnamdi Madu: PAY-004 approved from my side. Looks good. Over to Hauwa Buhari for product owner sign-off.
+[16/07/2026, 21:39] Ayinde Oshin: PAY-004: Has this been tested against the staging data set?
+[16/07/2026, 22:41] Mojisoluwa Fagunwa: PAY-004: Yes, the staging run passed last night.
+[27/08/2026, 20:50] Ayinde Oshin: PAY-008: Which release window are you targeting?
+[27/08/2026, 21:08] Chukwudi Okafor: PAY-008: The Thursday evening window.
+[29/08/2026, 20:11] Nnamdi Madu: PAY-008 approved from my side. Fine from my side. Over to Hauwa Buhari for product owner sign-off.
+[08/09/2026, 03:07] Ayinde Oshin: PAY-009 approved from my side. Approved; please schedule outside peak hours. Over to Nnamdi Madu for technical lead review.
+[09/09/2026, 00:33] Hauwa Buhari: PAY-009 approved from my side. Fine from my side. Good to go.
+[11/09/2026, 05:20] Ayinde Oshin: PAY-010 approved from my side. Approved. Keep the feature flag off until sign-off. Over to Nnamdi Madu for technical lead review.
+[15/10/2026, 16:55] Ayinde Oshin: PAY-011 approved from my side. Over to Nnamdi Madu for technical lead review.
+[20/10/2026, 16:02] Ayinde Oshin: PAY-012: Which release window are you targeting?
+[20/10/2026, 16:51] Ayinde Oshin: PAY-012 approved from my side. Over to Nnamdi Madu for technical lead review.
+[20/10/2026, 17:26] Mojisoluwa Fagunwa: PAY-012: The Thursday evening window.
+[21/10/2026, 20:12] Nnamdi Madu: PAY-012 approved from my side. Over to Hauwa Buhari for product owner sign-off.
+[22/10/2026, 14:25] Hauwa Buhari: For PAY-012: out of scope for the current contract; raise it as a change order.
+[24/10/2026, 08:50] Ayinde Oshin: PAY-013 approved from my side. Looks good. Over to Nnamdi Madu for technical lead review.
+[25/10/2026, 01:36] Nnamdi Madu: PAY-013 approved from my side. Approved. Keep the feature flag off until sign-off. Over to Hauwa Buhari for product owner sign-off.
+[28/10/2026, 13:01] Ayinde Oshin: PAY-015 approved from my side. Fine from my side. Passing it along.
+[29/10/2026, 15:50] Chukwudi Okafor: Who has PAY-016 now? Not sure it's moved.
+[29/10/2026, 15:50] Ayinde Oshin: I think Ayinde Oshin still has it.
+[29/10/2026, 18:52] Nnamdi Madu: PAY-017: Has this been tested against the staging data set?
+[29/10/2026, 20:09] Chukwudi Okafor: PAY-017: Yes, the staging run passed last night.
+[29/10/2026, 22:15] Ayinde Oshin: PAY-017 approved from my side. Fine from my side. Over to Nnamdi Madu for technical lead review.
+[01/11/2026, 06:34] Ayinde Oshin: PAY-019: Does this need a client notice?
+[01/11/2026, 06:49] Chukwudi Okafor: PAY-019: No, there is no visible change for end users.
+[01/11/2026, 08:53] Ayinde Oshin: PAY-019 is approved now I believe 👍
+[02/11/2026, 02:42] Ayinde Oshin: PAY-020 approved from my side. Fine from my side. Over to Nnamdi Madu for technical lead review.
+[02/11/2026, 06:48] Nnamdi Madu: PAY-020 approved from my side. Approved; please schedule outside peak hours. Over to Hauwa Buhari for product owner sign-off.
+[02/11/2026, 06:48] Mojisoluwa Fagunwa: @Hauwa Buhari gentle reminder on PAY-020 🙏

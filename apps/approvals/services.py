@@ -14,6 +14,7 @@ Views never change ``ApprovalRequest.state`` themselves.
 """
 import hashlib
 import mimetypes
+import re
 from pathlib import Path
 
 from django.conf import settings
@@ -44,6 +45,15 @@ from .models import (
     StageTask,
     WorkflowVersion,
 )
+
+
+VERSION_SUFFIX = re.compile(r"(?:[ _.-]*(?:v\d+|version\s*\d+|final|draft|reviewed|copy|\(\d+\)))+$", re.I)
+
+
+def base_document_name(filename):
+    """'design-note_v2_FINAL (1).md' -> 'design-note': the name a file would have without version labels."""
+    stem = Path(filename).stem.strip()
+    return VERSION_SUFFIX.sub("", stem).strip(" _.-") or stem
 
 
 class WorkflowError(ValidationError):
@@ -218,7 +228,13 @@ class WorkflowService:
             raise WorkflowError("Documents can only be added while the request is a draft or after changes are requested.")
         validate_upload(uploaded_file)
         if document is None:
-            name = (name or Path(uploaded_file.name).stem).strip()[:150]
+            if not name:
+                # Uploading "design-note_v2.md" to a request that has "design-note" adds version 2 of it,
+                # instead of quietly creating a second, confusingly named document.
+                guess = base_document_name(uploaded_file.name)
+                existing = request.documents.filter(name__iexact=guess).first()
+                name = existing.name if existing else Path(uploaded_file.name).stem
+            name = name.strip()[:150]
             document, created = Document.objects.get_or_create(
                 request=request, name=name, defaults={"created_by": actor}
             )

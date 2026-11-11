@@ -1,8 +1,10 @@
 import hashlib
+from pathlib import Path
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
+from django.db import transaction
 from django.db.models import Prefetch
 from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404, redirect, render
@@ -20,6 +22,7 @@ from .forms import (
     ReasonForm,
     ReassignForm,
     RequestContentForm,
+    RequestCreateForm,
     StageForm,
     WorkflowVersionForm,
 )
@@ -38,6 +41,25 @@ from .services import WorkflowError, WorkflowService, latest_published_workflow
 def _error_messages(request, error):
     for message in getattr(error, "messages", [str(error)]):
         messages.error(request, message)
+
+
+def decision_record(cycles):
+    """Every decision on the request in the order it was made, with what changed between revisions."""
+    rows, previous = [], {}
+    for cycle in sorted(cycles, key=lambda c: c.number):
+        docs = {rd.document_version.document.name: rd.document_version for rd in cycle.revision.revision_documents.all()}
+        cycle.changes = [
+            (name, previous[name].number if name in previous else None, v.number)
+            for name, v in sorted(docs.items())
+            if name not in previous or previous[name].pk != v.pk
+        ] if cycle.number > 1 else []
+        previous = docs
+        for task in sorted(cycle.tasks.all(), key=lambda t: t.position):
+            decision = getattr(task, "decision", None)
+            if decision is not None:
+                rows.append({"cycle": cycle, "task": task, "decision": decision})
+    rows.sort(key=lambda r: r["decision"].created_at)
+    return rows
 
 
 def _get_request(user, code, number):
@@ -89,15 +111,30 @@ def request_create(request, code):
     project = get_project_for_user(request.user, code)
     if get_role(request.user, project) != Role.REQUESTER:
         raise PermissionDenied("Only requesters can raise requests on this project.")
-    form = RequestContentForm(request.POST or None)
+    form = RequestCreateForm(request.POST or None, request.FILES or None)
     if request.method == "POST" and form.is_valid():
-        approval_request = WorkflowService.create_request(
-            project, request.user, form.cleaned_data["title"], form.cleaned_data["description"]
-        )
-        messages.success(request, f"Draft {approval_request.reference} created. Attach documents, then submit.")
-        return redirect(approval_request)
+        data = form.cleaned_data
+        try:
+            with transaction.atomic():
+                approval_request = WorkflowService.create_request(project, request.user, data["title"],
+                                                                  data["description"])
+                if data.get("document"):
+                    WorkflowService.add_document_version(approval_request, request.user, data["document"])
+        except WorkflowError as error:
+            _error_messages(request, error)
+        else:
+            if request.POST.get("then") == "submit":
+                try:
+                    WorkflowService.submit(approval_request, request.user)
+                    messages.success(request, f"{approval_request.reference} created and submitted for review.")
+                except WorkflowError as error:
+                    messages.warning(request, f"Draft {approval_request.reference} saved but not submitted:")
+                    _error_messages(request, error)
+            else:
+                messages.success(request, f"Draft {approval_request.reference} saved. Submit it when it is ready.")
+            return redirect(approval_request)
     return render(request, "approvals/request_form.html", {
-        "project": project, "form": form, "workflow": latest_published_workflow(project),
+        "project": project, "form": form, "workflow": latest_published_workflow(project), "creating": True,
     })
 
 
@@ -135,12 +172,13 @@ def request_detail(request, code, number):
         "can_decide": active_task is not None and active_task.approver == user and not is_requester,
         "can_withdraw": approval_request.is_open and (is_requester or role == Role.PM),
         "decision_form": DecisionForm(),
-        "reason_form": ReasonForm(),
-        "upload_form": DocumentUploadForm(),
+        "reason_form": ReasonForm(auto_id="withdraw_%s"),
+        "upload_form": DocumentUploadForm(approval_request=approval_request, auto_id="upload_%s"),
+        "decision_record": decision_record(cycles),
         "comments": approval_request.comments.select_related("author", "revision"),
         "can_comment": can_post(user, project),
         "can_reassign": role == Role.PM and approval_request.state == RequestState.IN_REVIEW,
-        "reassign_form": ReassignForm(approval_request=approval_request),
+        "reassign_form": ReassignForm(approval_request=approval_request, auto_id="reassign_%s"),
     }
     return render(request, "approvals/request_detail.html", context)
 
@@ -170,13 +208,20 @@ def request_edit(request, code, number):
 @require_POST
 def document_upload(request, code, number):
     project, approval_request = _get_request(request.user, code, number)
-    form = DocumentUploadForm(request.POST, request.FILES)
+    form = DocumentUploadForm(request.POST, request.FILES, approval_request=approval_request)
     if form.is_valid():
+        target, name = form.cleaned_data["target"], form.cleaned_data["name"].strip()
+        document = None
+        if target and target != "new":
+            document = get_object_or_404(approval_request.documents, pk=target)
+        elif target == "new" and not name:
+            name = Path(form.cleaned_data["file"].name).stem
         try:
             version = WorkflowService.add_document_version(
-                approval_request, request.user, form.cleaned_data["file"], name=form.cleaned_data["name"] or None
+                approval_request, request.user, form.cleaned_data["file"], name=name or None, document=document
             )
-            messages.success(request, f"Uploaded {version}.")
+            how = "a new version of" if version.number > 1 else "a new document,"
+            messages.success(request, f"Uploaded as {how} “{version.document.name}”: now v{version.number}.")
         except WorkflowError as error:
             _error_messages(request, error)
     else:

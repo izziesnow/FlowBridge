@@ -14,11 +14,16 @@
   {% if req and req.state == "CHANGES_REQUESTED" %}
     <div class="alert alert-info">Your edits will form a new revision when you resubmit. The reviewed revision is kept unchanged in the history.</div>
   {% endif %}
-  <form method="post" class="card card-body">
+  <form method="post" class="card card-body"{% if creating %} enctype="multipart/form-data"{% endif %}>
     {% csrf_token %}
     {% for field in form %}{% include "_field.html" %}{% endfor %}
-    <div class="d-flex gap-2">
-      <button type="submit" class="btn btn-primary">{% if req %}Save changes{% else %}Create draft{% endif %}</button>
+    <div class="d-flex flex-wrap gap-2">
+      {% if creating %}
+        {% if workflow %}<button type="submit" name="then" value="submit" class="btn btn-primary">Save and submit for review</button>{% endif %}
+        <button type="submit" name="then" value="draft" class="btn {% if workflow %}btn-outline-primary{% else %}btn-primary{% endif %}">Save as draft</button>
+      {% else %}
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      {% endif %}
       <a class="btn btn-outline-secondary" href="{% if req %}{{ req.get_absolute_url }}{% else %}{% url 'projects:detail' project.code %}{% endif %}">Cancel</a>
     </div>
   </form>

@@ -13,7 +13,7 @@
         <span class="badge text-bg-primary">{{ awaiting|length }}</span>
       </div>
       {% if awaiting %}
-      <div class="table-responsive">
+      <div class="table-responsive" tabindex="0">
         <table class="table mb-0 align-middle">
           <thead><tr><th scope="col">Request</th><th scope="col">Stage</th><th scope="col">Requester</th><th scope="col">Due</th></tr></thead>
           <tbody>
@@ -36,7 +36,7 @@
     <section class="card" aria-labelledby="mine-h">
       <div class="card-header"><h2 id="mine-h" class="h6 mb-0">My requests</h2></div>
       {% if my_requests %}
-      <div class="table-responsive">
+      <div class="table-responsive" tabindex="0">
         <table class="table mb-0 align-middle">
           <thead><tr><th scope="col">Request</th><th scope="col">Status</th><th scope="col">Updated</th></tr></thead>
           <tbody>

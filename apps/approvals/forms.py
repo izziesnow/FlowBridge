@@ -26,12 +26,30 @@ class RequestContentForm(BootstrapMixin, forms.Form):
     )
 
 
+class RequestCreateForm(RequestContentForm):
+    document = forms.FileField(required=False, label="Supporting document",
+                               help_text="You can add more documents after saving.")
+
+
 class DocumentUploadForm(BootstrapMixin, forms.Form):
-    name = forms.CharField(
-        max_length=150, required=False,
-        help_text="Leave blank to use the file name. Uploading under an existing name adds a new version.",
-    )
     file = forms.FileField()
+    target = forms.ChoiceField(label="Add it as", required=False)
+    name = forms.CharField(
+        max_length=150, required=False, label="Name for a new document",
+        help_text="Leave blank to use the file name.",
+    )
+
+    def __init__(self, *args, approval_request=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        choices = [("", "Choose automatically from the file name")]
+        if approval_request is not None:
+            for doc in approval_request.documents.all():
+                latest = doc.latest_version()
+                choices.append((str(doc.pk), f"A new version of “{doc.name}” (now v{latest.number if latest else 0})"))
+        choices.append(("new", "A new document"))
+        self.fields["target"].choices = choices
+        if approval_request is None or not approval_request.documents.exists():
+            self.fields["target"].widget = forms.HiddenInput()
 
 
 class DecisionForm(BootstrapMixin, forms.Form):

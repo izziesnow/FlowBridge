@@ -5,7 +5,7 @@
   <h1 class="h4 mb-0">Projects</h1>
   {% if user.is_staff %}<a class="btn btn-primary" href="{% url 'projects:create' %}">New project</a>{% endif %}
 </div>
-<div class="card table-responsive">
+<div class="card table-responsive" tabindex="0">
   <table class="table mb-0 align-middle">
     <thead><tr><th scope="col">Code</th><th scope="col">Name</th><th scope="col">Open requests</th></tr></thead>
     <tbody>

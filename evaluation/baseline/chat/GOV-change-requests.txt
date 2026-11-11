@@ -1,0 +1,48 @@
+ZTL GOV change requests (chat export)
+Fictional organisation; synthetic messages.
+
+[07/06/2026, 09:07] Hope Akinwale: GOV-001: Has this been tested against the staging data set?
+[07/06/2026, 10:20] Safiya Isah: GOV-001: Yes, the staging run passed last night.
+[08/06/2026, 05:58] Abdullahi Yusuf: GOV-001 approved from my side. Over to Hope Akinwale for technical lead review.
+[12/06/2026, 14:05] Omotola Afolayan: GOV-001 approved from my side. Good to go.
+[24/06/2026, 11:00] Hope Akinwale: GOV-003: Which release window are you targeting?
+[24/06/2026, 11:59] Safiya Isah: GOV-003: The Thursday evening window.
+[26/06/2026, 23:00] Omotola Afolayan: GOV-003 approved from my side. Looks good. Good to go.
+[11/07/2026, 16:38] Abdullahi Yusuf: GOV-004: Does this need a client notice?
+[11/07/2026, 17:10] Safiya Isah: GOV-004: No, there is no visible change for end users.
+[11/07/2026, 22:41] Abdullahi Yusuf: GOV-004 approved from my side. Over to Hope Akinwale for technical lead review.
+[23/07/2026, 04:07] Omotola Afolayan: GOV-005: Is the rollback automated?
+[23/07/2026, 04:25] Stephen Balogun: GOV-005: Partly; the database step is manual and documented.
+[23/07/2026, 05:51] Abdullahi Yusuf: GOV-005 approved from my side. Over to Hope Akinwale for technical lead review.
+[23/07/2026, 15:33] Hope Akinwale: GOV-005 approved from my side. Over to Omotola Afolayan for product owner sign-off.
+[07/09/2026, 09:07] Abdullahi Yusuf: GOV-008 approved from my side. Over to Hope Akinwale for technical lead review.
+[12/09/2026, 16:04] Abdullahi Yusuf: GOV-009 approved from my side. Approved; please schedule outside peak hours. Over to Hope Akinwale for technical lead review.
+[16/09/2026, 16:02] Abdullahi Yusuf: GOV-010: Is the rollback automated?
+[16/09/2026, 17:17] Stephen Balogun: GOV-010: Partly; the database step is manual and documented.
+[17/09/2026, 08:23] Abdullahi Yusuf: GOV-011: Is the rollback automated?
+[17/09/2026, 08:43] Stephen Balogun: GOV-011: Partly; the database step is manual and documented.
+[18/09/2026, 00:45] Omotola Afolayan: GOV-010: Has this been tested against the staging data set?
+[18/09/2026, 01:46] Stephen Balogun: GOV-010: Yes, the staging run passed last night.
+[19/09/2026, 02:44] Hope Akinwale: GOV-010 approved from my side. Over to Omotola Afolayan for product owner sign-off.
+[27/10/2026, 22:04] Omotola Afolayan: GOV-013: Does this need a client notice?
+[27/10/2026, 22:22] Stephen Balogun: GOV-013: No, there is no visible change for end users.
+[29/10/2026, 05:26] Abdullahi Yusuf: GOV-014: Is the rollback automated?
+[29/10/2026, 05:58] Safiya Isah: GOV-014: Partly; the database step is manual and documented.
+[29/10/2026, 20:35] Safiya Isah: Who has GOV-015 now? Not sure it's moved.
+[29/10/2026, 20:35] Abdullahi Yusuf: I think Abdullahi Yusuf still has it.
+[29/10/2026, 22:30] Abdullahi Yusuf: GOV-014 approved from my side. Over to Hope Akinwale for technical lead review.
+[29/10/2026, 22:30] Safiya Isah: @Hope Akinwale gentle reminder on GOV-014 🙏
+[29/10/2026, 22:36] Safiya Isah: Who has GOV-016 now? Not sure it's moved.
+[29/10/2026, 22:36] Abdullahi Yusuf: I think Abdullahi Yusuf still has it.
+[31/10/2026, 11:39] Safiya Isah: @Abdullahi Yusuf gentle reminder on GOV-018 🙏
+[31/10/2026, 12:40] Abdullahi Yusuf: GOV-013: Is the rollback automated?
+[31/10/2026, 13:21] Stephen Balogun: GOV-013: Partly; the database step is manual and documented.
+[31/10/2026, 17:14] Abdullahi Yusuf: GOV-019: Which release window are you targeting?
+[31/10/2026, 18:26] Abdullahi Yusuf: For GOV-019: clarify which client environments are affected.
+[31/10/2026, 18:38] Stephen Balogun: GOV-019: The Thursday evening window.
+[01/11/2026, 08:53] Abdullahi Yusuf: GOV-019: Has this been tested against the staging data set?
+[01/11/2026, 09:29] Stephen Balogun: GOV-019: Yes, the staging run passed last night.
+[01/11/2026, 13:32] Abdullahi Yusuf: GOV-019 approved from my side. Over to Hope Akinwale for technical lead review.
+[01/11/2026, 13:32] Stephen Balogun: @Hope Akinwale gentle reminder on GOV-019 🙏
+[01/11/2026, 15:53] Stephen Balogun: Who has GOV-013 now? Not sure it's moved.
+[01/11/2026, 15:53] Abdullahi Yusuf: I think Abdullahi Yusuf still has it.

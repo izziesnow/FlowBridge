@@ -62,3 +62,33 @@ table.table th { font-weight: 600; }
 .fb-tile-alert { border-color: #f1aeb5; background: #fff5f5; }
 .fb-tile-alert .fb-tile-value { color: #b42318; }
 .fb-bar { height: .75rem; width: var(--w); min-width: 2px; background: var(--fb-accent); border-radius: 2px; }
+
+/* Accessibility (WCAG 2.2 AA, 1.4.3): Bootstrap's default blue (#0d6efd) and grey (#6c757d)
+   fall just under 4.5:1 on this page background, so use darker shades throughout. */
+:root {
+  --bs-primary: #0a58ca; --bs-primary-rgb: 10, 88, 202;
+  --bs-link-color: #0a58ca; --bs-link-color-rgb: 10, 88, 202;
+  --bs-link-hover-color: #084298; --bs-link-hover-color-rgb: 8, 66, 152;
+  --bs-secondary: #565e64; --bs-secondary-rgb: 86, 94, 100;
+}
+.btn-primary {
+  --bs-btn-bg: #0a58ca; --bs-btn-border-color: #0a58ca;
+  --bs-btn-hover-bg: #084298; --bs-btn-hover-border-color: #084298;
+  --bs-btn-active-bg: #073984; --bs-btn-active-border-color: #073984;
+  --bs-btn-disabled-bg: #0a58ca; --bs-btn-disabled-border-color: #0a58ca;
+}
+.btn-outline-primary {
+  --bs-btn-color: #0a58ca; --bs-btn-border-color: #0a58ca;
+  --bs-btn-hover-bg: #0a58ca; --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-active-bg: #084298; --bs-btn-active-border-color: #084298;
+}
+.btn-secondary {
+  --bs-btn-bg: #565e64; --bs-btn-border-color: #565e64;
+  --bs-btn-hover-bg: #474e53; --bs-btn-hover-border-color: #474e53;
+}
+.btn-outline-secondary {
+  --bs-btn-color: #565e64; --bs-btn-border-color: #565e64;
+  --bs-btn-hover-bg: #565e64; --bs-btn-hover-border-color: #565e64;
+  --bs-btn-active-bg: #474e53; --bs-btn-active-border-color: #474e53;
+}
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }

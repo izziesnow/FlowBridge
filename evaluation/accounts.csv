@@ -1,0 +1,49 @@
+email,name,job_title,staff_code,project,role
+joshua.obi@ztl.example,Joshua Obi,Technical lead,ZTL-008,CRM,APPROVER
+toluwanimi.babtunde@ztl.example,Toluwanimi Babtunde,Product owner,ZTL-009,CRM,APPROVER
+musa.ali@ztl.example,Musa Ali,Project manager,ZTL-007,CRM,PM
+adaeze.udeh@ztl.example,Adaeze Udeh,Software engineer,ZTL-010,CRM,REQUESTER
+fatima.suleiman@ztl.example,Fatima Suleiman,Software engineer,ZTL-011,CRM,REQUESTER
+sarah.ibrahim@ztl.example,Sarah Ibrahim,Software engineer,ZTL-012,CRM,REQUESTER
+emmanuel.ibrahim@ztl.example,Emmanuel Ibrahim,Quality assurance analyst,ZTL-040,CRM,VIEWER
+uche.iwu@ztl.example,Uche Iwu,Quality assurance analyst,ZTL-038,CRM,VIEWER
+hope.akinwale@ztl.example,Hope Akinwale,Technical lead,ZTL-032,GOV,APPROVER
+omotola.afolayan@ztl.example,Omotola Afolayan,Product owner,ZTL-033,GOV,APPROVER
+abdullahi.yusuf@ztl.example,Abdullahi Yusuf,Project manager,ZTL-031,GOV,PM
+chiamaka.chukwu@ztl.example,Chiamaka Chukwu,Software engineer,ZTL-034,GOV,REQUESTER
+safiya.isah@ztl.example,Safiya Isah,Software engineer,ZTL-035,GOV,REQUESTER
+stephen.balogun@ztl.example,Stephen Balogun,Software engineer,ZTL-036,GOV,REQUESTER
+emmanuel.ibrahim@ztl.example,Emmanuel Ibrahim,Quality assurance analyst,ZTL-040,GOV,VIEWER
+uche.iwu@ztl.example,Uche Iwu,Quality assurance analyst,ZTL-038,GOV,VIEWER
+ismail.abubakar@ztl.example,Ismail Abubakar,Product owner,ZTL-015,HRM,APPROVER
+nonso.udeh@ztl.example,Nonso Udeh,Technical lead,ZTL-014,HRM,APPROVER
+niyilolawa.ogulana@ztl.example,Niyilolawa Ogulana,Project manager,ZTL-013,HRM,PM
+agnes.eze@ztl.example,Agnes Eze,Software engineer,ZTL-016,HRM,REQUESTER
+nonso.anyanwu@ztl.example,Nonso Anyanwu,Software engineer,ZTL-018,HRM,REQUESTER
+similoluwa.kolade@ztl.example,Similoluwa Kolade,Software engineer,ZTL-017,HRM,REQUESTER
+habiba.mohammed@ztl.example,Habiba Mohammed,Quality assurance analyst,ZTL-039,HRM,VIEWER
+oke.adebisi@ztl.example,Oke Adebisi,Quality assurance analyst,ZTL-037,HRM,VIEWER
+ayoka.makinwa@ztl.example,Ayoka Makinwa,Product owner,ZTL-021,LND,APPROVER
+simon.ogunleye@ztl.example,Simon Ogunleye,Technical lead,ZTL-020,LND,APPROVER
+nasiru.lawal@ztl.example,Nasiru Lawal,Project manager,ZTL-019,LND,PM
+agnes.adetokunbo@ztl.example,Agnes Adetokunbo,Software engineer,ZTL-024,LND,REQUESTER
+gambo.isah@ztl.example,Gambo Isah,Software engineer,ZTL-023,LND,REQUESTER
+ozioma.nwachukwu@ztl.example,Ozioma Nwachukwu,Software engineer,ZTL-022,LND,REQUESTER
+emmanuel.ibrahim@ztl.example,Emmanuel Ibrahim,Quality assurance analyst,ZTL-040,LND,VIEWER
+uche.iwu@ztl.example,Uche Iwu,Quality assurance analyst,ZTL-038,LND,VIEWER
+hauwa.buhari@ztl.example,Hauwa Buhari,Product owner,ZTL-003,PAY,APPROVER
+nnamdi.madu@ztl.example,Nnamdi Madu,Technical lead,ZTL-002,PAY,APPROVER
+ayinde.oshin@ztl.example,Ayinde Oshin,Project manager,ZTL-001,PAY,PM
+chukwudi.okafor@ztl.example,Chukwudi Okafor,Software engineer,ZTL-006,PAY,REQUESTER
+hope.oshodi@ztl.example,Hope Oshodi,Software engineer,ZTL-004,PAY,REQUESTER
+mojisoluwa.fagunwa@ztl.example,Mojisoluwa Fagunwa,Software engineer,ZTL-005,PAY,REQUESTER
+habiba.mohammed@ztl.example,Habiba Mohammed,Quality assurance analyst,ZTL-039,PAY,VIEWER
+oke.adebisi@ztl.example,Oke Adebisi,Quality assurance analyst,ZTL-037,PAY,VIEWER
+hauwa.saidu@ztl.example,Hauwa Sa’idu,Product owner,ZTL-027,TEL,APPROVER
+okechukwu.chukwu@ztl.example,Okechukwu Chukwu,Technical lead,ZTL-026,TEL,APPROVER
+ololade.oyetoro@ztl.example,Ololade Oyetoro,Project manager,ZTL-025,TEL,PM
+blessing.adetokunbo@ztl.example,Blessing Adetokunbo,Software engineer,ZTL-028,TEL,REQUESTER
+modupe.salami@ztl.example,Modupe Salami,Software engineer,ZTL-029,TEL,REQUESTER
+somadina.obi@ztl.example,Somadina Obi,Software engineer,ZTL-030,TEL,REQUESTER
+habiba.mohammed@ztl.example,Habiba Mohammed,Quality assurance analyst,ZTL-039,TEL,VIEWER
+oke.adebisi@ztl.example,Oke Adebisi,Quality assurance analyst,ZTL-037,TEL,VIEWER
