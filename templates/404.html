@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Not found{% endblock %}
+{% block content %}
+<h1 class="h4">Page not found</h1>
+<p>The page does not exist, or you do not have access to it.</p>
+<p><a href="{% url 'dashboard' %}">Return to your work</a></p>
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load flowbridge %}
+{% block title %}{{ req.reference }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">{{ req.reference }}</li>
+</ol></nav>
+
+<div class="d-flex flex-wrap align-items-start justify-content-between gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">{{ req.reference }} · {{ req.title }}</h1>
+    <div class="text-muted small">Raised by {{ req.requester }} on {{ req.created_at|date:"j M Y" }}</div>
+  </div>
+  <span class="badge fs-6 {{ req.state|badge_class }}">{{ req.get_state_display }}</span>
+</div>
+
+<dl class="fb-status-strip row g-3 mb-4">
+  <div class="col-sm-3"><dt>Status</dt><dd>{{ req.get_state_display }}</dd></div>
+  <div class="col-sm-3"><dt>Current approver</dt><dd>{% if active_task %}{{ active_task.approver }}{% else %}None{% endif %}</dd></div>
+  <div class="col-sm-3"><dt>Current stage</dt><dd>{% if active_task %}{{ active_task.position }}. {{ active_task.name }}{% else %}—{% endif %}</dd></div>
+  <div class="col-sm-3"><dt>Due</dt><dd>{% if active_task %}<span class="{% if active_task.is_overdue %}fb-overdue{% endif %}">{{ active_task.due_at|date:"j M Y, H:i" }}{% if active_task.is_overdue %} (overdue){% endif %}</span>{% else %}—{% endif %}</dd></div>
+</dl>
+
+<div class="row g-4">
+  <div class="col-lg-8">
+
+    {% if can_decide %}
+    <section class="card border-primary mb-4" aria-labelledby="decide-h">
+      <div class="card-header"><h2 id="decide-h" class="h6 mb-0">Your decision · stage {{ active_task.position }}: {{ active_task.name }}</h2></div>
+      <div class="card-body">
+        <p class="small text-muted">You are reviewing revision {{ req.current_revision.number }} and the document versions listed under it below.</p>
+        <form method="post" action="{% url 'approvals:request_decide' project.code req.number %}">
+          {% csrf_token %}
+          {% with field=decision_form.outcome %}{% include "_field.html" %}{% endwith %}
+          {% with field=decision_form.reason %}{% include "_field.html" %}{% endwith %}
+          <button type="submit" class="btn btn-primary">Record decision</button>
+        </form>
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="card mb-4" aria-labelledby="content-h">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h2 id="content-h" class="h6 mb-0">{% if req.is_editable %}Working copy{% else %}Request content{% endif %}</h2>
+        {% if can_edit %}<a class="btn btn-sm btn-outline-primary" href="{% url 'approvals:request_edit' project.code req.number %}">Edit</a>{% endif %}
+      </div>
+      <div class="card-body">
+        <p class="mb-0" style="white-space: pre-line">{{ req.description|default:"No description yet." }}</p>
+      </div>
+    </section>
+
+    <section class="card mb-4" aria-labelledby="docs-h">
+      <div class="card-header"><h2 id="docs-h" class="h6 mb-0">Documents and versions</h2></div>
+      <div class="card-body">
+        {% for doc in documents %}
+          <h3 class="h6 mt-2">{{ doc.name }}</h3>
+          <ul class="list-unstyled small mb-3">
+            {% for v in doc.versions.all %}
+              <li>
+                <a href="{% url 'approvals:document_download' v.id %}">v{{ v.number }} · {{ v.original_filename }}</a>
+                · {{ v.size_bytes|filesize }} · {{ v.uploaded_by }} · {{ v.uploaded_at|date:"j M Y, H:i" }}
+                · <span class="fb-mono" title="SHA-256 {{ v.sha256 }}">sha256 {{ v.short_checksum }}…</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% empty %}
+          <p class="text-muted mb-0">No documents attached.</p>
+        {% endfor %}
+        {% if can_edit %}
+        <form method="post" enctype="multipart/form-data" action="{% url 'approvals:document_upload' project.code req.number %}" class="border-top pt-3 mt-2">
+          {% csrf_token %}
+          <div class="row g-2">
+            <div class="col-md-5">{% with field=upload_form.name %}{% include "_field.html" %}{% endwith %}</div>
+            <div class="col-md-7">{% with field=upload_form.file %}{% include "_field.html" %}{% endwith %}</div>
+          </div>
+          <button type="submit" class="btn btn-sm btn-outline-primary">Upload</button>
+        </form>
+        {% endif %}
+      </div>
+    </section>
+
+    <section aria-labelledby="cycles-h">
+      <h2 id="cycles-h" class="h5 mb-3">Review cycles</h2>
+      {% for cycle in cycles %}
+      <div class="card mb-3">
+        <div class="card-header d-flex flex-wrap justify-content-between gap-2">
+          <span>Cycle {{ cycle.number }} · revision {{ cycle.revision.number }} · workflow v{{ cycle.workflow_version.number }}</span>
+          <span>{% if cycle.outcome %}<span class="badge {{ cycle.outcome|badge_class }}">{{ cycle.get_outcome_display }}</span>{% else %}<span class="badge text-bg-primary">Open</span>{% endif %}</span>
+        </div>
+        <div class="card-body">
+          <p class="small text-muted mb-2">Revision {{ cycle.revision.number }} frozen {{ cycle.revision.created_at|date:"j M Y, H:i" }} · title: “{{ cycle.revision.title }}”</p>
+          <p class="small mb-1 fw-semibold">Evidence reviewed in this cycle</p>
+          <ul class="small">
+            {% for rd in cycle.revision.revision_documents.all %}
+              <li><a href="{% url 'approvals:document_download' rd.document_version.id %}">{{ rd.document_version.document.name }} v{{ rd.document_version.number }}</a> <span class="fb-mono">sha256 {{ rd.document_version.short_checksum }}…</span></li>
+            {% empty %}<li class="text-muted">No documents in this revision.</li>{% endfor %}
+          </ul>
+          <ol class="fb-stages mt-3" aria-label="Stages in cycle {{ cycle.number }}">
+            {% for task in cycle.tasks.all %}
+              <li class="{% if task.status == 'ACTIVE' %}is-active{% endif %}">
+                <div class="fw-semibold">{{ task.position }}. {{ task.name }}</div>
+                <div class="small">{{ task.approver }}</div>
+                {% if task.decision %}
+                  <span class="badge {{ task.decision.outcome|badge_class }}">{{ task.decision.get_outcome_display }}</span>
+                  <div class="small text-muted">{{ task.decision.created_at|date:"j M, H:i" }}</div>
+                  {% if task.decision.reason %}<div class="small mt-1">“{{ task.decision.reason }}”</div>{% endif %}
+                {% else %}
+                  <span class="badge {{ task.status|badge_class }}">{{ task.get_status_display }}</span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+      {% empty %}
+        <p class="text-muted">Not yet submitted.</p>
+      {% endfor %}
+    </section>
+  </div>
+
+  <div class="col-lg-4">
+    <section class="card mb-4" aria-labelledby="actions-h">
+      <div class="card-header"><h2 id="actions-h" class="h6 mb-0">Actions</h2></div>
+      <div class="card-body d-grid gap-2">
+        {% if can_submit %}
+          <form method="post" action="{% url 'approvals:request_submit' project.code req.number %}">{% csrf_token %}
+            <button type="submit" class="btn btn-primary w-100">Submit for review</button></form>
+        {% endif %}
+        {% if can_resubmit %}
+          <form method="post" action="{% url 'approvals:request_resubmit' project.code req.number %}">{% csrf_token %}
+            <button type="submit" class="btn btn-primary w-100">Resubmit (restarts at stage 1)</button></form>
+        {% endif %}
+        {% if can_withdraw %}
+          <form method="post" action="{% url 'approvals:request_withdraw' project.code req.number %}">{% csrf_token %}
+            {% with field=reason_form.reason %}{% include "_field.html" %}{% endwith %}
+            <button type="submit" class="btn btn-outline-danger w-100">Withdraw request</button></form>
+        {% endif %}
+        {% if not can_submit and not can_resubmit and not can_withdraw and not can_decide %}
+          <p class="text-muted small mb-0">No actions are available to you on this request.</p>
+        {% endif %}
+        {% if req.closed_reason %}<p class="small mb-0"><strong>Withdrawal reason:</strong> {{ req.closed_reason }}</p>{% endif %}
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="hist-h">
+      <div class="card-header"><h2 id="hist-h" class="h6 mb-0">History</h2></div>
+      <div class="card-body">
+        <ol class="fb-timeline small mb-0">
+          {% for event in history %}
+            <li><div>{{ event.summary }}</div>
+              <div class="text-muted">{{ event.actor|default:"System" }} · {{ event.created_at|date:"j M Y, H:i:s" }}</div>
+              {% if event.data.reason %}<div>Reason: “{{ event.data.reason }}”</div>{% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

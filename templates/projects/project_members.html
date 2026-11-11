@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Members · {{ project.code }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Members</li>
+</ol></nav>
+<h1 class="h4">Members of {{ project.code }}</h1>
+<div class="row g-4">
+  <div class="col-lg-8">
+    <div class="card table-responsive">
+      <table class="table mb-0 align-middle">
+        <thead><tr><th scope="col">Name</th><th scope="col">Email</th><th scope="col">Role</th>{% if is_pm %}<th scope="col"><span class="visually-hidden">Actions</span></th>{% endif %}</tr></thead>
+        <tbody>
+        {% for m in members %}
+          <tr>
+            <td>{{ m.user.full_name }}</td><td>{{ m.user.email }}</td><td>{{ m.get_role_display }}</td>
+            {% if is_pm %}<td class="text-end">{% if m.user != user %}
+              <form method="post" action="{% url 'projects:member_remove' project.code m.id %}">{% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-outline-danger">Remove<span class="visually-hidden"> {{ m.user.full_name }}</span></button></form>
+            {% endif %}</td>{% endif %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% if is_pm %}
+  <div class="col-lg-4">
+    <form method="post" class="card card-body">
+      <h2 class="h6">Add a member or change a role</h2>
+      {% csrf_token %}
+      {% for field in form %}{% include "_field.html" %}{% endfor %}
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

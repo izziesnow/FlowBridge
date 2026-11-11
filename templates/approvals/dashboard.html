@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load flowbridge %}
+{% block title %}My work{% endblock %}
+{% block content %}
+<h1 class="h3 mb-1">Good to see you, {{ user.get_short_name }}</h1>
+<p class="text-muted">What needs your attention across your projects.</p>
+
+<div class="row g-4">
+  <div class="col-lg-8">
+    <section class="card mb-4" aria-labelledby="awaiting-h">
+      <div class="card-header d-flex justify-content-between">
+        <h2 id="awaiting-h" class="h6 mb-0">Awaiting my decision</h2>
+        <span class="badge text-bg-primary">{{ awaiting|length }}</span>
+      </div>
+      {% if awaiting %}
+      <div class="table-responsive">
+        <table class="table mb-0 align-middle">
+          <thead><tr><th scope="col">Request</th><th scope="col">Stage</th><th scope="col">Requester</th><th scope="col">Due</th></tr></thead>
+          <tbody>
+          {% for task in awaiting %}{% with r=task.cycle.request %}
+            <tr>
+              <td><a href="{{ r.get_absolute_url }}">{{ r.reference }}</a> {{ r.title }}</td>
+              <td>{{ task.position }}. {{ task.name }}</td>
+              <td>{{ r.requester }}</td>
+              <td>{% if task.is_overdue %}<span class="fb-overdue">Overdue · {{ task.due_at|date:"j M, H:i" }}</span>{% else %}{{ task.due_at|date:"j M, H:i" }}{% endif %}</td>
+            </tr>
+          {% endwith %}{% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <div class="card-body text-muted">Nothing is waiting for you.</div>
+      {% endif %}
+    </section>
+
+    <section class="card" aria-labelledby="mine-h">
+      <div class="card-header"><h2 id="mine-h" class="h6 mb-0">My requests</h2></div>
+      {% if my_requests %}
+      <div class="table-responsive">
+        <table class="table mb-0 align-middle">
+          <thead><tr><th scope="col">Request</th><th scope="col">Status</th><th scope="col">Updated</th></tr></thead>
+          <tbody>
+          {% for r in my_requests %}
+            <tr>
+              <td><a href="{{ r.get_absolute_url }}">{{ r.reference }}</a> {{ r.title }}</td>
+              <td><span class="badge {{ r.state|badge_class }}">{{ r.get_state_display }}</span></td>
+              <td>{{ r.updated_at|date:"j M Y, H:i" }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <div class="card-body text-muted">You have not raised any requests.</div>
+      {% endif %}
+    </section>
+  </div>
+
+  <div class="col-lg-4">
+    <section class="card" aria-labelledby="proj-h">
+      <div class="card-header"><h2 id="proj-h" class="h6 mb-0">My projects</h2></div>
+      <ul class="list-group list-group-flush">
+        {% for p in projects %}
+          <li class="list-group-item"><a href="{% url 'projects:detail' p.code %}">{{ p.code }}</a> · {{ p.name }}</li>
+        {% empty %}
+          <li class="list-group-item text-muted">You are not a member of any project yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</div>
+{% endblock %}

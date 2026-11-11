@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Audit log · {{ project.code }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Audit log</li>
+</ol></nav>
+<h1 class="h4">Audit log</h1>
+<p class="text-muted">Append-only. Entries cannot be edited or deleted. Showing the latest 500.</p>
+<div class="card table-responsive">
+  <table class="table table-sm mb-0 align-middle">
+    <thead><tr><th scope="col">When</th><th scope="col">Who</th><th scope="col">Action</th><th scope="col">Request</th><th scope="col">Summary</th></tr></thead>
+    <tbody>
+      {% for e in events %}
+        <tr>
+          <td class="text-nowrap">{{ e.created_at|date:"j M Y, H:i:s" }}</td>
+          <td>{{ e.actor|default:"System" }}</td>
+          <td class="fb-mono">{{ e.action }}</td>
+          <td>{% if e.request %}<a href="{{ e.request.get_absolute_url }}">{{ e.request.reference }}</a>{% endif %}</td>
+          <td>{{ e.summary }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="5" class="text-muted">No events yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

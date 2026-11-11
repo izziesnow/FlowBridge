@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Not allowed{% endblock %}
+{% block content %}
+<h1 class="h4">You cannot do that</h1>
+<p>{% if exception %}{{ exception }}{% else %}Your role on this project does not allow this action.{% endif %}</p>
+<p><a href="{% url 'dashboard' %}">Return to your work</a></p>
+{% endblock %}

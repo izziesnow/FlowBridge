@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{% if req %}Edit {{ req.reference }}{% else %}New request{% endif %}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  {% if req %}<li class="breadcrumb-item"><a href="{{ req.get_absolute_url }}">{{ req.reference }}</a></li>{% endif %}
+  <li class="breadcrumb-item active" aria-current="page">{% if req %}Edit{% else %}New change request{% endif %}</li>
+</ol></nav>
+<div class="row"><div class="col-lg-8">
+  <h1 class="h4">{% if req %}Edit {{ req.reference }}{% else %}New change request{% endif %}</h1>
+  {% if not req and not workflow %}
+    <div class="alert alert-warning">This project has no published workflow yet. You can save a draft, but it cannot be submitted until the project manager publishes one.</div>
+  {% endif %}
+  {% if req and req.state == "CHANGES_REQUESTED" %}
+    <div class="alert alert-info">Your edits will form a new revision when you resubmit. The reviewed revision is kept unchanged in the history.</div>
+  {% endif %}
+  <form method="post" class="card card-body">
+    {% csrf_token %}
+    {% for field in form %}{% include "_field.html" %}{% endfor %}
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">{% if req %}Save changes{% else %}Create draft{% endif %}</button>
+      <a class="btn btn-outline-secondary" href="{% if req %}{{ req.get_absolute_url }}{% else %}{% url 'projects:detail' project.code %}{% endif %}">Cancel</a>
+    </div>
+  </form>
+</div></div>
+{% endblock %}

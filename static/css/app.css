@@ -1,0 +1,55 @@
+:root {
+  --fb-ink: #14213d;
+  --fb-accent: #0f766e;
+  --fb-accent-soft: #e6f4f2;
+  --fb-line: #dee2e6;
+}
+
+body { background: #f7f8fa; color: #1f2937; }
+
+.fb-nav { background: var(--fb-ink); }
+.fb-nav .navbar-brand, .fb-nav .nav-link { color: #fff; }
+.fb-nav .nav-link:hover, .fb-nav .nav-link:focus { color: #a7f3d0; }
+.fb-nav .navbar-toggler { border-color: rgba(255,255,255,.4); }
+.fb-nav .navbar-toggler-icon { filter: invert(1); }
+.fb-mark {
+  display: inline-block; width: .9rem; height: .9rem; margin-right: .5rem;
+  border-radius: 3px; background: linear-gradient(135deg, #2dd4bf, #0f766e);
+  vertical-align: -1px;
+}
+
+.fb-banner {
+  background: #fff7e6; border-bottom: 1px solid #f5d9a8; color: #7a4b00;
+  font-size: .85rem; text-align: center; padding: .35rem 1rem;
+}
+
+.skip-link { position: absolute; left: 1rem; top: .5rem; z-index: 1000; background: #fff; padding: .5rem 1rem; }
+
+.card { border-color: var(--fb-line); }
+.card-header { background: #fff; font-weight: 600; }
+
+.fb-status-strip {
+  background: #fff; border: 1px solid var(--fb-line); border-left: 4px solid var(--fb-accent);
+  border-radius: .5rem; padding: 1rem 1.25rem;
+}
+.fb-status-strip dt { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: #6b7280; }
+.fb-status-strip dd { margin-bottom: 0; font-weight: 600; }
+
+.fb-stages { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.fb-stages li {
+  border: 1px solid var(--fb-line); border-radius: .5rem; padding: .5rem .75rem; background: #fff;
+  min-width: 10rem; font-size: .9rem;
+}
+.fb-stages li.is-active { border-color: var(--fb-accent); box-shadow: 0 0 0 2px var(--fb-accent-soft); }
+.fb-overdue { color: #b42318; font-weight: 600; }
+
+.fb-timeline { list-style: none; padding-left: 0; }
+.fb-timeline li { border-left: 2px solid var(--fb-line); padding: 0 0 .9rem 1rem; position: relative; }
+.fb-timeline li::before {
+  content: ""; position: absolute; left: -6px; top: .35rem; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--fb-accent);
+}
+.fb-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem; }
+
+table.table th { font-weight: 600; }
+.table thead th { background: #eef0f3; }

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load flowbridge %}
+{% block title %}Workflows · {{ project.code }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Workflows</li>
+</ol></nav>
+<h1 class="h4">Approval workflows</h1>
+<p class="text-muted">New submissions use the latest published version{% if current %} (currently v{{ current.number }}){% endif %}. Published versions never change; requests already in review keep the version they started with.</p>
+<div class="row g-4">
+  <div class="col-lg-8">
+    <div class="table-responsive card">
+      <table class="table mb-0 align-middle">
+        <thead><tr><th scope="col">Version</th><th scope="col">Name</th><th scope="col">Stages</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+        {% for v in versions %}
+          <tr>
+            <td><a href="{% url 'approvals:workflow_detail' project.code v.number %}">v{{ v.number }}</a></td>
+            <td>{{ v.name }}</td>
+            <td>{% for s in v.stages.all %}{{ s.position }}. {{ s.name }} ({{ s.approver }}){% if not forloop.last %} → {% endif %}{% empty %}<span class="text-muted">None yet</span>{% endfor %}</td>
+            <td><span class="badge {{ v.status|badge_class }}">{{ v.get_status_display }}</span></td>
+          </tr>
+        {% empty %}
+          <tr><td colspan="4" class="text-muted">No workflows yet.</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% if is_pm %}
+  <div class="col-lg-4">
+    <form method="post" class="card card-body">
+      <h2 class="h6">New workflow version</h2>
+      {% csrf_token %}
+      {% for field in form %}{% include "_field.html" %}{% endfor %}
+      <button type="submit" class="btn btn-primary">Create draft version</button>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
