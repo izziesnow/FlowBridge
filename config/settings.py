@@ -99,9 +99,15 @@ DATABASES = {
 # Hosted databases (Neon, Render and others) give a single connection URL instead, such as
 # postgresql://user:password@host/dbname?sslmode=require. Its query options, such as
 # sslmode, are passed to the PostgreSQL driver.
-DATABASE_URL = env("DATABASE_URL")
+DATABASE_URL = (env("DATABASE_URL") or "").strip()
+# Tolerate the string as Neon's Connect box shows it in its "psql" form: psql 'postgresql://…'
+if DATABASE_URL.startswith("psql "):
+    DATABASE_URL = DATABASE_URL[5:].strip()
+DATABASE_URL = DATABASE_URL.strip("'\"")
 if DATABASE_URL:
     _url = urlparse(DATABASE_URL)
+    if _url.scheme not in ("postgres", "postgresql") or not _url.hostname:
+        raise RuntimeError("DATABASE_URL must look like postgresql://user:password@host/dbname?sslmode=require")
     DATABASES["default"].update({
         "NAME": unquote(_url.path.lstrip("/")),
         "USER": unquote(_url.username or ""),
