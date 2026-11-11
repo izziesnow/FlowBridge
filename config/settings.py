@@ -104,6 +104,9 @@ DATABASE_URL = (env("DATABASE_URL") or "").strip()
 if DATABASE_URL.startswith("psql "):
     DATABASE_URL = DATABASE_URL[5:].strip()
 DATABASE_URL = DATABASE_URL.strip("'\"")
+if env("RENDER") and not DATABASE_URL:
+    # Render sets RENDER=true. Without DATABASE_URL the app would look for a database on its own machine.
+    raise RuntimeError("DATABASE_URL is empty. Set it to the Neon connection string under Environment on Render.")
 if DATABASE_URL:
     _url = urlparse(DATABASE_URL)
     if _url.scheme not in ("postgres", "postgresql") or not _url.hostname:
