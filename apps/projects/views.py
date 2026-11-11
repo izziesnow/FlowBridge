@@ -2,12 +2,16 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.db import transaction
-from django.db.models import Count, Exists, OuterRef, Q
+from django.db.models import Count, Q
+from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from apps.approvals.models import RequestState, StageTask
+from apps.approvals import exports
+from apps.approvals.filters import filtered_requests
+from apps.approvals.metrics import project_metrics
+from apps.approvals.models import RequestState
 from apps.approvals.services import latest_published_workflow
 from apps.audit.models import AuditEvent, record
 
@@ -51,33 +55,57 @@ def project_create(request):
 def project_detail(request, code):
     project = get_project_for_user(request.user, code)
     role = get_role(request.user, project)
-    state = request.GET.get("state", "")
-    now = timezone.now()
-    overdue_tasks = StageTask.objects.filter(
-        cycle__request=OuterRef("pk"), status=StageTask.Status.ACTIVE, due_at__lt=now
-    )
-    requests_qs = (
-        project.requests.select_related("requester")
-        .annotate(is_overdue=Exists(overdue_tasks))
-        .order_by("-updated_at")
-    )
-    if state in RequestState.values:
-        requests_qs = requests_qs.filter(state=state)
-    overdue_only = request.GET.get("overdue") == "1"
-    if overdue_only:
-        requests_qs = requests_qs.filter(is_overdue=True)
+    form, requests_qs = filtered_requests(request, [project])
     return render(request, "projects/project_detail.html", {
         "project": project,
         "role": role,
         "role_label": Role(role).label if role else None,
         "requests": requests_qs,
-        "state_filter": state,
-        "overdue_only": overdue_only,
-        "states": RequestState.choices,
+        "filter_form": form,
+        "query": request.GET.urlencode(),
         "workflow": latest_published_workflow(project),
         "can_raise": role == Role.REQUESTER,
         "is_pm": role == Role.PM,
+        "can_export": can_export(request.user, project),
     })
+
+
+@login_required
+def project_dashboard(request, code):
+    project = get_project_for_user(request.user, code)
+    form, requests_qs = filtered_requests(request, [project])
+    return render(request, "projects/project_dashboard.html", {
+        "project": project, "filter_form": form, "m": project_metrics(requests_qs),
+        "query": request.GET.urlencode(), "can_export": can_export(request.user, project),
+    })
+
+
+def can_export(user, project):
+    return user.is_staff or get_role(user, project) == Role.PM
+
+
+@login_required
+def project_export(request, code, kind):
+    """Authorised CSV export. PM and administrators only; every export is audited (NFR03)."""
+    project = get_project_for_user(request.user, code)
+    if not can_export(request.user, project):
+        raise PermissionDenied("Only the project manager and administrators can export history.")
+    if kind not in exports.EXPORTS:
+        raise Http404("Unknown export")
+    label, builder = exports.EXPORTS[kind]
+    form, requests_qs = filtered_requests(request, [project])
+    if kind == "audit":
+        content, rows = exports.audit_log(project)
+    else:
+        content, rows = builder(requests_qs)
+    stamp = timezone.localtime().strftime("%Y%m%d-%H%M")
+    filename = f"flowbridge-{project.code.lower()}-{kind}-{stamp}.csv"
+    record("export.created", f"{label} exported ({rows} rows)", actor=request.user, project=project,
+           kind=kind, rows=rows, filters={k: str(v) for k, v in form.active_filters.items()}, filename=filename)
+    response = HttpResponse(content, content_type="text/csv; charset=utf-8")
+    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+    response["Cache-Control"] = "no-store"
+    return response
 
 
 @login_required

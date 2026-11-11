@@ -49,6 +49,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         help_text="Administrators manage accounts and projects and can view all history.",
     )
     is_active = models.BooleanField(default=True)
+    email_notifications = models.BooleanField(
+        default=False, help_text="Also send my in-app notifications to my email address.",
+    )
     date_joined = models.DateTimeField(default=timezone.now)
 
     objects = UserManager()

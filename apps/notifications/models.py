@@ -15,6 +15,13 @@ class Notification(models.Model):
         REASSIGNED = "REASSIGNED", "Stage reassigned"
         OVERDUE = "OVERDUE", "Overdue reminder"
         WITHDRAWN = "WITHDRAWN", "Request withdrawn"
+        MENTION = "MENTION", "Mentioned"
+
+    class Email(models.TextChoices):
+        NONE = "", "Not requested"
+        PENDING = "PENDING", "Waiting to send"
+        SENT = "SENT", "Sent"
+        FAILED = "FAILED", "Failed"
 
     recipient = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="notifications")
     kind = models.CharField(max_length=20, choices=Kind.choices)
@@ -26,6 +33,10 @@ class Notification(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     read_at = models.DateTimeField(null=True, blank=True)
+    email_status = models.CharField(max_length=8, choices=Email.choices, blank=True, default=Email.NONE, db_index=True)
+    email_attempts = models.PositiveSmallIntegerField(default=0)
+    email_sent_at = models.DateTimeField(null=True, blank=True)
+    email_error = models.CharField(max_length=255, blank=True)
 
     class Meta:
         ordering = ["-created_at", "-id"]

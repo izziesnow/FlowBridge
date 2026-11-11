@@ -112,6 +112,21 @@ DOCUMENT_ALLOWED_EXTENSIONS = [
     "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "txt", "md", "csv", "png", "jpg", "jpeg",
 ]
 
+# Email (FR13, optional). Users opt in from their preferences page.
+# The console backend prints messages instead of sending them; set EMAIL_BACKEND
+# to django.core.mail.backends.smtp.EmailBackend and the EMAIL_* variables to use SMTP.
+EMAIL_BACKEND = env("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
+EMAIL_HOST = env("EMAIL_HOST", "localhost")
+EMAIL_PORT = int(env("EMAIL_PORT", "587"))
+EMAIL_HOST_USER = env("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", "")
+EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", True)
+EMAIL_TIMEOUT = 10
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", "Flowbridge <no-reply@ztl.example>")
+EMAIL_NOTIFICATIONS_ENABLED = env_bool("EMAIL_NOTIFICATIONS_ENABLED", True)
+EMAIL_MAX_ATTEMPTS = 3
+SITE_URL = env("SITE_URL", "http://localhost:8000")
+
 # Overdue stages: an approver is reminded at most once per interval (send_reminders command).
 REMINDER_INTERVAL_HOURS = int(env("REMINDER_INTERVAL_HOURS", "24"))
 
@@ -128,6 +143,12 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_HSTS_SECONDS = 60 * 60 * 24 * 30
+    # Nginx also redirects HTTP to HTTPS; Django does too, except for the internal health check.
+    SECURE_SSL_REDIRECT = env_bool("DJANGO_SECURE_SSL_REDIRECT", True)
+    SECURE_REDIRECT_EXEMPT = [r"^healthz$"]
+    # HSTS for subdomains and browser preload lists depend on the real domain a deployment uses,
+    # so they are a deployment decision rather than an application default.
+    SILENCED_SYSTEM_CHECKS = ["security.W005", "security.W021"]
 
 MESSAGE_TAGS = {40: "danger"}
 

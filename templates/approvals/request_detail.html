@@ -139,7 +139,7 @@
           {% csrf_token %}
           <label for="comment-body" class="form-label">Add a comment</label>
           <textarea id="comment-body" name="body" rows="3" maxlength="4000" class="form-control mb-2" required></textarea>
-          <div class="form-text mb-2">Comments are kept with the revision under discussion and cannot be edited later.</div>
+          <div class="form-text mb-2">Comments are kept with the revision under discussion and cannot be edited later. Mention a project member with @ and the first part of their email, e.g. @aisha.bello.</div>
           <button type="submit" class="btn btn-sm btn-primary">Post comment</button>
         </form>
         {% endif %}

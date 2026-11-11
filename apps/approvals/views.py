@@ -31,6 +31,7 @@ from .models import (
     StageTask,
     WorkflowVersion,
 )
+from .filters import filtered_requests
 from .services import WorkflowError, WorkflowService, latest_published_workflow
 
 
@@ -67,6 +68,16 @@ def dashboard(request):
     projects = visible_projects(user).order_by("code")
     return render(request, "approvals/dashboard.html", {
         "awaiting": awaiting, "my_requests": my_requests, "projects": projects,
+    })
+
+
+@login_required
+def request_search(request):
+    """All requests in the projects the user can see, with the shared filters."""
+    projects = visible_projects(request.user)
+    form, requests_qs = filtered_requests(request, projects)
+    return render(request, "approvals/request_search.html", {
+        "filter_form": form, "requests": requests_qs[:300], "count": requests_qs.count(),
     })
 
 

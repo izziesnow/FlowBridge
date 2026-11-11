@@ -6,7 +6,7 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 
 > **Fictional setting.** The system is demonstrated at **Zenkora Technologies Limited (ZTL)**, a fictional Lagos-based IT services firm created for this project. ZTL is not a real company, and every user, project, request and document in the demo data is synthetic.
 
-## What it does (increments 1 and 2)
+## What it does (increments 1 to 3)
 
 - **Accounts.** Email sign-in with administrator-managed accounts. Passwords are stored as salted hashes.
 - **Projects and roles.** Each person holds one role per project: project manager, requester, approver or viewer. Non-members get a 404 for every project page, request and document.
@@ -19,6 +19,9 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 - **Discussion.** Each request has a comment thread, and each comment records the revision it was written about. Each project also has a general discussion page. Comments and messages cannot be edited or deleted. Viewers can read but not post.
 - **Notifications.** In-app notifications tell approvers when a stage needs them and tell requesters about decisions and outcomes. They also cover comments, project messages, reassignments, withdrawals and overdue stages. The person who acted is never notified of their own action.
 - **Overdue flags and reminders.** A stage is overdue once its due time passes. Overdue requests are flagged and can be filtered on the project page. `python manage.py send_reminders` reminds the approver at most once every 24 hours, and the project manager is told the first time.
+- **Dashboards and filters.** Each project has a dashboard showing open and overdue work, median time to decision, first-time approval rate, review cycles per request, what is waiting with each approver and decision time by stage. It shares one set of filters (text or reference, status, requester, current approver, date raised, overdue) with the project request list and a cross-project Requests page.
+- **History export.** Project managers and administrators can download three CSV files: the request register, the decision history and the full audit log. The register and history follow the filters on screen. The decision history lists, for every decision, the exact document versions reviewed and their SHA-256 checksums. Every export is itself audited, and cells that a spreadsheet would run as formulas are neutralised.
+- **Optional email and mentions.** Users can switch on email copies of their notifications. Emails go out only after the action commits, and failures are retried. Writing @name in a comment notifies that project member, where name is the part of their email before the @.
 - **Stage reassignment.** The project manager can move an active or waiting stage of the open cycle to another approver, with a reason. An active stage gets a fresh due time. The published workflow does not change, and each move is kept as an immutable record and an audit event.
 
 ### Request states
@@ -43,20 +46,29 @@ Flowbridge is the artefact for a Professional Master of Information Technology (
 
 ## Stack
 
-Python 3.13 · Django 5.2 LTS · PostgreSQL 16 · Bootstrap 5 (server-rendered) · pytest + pytest-django · Docker Compose · GitHub Actions
+Python 3.13 · Django 5.2 LTS · PostgreSQL 16 · Gunicorn · Nginx · Bootstrap 5 (server-rendered) · pytest + pytest-django · Docker Compose · GitHub Actions
 
 ## Run it
 
-### With Docker Compose
+### Full stack with Docker Compose
 
 ```bash
-docker compose up --build
+docker compose up --build -d
 docker compose exec web python manage.py seed_demo
 ```
 
-Open http://localhost:8000. The `scheduler` service runs `send_reminders` every 15 minutes.
+Open https://localhost:8443. The certificate is self-signed unless you mount your own, so your browser will warn once.
 
-### Without Docker
+The stack runs:
+- PostgreSQL;
+- Django under Gunicorn;
+- Nginx (HTTPS, static files, security headers);
+- a scheduler for reminders and email retries;
+- a daily backup.
+
+See [docs/operations.md](docs/operations.md) for backups, restores, the integrity check and the restore test record.
+
+### Development server
 
 You need Python 3.13 and a running PostgreSQL 16 server.
 
@@ -68,6 +80,11 @@ python manage.py migrate
 python manage.py seed_demo
 python manage.py runserver
 ```
+
+Useful commands:
+- `python manage.py send_reminders`: remind approvers about overdue stages.
+- `python manage.py send_emails`: retry notification emails that failed.
+- `python manage.py verify_integrity`: check document checksums, immutability triggers and workflow consistency.
 
 ### Demo accounts
 
@@ -93,7 +110,15 @@ pytest                       # needs PostgreSQL: the triggers and row locks are 
 pytest --cov                 # with coverage
 ```
 
-The suite covers every workflow transition and guard and the permission checks on pages and downloads. It also covers immutability (model guard and database trigger), simultaneous decisions, document checksums, comments, notifications, reminders, reassignment and the demo seed. CI runs it on every push against a PostgreSQL 16 service container.
+The suite covers every workflow transition and guard and the permission checks on pages, downloads and exports. It also covers:
+- immutability (model guard and database trigger);
+- simultaneous decisions and document checksums;
+- comments, mentions, notifications, email delivery and retries;
+- reminders, reassignment, dashboards, filters and exports;
+- the integrity check and the demo seed. CI runs three things on every push:
+- the test suite, against a PostgreSQL 16 service container;
+- Django's deployment security checks;
+- a full Docker Compose smoke test that checks HTTPS and the security headers, then backs up, wipes, restores and verifies the demo data.
 
 ## Project layout
 
@@ -106,6 +131,9 @@ apps/audit/        append-only AuditEvent
 apps/discussion/   request comments and project discussion
 apps/notifications/ in-app notifications and the overdue reminder job
 apps/core_immutable.py   immutable model base and PostgreSQL trigger SQL
+docker/            Gunicorn entrypoint and the Nginx image (HTTPS, headers, static files)
+scripts/           backup.sh and restore.sh
+docs/operations.md running, backing up, restoring and verifying
 templates/, static/      Bootstrap 5 interface
 ```
 
@@ -113,5 +141,5 @@ templates/, static/      Bootstrap 5 interface
 
 1. **Increment 1 (done):** accounts, projects, membership, sequential workflows, revisions, documents, decisions, audit.
 2. **Increment 2 (done):** request comments and project discussion, in-app notifications, overdue flags with a reminder command, audited stage reassignment by the project manager.
-3. **Increment 3:** dashboards and filters, history export, optional email, Nginx and Gunicorn in Compose, backup and restore.
+3. **Increment 3 (done):** dashboards and filters, history export, optional email, Nginx and Gunicorn in Compose, backup and restore.
 4. **Increment 4:** synthetic evaluation datasets and the manual baseline, usability fixes, frozen evaluation build.

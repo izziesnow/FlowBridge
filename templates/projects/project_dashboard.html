@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load flowbridge %}
+{% block title %}Dashboard · {{ project.code }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'projects:detail' project.code %}">{{ project.code }}</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+</ol></nav>
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+  <h1 class="h4 mb-0">{{ project.code }} dashboard</h1>
+  {% if can_export %}<a class="btn btn-sm btn-outline-primary" href="{% url 'projects:export' project.code 'decisions' %}{% if query %}?{{ query }}{% endif %}">Export decision history (CSV)</a>{% endif %}
+</div>
+<p class="text-muted small">Figures cover the {{ m.total }} request{{ m.total|pluralize }} matching the filters below.</p>
+{% include "_request_filters.html" %}
+
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-2"><div class="fb-tile"><div class="fb-tile-label">Open</div><div class="fb-tile-value">{{ m.open }}</div></div></div>
+  <div class="col-6 col-lg-2"><div class="fb-tile"><div class="fb-tile-label">In review</div><div class="fb-tile-value">{{ m.in_review }}</div></div></div>
+  <div class="col-6 col-lg-2"><div class="fb-tile{% if m.overdue %} fb-tile-alert{% endif %}"><div class="fb-tile-label">Overdue stages</div><div class="fb-tile-value">{{ m.overdue }}</div></div></div>
+  <div class="col-6 col-lg-2"><div class="fb-tile"><div class="fb-tile-label">Median time to decision</div><div class="fb-tile-value">{% if m.median_hours_to_decision is not None %}{{ m.median_hours_to_decision }} h{% else %}—{% endif %}</div><div class="fb-tile-note">{{ m.decided_requests }} decided</div></div></div>
+  <div class="col-6 col-lg-2"><div class="fb-tile"><div class="fb-tile-label">Approved first time</div><div class="fb-tile-value">{% if m.first_pass_rate is not None %}{{ m.first_pass_rate }}%{% else %}—{% endif %}</div><div class="fb-tile-note">of {{ m.approved }} approved</div></div></div>
+  <div class="col-6 col-lg-2"><div class="fb-tile"><div class="fb-tile-label">Cycles per closed request</div><div class="fb-tile-value">{{ m.cycles_per_closed|default:"—" }}</div></div></div>
+</div>
+
+<div class="row g-4">
+  <div class="col-lg-6">
+    <section class="card h-100" aria-labelledby="status-h">
+      <div class="card-header"><h2 id="status-h" class="h6 mb-0">Requests by status</h2></div>
+      <div class="card-body">
+        <table class="table table-sm mb-0 align-middle">
+          <caption class="visually-hidden">Number of requests in each status</caption>
+          <tbody>
+          {% for value, label, n in m.states %}
+            <tr>
+              <th scope="row" class="fw-normal" style="width: 11rem"><span class="badge {{ value|badge_class }}">{{ label }}</span></th>
+              <td><div class="fb-bar" style="--w: {% widthratio n m.max_state 100 %}%" aria-hidden="true"></div></td>
+              <td class="text-end" style="width: 3rem">{{ n }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6">
+    <section class="card h-100" aria-labelledby="wait-h">
+      <div class="card-header"><h2 id="wait-h" class="h6 mb-0">Waiting with each approver</h2></div>
+      <div class="table-responsive">
+        <table class="table table-sm mb-0 align-middle">
+          <thead><tr><th scope="col">Approver</th><th scope="col" class="text-end">Active</th><th scope="col" class="text-end">Overdue</th><th scope="col" class="text-end">Oldest waiting</th></tr></thead>
+          <tbody>
+          {% for row in m.waiting %}
+            <tr><td>{{ row.approver }}</td><td class="text-end">{{ row.active }}</td>
+              <td class="text-end{% if row.overdue %} fb-overdue{% endif %}">{{ row.overdue }}</td>
+              <td class="text-end">{{ row.oldest_hours }} h</td></tr>
+          {% empty %}
+            <tr><td colspan="4" class="text-muted">Nothing is waiting.</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6">
+    <section class="card h-100" aria-labelledby="stage-h">
+      <div class="card-header"><h2 id="stage-h" class="h6 mb-0">Decision time by stage</h2></div>
+      <div class="table-responsive">
+        <table class="table table-sm mb-0 align-middle">
+          <thead><tr><th scope="col">Stage</th><th scope="col" class="text-end">Decisions</th><th scope="col" class="text-end">Median time to decide</th></tr></thead>
+          <tbody>
+          {% for row in m.stages %}
+            <tr><td>{{ row.position }}. {{ row.name }}</td><td class="text-end">{{ row.decisions }}</td><td class="text-end">{{ row.median_hours }} h</td></tr>
+          {% empty %}
+            <tr><td colspan="3" class="text-muted">No decisions yet.</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6">
+    <section class="card h-100" aria-labelledby="out-h">
+      <div class="card-header"><h2 id="out-h" class="h6 mb-0">Decisions recorded</h2></div>
+      <ul class="list-group list-group-flush">
+        {% for label, n in m.decision_outcomes %}<li class="list-group-item d-flex justify-content-between"><span>{{ label }}</span><strong>{{ n }}</strong></li>{% endfor %}
+      </ul>
+    </section>
+  </div>
+</div>
+<p class="small text-muted mt-3">Times are measured inside Flowbridge, from activation or first submission to the recorded decision. They include waiting time and the approver's own review time (Section 2.1.2).</p>
+{% endblock %}

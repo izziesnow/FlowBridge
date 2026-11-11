@@ -53,3 +53,12 @@ body { background: #f7f8fa; color: #1f2937; }
 
 table.table th { font-weight: 600; }
 .table thead th { background: #eef0f3; }
+
+/* Dashboard */
+.fb-tile { background: #fff; border: 1px solid var(--fb-line); border-radius: .5rem; padding: .75rem 1rem; height: 100%; }
+.fb-tile-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: #6b7280; }
+.fb-tile-value { font-size: 1.6rem; font-weight: 700; color: var(--fb-ink); }
+.fb-tile-note { font-size: .75rem; color: #6b7280; }
+.fb-tile-alert { border-color: #f1aeb5; background: #fff5f5; }
+.fb-tile-alert .fb-tile-value { color: #b42318; }
+.fb-bar { height: .75rem; width: var(--w); min-width: 2px; background: var(--fb-accent); border-radius: 2px; }

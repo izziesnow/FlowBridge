@@ -11,4 +11,6 @@ urlpatterns = [
     path("<str:code>/members/", views.project_members, name="members"),
     path("<str:code>/members/<int:membership_id>/remove/", views.member_remove, name="member_remove"),
     path("<str:code>/history/", views.project_history, name="history"),
+    path("<str:code>/dashboard/", views.project_dashboard, name="dashboard"),
+    path("<str:code>/export/<str:kind>.csv", views.project_export, name="export"),
 ]

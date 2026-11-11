@@ -1,0 +1,11 @@
+.git
+.github
+.env
+private_media
+backups
+staticfiles
+**/__pycache__
+.pytest_cache
+.coverage
+coverage.xml
+htmlcov

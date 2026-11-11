@@ -1,0 +1,20 @@
+{% load flowbridge %}
+<div class="card table-responsive">
+  <table class="table mb-0 align-middle">
+    <thead><tr><th scope="col">Reference</th><th scope="col">Title</th><th scope="col">Requester</th><th scope="col">Status</th><th scope="col">Current approver</th><th scope="col">Updated</th></tr></thead>
+    <tbody>
+      {% for r in requests %}
+        <tr>
+          <td><a href="{{ r.get_absolute_url }}">{{ r.reference }}</a></td>
+          <td>{{ r.title }}</td>
+          <td>{{ r.requester }}</td>
+          <td><span class="badge {{ r.state|badge_class }}">{{ r.get_state_display }}</span>{% if r.is_overdue %} <span class="badge text-bg-danger">Overdue</span>{% endif %}</td>
+          <td>{{ r.current_approver_name|default:"—" }}</td>
+          <td>{{ r.updated_at|date:"j M Y, H:i" }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="6" class="text-muted">No requests match.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

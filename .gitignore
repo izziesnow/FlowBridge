@@ -13,3 +13,4 @@ private_media/
 .DS_Store
 .idea/
 .vscode/
+backups/

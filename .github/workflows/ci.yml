@@ -51,6 +51,12 @@ jobs:
       - name: Django system checks
         run: python manage.py check
 
+      - name: Deployment security checks (production settings)
+        env:
+          DJANGO_DEBUG: "0"
+          DJANGO_SECRET_KEY: ci-deploy-check-${{ github.run_id }}-a-long-random-looking-value-for-the-check
+        run: python manage.py check --deploy --fail-level WARNING
+
       - name: Run tests with coverage
         run: pytest --cov --cov-report=term-missing --cov-report=xml
 
@@ -59,3 +65,54 @@ jobs:
         with:
           name: coverage-report
           path: coverage.xml
+
+  compose-smoke:
+    # Brings up the full stack (PostgreSQL, Gunicorn, Nginx with HTTPS, scheduler, backup)
+    # and runs a backup-and-restore test against it (NFR08).
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start the stack
+        run: docker compose up --build --detach --wait --wait-timeout 300 db web nginx
+
+      - name: HTTPS, redirects and security headers
+        run: |
+          set -eux
+          test "$(curl -sk https://localhost:8443/healthz)" = "ok"
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/accounts/login/)" = "301"
+          curl -sk -D headers.txt -o /dev/null https://localhost:8443/accounts/login/
+          grep -i "^HTTP/.* 200" headers.txt
+          grep -i "^strict-transport-security" headers.txt
+          grep -i "^content-security-policy" headers.txt
+          grep -i "^x-frame-options: DENY" headers.txt
+          test "$(curl -sk -o /dev/null -w '%{http_code}' https://localhost:8443/static/css/app.css)" = "200"
+          test "$(curl -sk -o /dev/null -w '%{http_code}' https://localhost:8443/documents/1/download/)" = "302"
+
+      - name: Load demo data and check integrity
+        run: |
+          docker compose exec -T web python manage.py seed_demo
+          docker compose exec -T web python manage.py send_reminders
+          docker compose exec -T web python manage.py verify_integrity
+
+      - name: Backup, simulate data loss, restore, verify
+        run: |
+          set -eux
+          docker compose run --rm --no-deps -T backup /scripts/backup.sh
+          BACKUP=$(ls -d backups/flowbridge-* | head -1)
+          docker compose exec -T web python manage.py flush --no-input
+          docker compose stop web
+          docker compose run --rm --no-deps -T backup /scripts/restore.sh "/backups/$(basename "$BACKUP")"
+          docker compose start web
+          docker compose up --detach --wait --wait-timeout 120 web
+          docker compose exec -T web python manage.py verify_integrity
+          test "$(docker compose exec -T db psql -U flowbridge -Atc 'select count(*) from approvals_approvalrequest')" = "6"
+
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail 200
+
+      - name: Stop the stack
+        if: always()
+        run: docker compose down --volumes

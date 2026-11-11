@@ -15,6 +15,7 @@
   </div>
   <div class="d-flex flex-wrap gap-2">
     {% if can_raise %}<a class="btn btn-primary" href="{% url 'approvals:request_create' project.code %}">New change request</a>{% endif %}
+    <a class="btn btn-outline-secondary" href="{% url 'projects:dashboard' project.code %}">Dashboard</a>
     <a class="btn btn-outline-secondary" href="{% url 'discussion:project' project.code %}">Discussion</a>
     <a class="btn btn-outline-secondary" href="{% url 'approvals:workflow_list' project.code %}">Workflows</a>
     <a class="btn btn-outline-secondary" href="{% url 'projects:members' project.code %}">Members</a>
@@ -22,36 +23,14 @@
   </div>
 </div>
 
-<form method="get" class="d-flex gap-2 align-items-end mb-3" role="search" aria-label="Filter requests">
-  <div><label for="state" class="form-label small mb-1">Status</label>
-    <select id="state" name="state" class="form-select form-select-sm">
-      <option value="">All</option>
-      {% for value, label in states %}<option value="{{ value }}"{% if value == state_filter %} selected{% endif %}>{{ label }}</option>{% endfor %}
-    </select>
-  </div>
-  <div class="form-check mb-1">
-    <input class="form-check-input" type="checkbox" name="overdue" value="1" id="overdue"{% if overdue_only %} checked{% endif %}>
-    <label class="form-check-label small" for="overdue">Overdue only</label>
-  </div>
-  <button type="submit" class="btn btn-sm btn-outline-primary">Filter</button>
-</form>
-
-<div class="card table-responsive">
-  <table class="table mb-0 align-middle">
-    <thead><tr><th scope="col">Reference</th><th scope="col">Title</th><th scope="col">Requester</th><th scope="col">Status</th><th scope="col">Updated</th></tr></thead>
-    <tbody>
-      {% for r in requests %}
-        <tr>
-          <td><a href="{{ r.get_absolute_url }}">{{ r.reference }}</a></td>
-          <td>{{ r.title }}</td>
-          <td>{{ r.requester }}</td>
-          <td><span class="badge {{ r.state|badge_class }}">{{ r.get_state_display }}</span>{% if r.is_overdue %} <span class="badge text-bg-danger">Overdue</span>{% endif %}</td>
-          <td>{{ r.updated_at|date:"j M Y, H:i" }}</td>
-        </tr>
-      {% empty %}
-        <tr><td colspan="5" class="text-muted">No requests match.</td></tr>
-      {% endfor %}
-    </tbody>
-  </table>
+{% include "_request_filters.html" %}
+{% if can_export %}
+<div class="d-flex flex-wrap gap-2 mb-2 small">
+  <span class="text-muted">Export the filtered requests:</span>
+  <a href="{% url 'projects:export' project.code 'requests' %}{% if query %}?{{ query }}{% endif %}">Request register (CSV)</a>
+  <a href="{% url 'projects:export' project.code 'decisions' %}{% if query %}?{{ query }}{% endif %}">Decision history (CSV)</a>
+  <a href="{% url 'projects:export' project.code 'audit' %}">Full audit log (CSV)</a>
 </div>
+{% endif %}
+{% include "_request_table.html" %}
 {% endblock %}

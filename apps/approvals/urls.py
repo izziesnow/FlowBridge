@@ -5,6 +5,7 @@ from . import views
 app_name = "approvals"
 
 urlpatterns = [
+    path("requests/", views.request_search, name="request_search"),
     path("projects/<str:code>/requests/new/", views.request_create, name="request_create"),
     path("projects/<str:code>/requests/<int:number>/", views.request_detail, name="request_detail"),
     path("projects/<str:code>/requests/<int:number>/edit/", views.request_edit, name="request_edit"),

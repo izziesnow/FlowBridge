@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 
+from .models import User
+
 
 class EmailAuthenticationForm(AuthenticationForm):
     username = forms.EmailField(
@@ -15,3 +17,11 @@ class EmailAuthenticationForm(AuthenticationForm):
 
     def clean_username(self):
         return self.cleaned_data["username"].lower()
+
+
+class PreferencesForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ["email_notifications"]
+        labels = {"email_notifications": "Email me my notifications"}
+        widgets = {"email_notifications": forms.CheckboxInput(attrs={"class": "form-check-input"})}
