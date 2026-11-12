@@ -27,7 +27,7 @@ The free plans also bring two limits worth telling testers about:
 ### 1. Create the database on Neon
 
 1. Sign up at [neon.com](https://neon.com) (signing in with GitHub is quickest).
-2. Create a project named `flowbridge`, with PostgreSQL 16 and the region **AWS Europe Central 1 (Frankfurt)**, close to the app.
+2. Create a project named `flowbridge` in the region **AWS Europe Central 1 (Frankfurt)**, close to the app. Neon currently creates PostgreSQL 18 databases; the app runs on them unchanged, although the Compose stack and CI use version 16.
 3. On the project dashboard, click **Connect** and copy the connection string. It looks like `postgresql://user:password@ep-…eu-central-1.aws.neon.tech/neondb?sslmode=require`.
 
 ### 2. Create the app on Render
